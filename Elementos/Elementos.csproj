@@ -41,7 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Book.cs" />
+    <Compile Include="EditorialSencillo.cs" />
     <Compile Include="FullUser.cs" />
+    <Compile Include="LibroSencillo.cs" />
+    <Compile Include="Tema.cs" />
     <Compile Include="UsuarioTemp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

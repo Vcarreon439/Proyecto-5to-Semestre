@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcionalidad_Formularios",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainForm", "MainForm\MainForm.csproj", "{866D1CD3-5058-46C7-9768-3EDC4E0741D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControls", "..\Evidencia-de-Proyecto-Final\CustomControls\CustomControls.csproj", "{275C59E3-3F7E-4C80-9963-8E3E4B2A0BCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{866D1CD3-5058-46C7-9768-3EDC4E0741D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{866D1CD3-5058-46C7-9768-3EDC4E0741D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{866D1CD3-5058-46C7-9768-3EDC4E0741D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{275C59E3-3F7E-4C80-9963-8E3E4B2A0BCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{275C59E3-3F7E-4C80-9963-8E3E4B2A0BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{275C59E3-3F7E-4C80-9963-8E3E4B2A0BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{275C59E3-3F7E-4C80-9963-8E3E4B2A0BCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
