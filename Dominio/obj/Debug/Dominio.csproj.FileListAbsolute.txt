@@ -1,0 +1,11 @@
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Dominio\bin\Debug\Dominio.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Dominio\bin\Debug\Dominio.pdb
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Dominio\bin\Debug\DataAccess.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Dominio\bin\Debug\Elementos.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Dominio\bin\Debug\DataAccess.pdb
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Dominio\bin\Debug\Elementos.pdb
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Dominio\obj\Debug\Dominio.csproj.CopyComplete
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Dominio\obj\Debug\Dominio.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Dominio\obj\Debug\Dominio.pdb

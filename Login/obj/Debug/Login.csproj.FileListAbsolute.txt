@@ -23,3 +23,15 @@ C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\obj\Debug\Login.Login.es
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\obj\Debug\es-MX\Login.resources.dll
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\obj\Debug\Login.ResetPassword.es-MX.resources
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\obj\Debug\Login.Registro.resources
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\bin\Debug\RJCodeAdvance.RJControls.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\obj\Debug\Login.Success.resources
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\obj\Debug\Login.Success.es-419.resources
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\bin\Debug\Dominio.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\bin\Debug\Elementos.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\bin\Debug\DataAccess.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\bin\Debug\Dominio.pdb
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\bin\Debug\Elementos.pdb
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\bin\Debug\DataAccess.pdb
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\bin\Debug\Funcionalidad_Formularios.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\bin\Debug\Funcionalidad_Formularios.pdb

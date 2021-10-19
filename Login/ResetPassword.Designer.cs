@@ -32,19 +32,22 @@ namespace Login
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResetPassword));
             this.rounded_Panel1 = new CustomControls.Rounded_Panel(this.components);
+            this.rounded_Button1 = new CustomControls.Rounded_Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.rounded_PictureBox1 = new CustomControls.Rounded_PictureBox(this.components);
             this.txtMail = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.rounded_Button1 = new CustomControls.Rounded_Button();
+            this.btnCerrar = new FontAwesome.Sharp.IconPictureBox();
             this.rounded_Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rounded_PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // rounded_Panel1
             // 
             resources.ApplyResources(this.rounded_Panel1, "rounded_Panel1");
             this.rounded_Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.rounded_Panel1.Controls.Add(this.btnCerrar);
             this.rounded_Panel1.Controls.Add(this.rounded_Button1);
             this.rounded_Panel1.Controls.Add(this.label2);
             this.rounded_Panel1.Controls.Add(this.label1);
@@ -53,6 +56,21 @@ namespace Login
             this.rounded_Panel1.Name = "rounded_Panel1";
             this.rounded_Panel1.PanelColor = System.Drawing.Color.White;
             this.rounded_Panel1.Radio = 20;
+            this.rounded_Panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.rounded_Panel1_MouseMove);
+            // 
+            // rounded_Button1
+            // 
+            this.rounded_Button1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rounded_Button1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.rounded_Button1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rounded_Button1.BorderRadius = 20;
+            this.rounded_Button1.BorderSize = 0;
+            this.rounded_Button1.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.rounded_Button1, "rounded_Button1");
+            this.rounded_Button1.ForeColor = System.Drawing.Color.White;
+            this.rounded_Button1.Name = "rounded_Button1";
+            this.rounded_Button1.TextColor = System.Drawing.Color.White;
+            this.rounded_Button1.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -84,19 +102,17 @@ namespace Login
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtMail.StateCommon.Border.Rounding = 20;
             // 
-            // rounded_Button1
+            // btnCerrar
             // 
-            this.rounded_Button1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rounded_Button1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rounded_Button1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rounded_Button1.BorderRadius = 20;
-            this.rounded_Button1.BorderSize = 0;
-            this.rounded_Button1.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.rounded_Button1, "rounded_Button1");
-            this.rounded_Button1.ForeColor = System.Drawing.Color.White;
-            this.rounded_Button1.Name = "rounded_Button1";
-            this.rounded_Button1.TextColor = System.Drawing.Color.White;
-            this.rounded_Button1.UseVisualStyleBackColor = false;
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCerrar.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnCerrar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            resources.ApplyResources(this.btnCerrar, "btnCerrar");
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // ResetPassword
             // 
@@ -107,9 +123,11 @@ namespace Login
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ResetPassword";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Load += new System.EventHandler(this.ResetPassword_Load);
             this.rounded_Panel1.ResumeLayout(false);
             this.rounded_Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rounded_PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -122,5 +140,6 @@ namespace Login
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private CustomControls.Rounded_Button rounded_Button1;
+        private FontAwesome.Sharp.IconPictureBox btnCerrar;
     }
 }

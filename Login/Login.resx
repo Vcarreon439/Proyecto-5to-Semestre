@@ -138,89 +138,113 @@
   <data name="rounded_Panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="rounded_Button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="btnCerrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>280, 14</value>
   </data>
-  <data name="rounded_Button1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Montserrat SemiBold, 14.249999pt, style=Bold</value>
+  <data name="btnCerrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
   </data>
-  <data name="rounded_Button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnCerrar.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
-  <data name="rounded_Button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 198</value>
+  <data name="&gt;&gt;btnCerrar.Name" xml:space="preserve">
+    <value>btnCerrar</value>
   </data>
-  <data name="rounded_Button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 40</value>
+  <data name="&gt;&gt;btnCerrar.Type" xml:space="preserve">
+    <value>FontAwesome.Sharp.IconPictureBox, FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="rounded_Button1.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="rounded_Button1.Text" xml:space="preserve">
-    <value>LOGIN</value>
-  </data>
-  <data name="&gt;&gt;rounded_Button1.Name" xml:space="preserve">
-    <value>rounded_Button1</value>
-  </data>
-  <data name="&gt;&gt;rounded_Button1.Type" xml:space="preserve">
-    <value>CustomControls.Rounded_Button, CustomControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;rounded_Button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnCerrar.Parent" xml:space="preserve">
     <value>rounded_Panel1</value>
   </data>
-  <data name="&gt;&gt;rounded_Button1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnCerrar.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="kryptonLinkLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 294</value>
+  <data name="lnkForget.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="kryptonLinkLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 20</value>
+  <data name="lnkForget.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 203</value>
   </data>
-  <data name="kryptonLinkLabel2.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="lnkForget.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 23</value>
   </data>
-  <data name="kryptonLinkLabel2.Values.Text" xml:space="preserve">
-    <value>SIGN UP</value>
+  <data name="lnkForget.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
-  <data name="&gt;&gt;kryptonLinkLabel2.Name" xml:space="preserve">
-    <value>kryptonLinkLabel2</value>
+  <data name="lnkForget.Text" xml:space="preserve">
+    <value>Forgot password?</value>
   </data>
-  <data name="&gt;&gt;kryptonLinkLabel2.Type" xml:space="preserve">
-    <value>ComponentFactory.Krypton.Toolkit.KryptonLinkLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  <data name="lnkForget.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;kryptonLinkLabel2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lnkForget.Name" xml:space="preserve">
+    <value>lnkForget</value>
+  </data>
+  <data name="&gt;&gt;lnkForget.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lnkForget.Parent" xml:space="preserve">
     <value>rounded_Panel1</value>
   </data>
-  <data name="&gt;&gt;kryptonLinkLabel2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lnkForget.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="kryptonLinkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>205, 163</value>
+  <data name="btnLogin.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="kryptonLinkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 20</value>
+  <data name="btnLogin.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Montserrat SemiBold, 14.249999pt, style=Bold</value>
   </data>
-  <data name="kryptonLinkLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="btnLogin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="kryptonLinkLabel1.Values.Text" xml:space="preserve">
-    <value>Forget password?</value>
+  <data name="btnLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 239</value>
   </data>
-  <data name="&gt;&gt;kryptonLinkLabel1.Name" xml:space="preserve">
-    <value>kryptonLinkLabel1</value>
+  <data name="btnLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 40</value>
   </data>
-  <data name="&gt;&gt;kryptonLinkLabel1.Type" xml:space="preserve">
-    <value>ComponentFactory.Krypton.Toolkit.KryptonLinkLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  <data name="btnLogin.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
-  <data name="&gt;&gt;kryptonLinkLabel1.Parent" xml:space="preserve">
+  <data name="btnLogin.Text" xml:space="preserve">
+    <value>LOGIN</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.Name" xml:space="preserve">
+    <value>btnLogin</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.Type" xml:space="preserve">
+    <value>CustomControls.Rounded_Button, CustomControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.Parent" xml:space="preserve">
     <value>rounded_Panel1</value>
   </data>
-  <data name="&gt;&gt;kryptonLinkLabel1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnLogin.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="lnkSignUp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 292</value>
+  </data>
+  <data name="lnkSignUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 20</value>
+  </data>
+  <data name="lnkSignUp.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lnkSignUp.Values.Text" xml:space="preserve">
+    <value>SIGN UP</value>
+  </data>
+  <data name="&gt;&gt;lnkSignUp.Name" xml:space="preserve">
+    <value>lnkSignUp</value>
+  </data>
+  <data name="&gt;&gt;lnkSignUp.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLinkLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;lnkSignUp.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;lnkSignUp.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Montserrat, 15.749999pt</value>
@@ -229,16 +253,19 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>139, 21</value>
+    <value>16, 57</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 29</value>
+    <value>294, 37</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Login</value>
+  </data>
+  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -250,31 +277,34 @@
     <value>rounded_Panel1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
-  <data name="kryptonTextBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 122</value>
+  <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 155</value>
   </data>
-  <data name="kryptonTextBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtPassword.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>●</value>
+  </data>
+  <data name="txtPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>297, 35</value>
   </data>
-  <data name="kryptonTextBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtPassword.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;kryptonTextBox1.Name" xml:space="preserve">
-    <value>kryptonTextBox1</value>
+  <data name="&gt;&gt;txtPassword.Name" xml:space="preserve">
+    <value>txtPassword</value>
   </data>
-  <data name="&gt;&gt;kryptonTextBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtPassword.Type" xml:space="preserve">
     <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="&gt;&gt;kryptonTextBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtPassword.Parent" xml:space="preserve">
     <value>rounded_Panel1</value>
   </data>
-  <data name="&gt;&gt;kryptonTextBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;txtPassword.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="txtMail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 75</value>
+    <value>15, 107</value>
   </data>
   <data name="txtMail.Size" type="System.Drawing.Size, System.Drawing">
     <value>297, 35</value>
@@ -292,7 +322,7 @@
     <value>rounded_Panel1</value>
   </data>
   <data name="&gt;&gt;txtMail.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="rounded_Panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
@@ -323,6 +353,9 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>350, 350</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Form1</value>

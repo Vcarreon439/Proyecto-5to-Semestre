@@ -1,0 +1,9 @@
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\DataAccess\bin\Debug\Elementos.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\DataAccess\bin\Debug\Elementos.pdb
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\DataAccess\obj\Debug\DataAccess.pdb
