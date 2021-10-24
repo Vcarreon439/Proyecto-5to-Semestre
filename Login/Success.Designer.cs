@@ -35,9 +35,9 @@ namespace Login
             this.label2 = new System.Windows.Forms.Label();
             this.rounded_Button1 = new CustomControls.Rounded_Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.rjCircularPictureBox1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
+            this.pctImage = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.rounded_Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctImage)).BeginInit();
             this.SuspendLayout();
             // 
             // rounded_Panel1
@@ -46,10 +46,11 @@ namespace Login
             this.rounded_Panel1.Controls.Add(this.label2);
             this.rounded_Panel1.Controls.Add(this.rounded_Button1);
             this.rounded_Panel1.Controls.Add(this.label1);
-            this.rounded_Panel1.Controls.Add(this.rjCircularPictureBox1);
+            this.rounded_Panel1.Controls.Add(this.pctImage);
             this.rounded_Panel1.Name = "rounded_Panel1";
             this.rounded_Panel1.PanelColor = System.Drawing.Color.White;
             this.rounded_Panel1.Radio = 20;
+            this.rounded_Panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.rounded_Panel1_MouseMove);
             // 
             // label2
             // 
@@ -77,19 +78,19 @@ namespace Login
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Name = "label1";
             // 
-            // rjCircularPictureBox1
+            // pctImage
             // 
-            this.rjCircularPictureBox1.BackColor = System.Drawing.Color.White;
-            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox1.BorderSize = 2;
-            this.rjCircularPictureBox1.GradientAngle = 50F;
-            this.rjCircularPictureBox1.Image = global::Login.Properties.Resources.check_3x;
-            resources.ApplyResources(this.rjCircularPictureBox1, "rjCircularPictureBox1");
-            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
-            this.rjCircularPictureBox1.TabStop = false;
+            this.pctImage.BackColor = System.Drawing.Color.White;
+            this.pctImage.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pctImage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.pctImage.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.pctImage.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.pctImage.BorderSize = 2;
+            this.pctImage.GradientAngle = 50F;
+            this.pctImage.Image = global::Login.Properties.Resources.check_3x;
+            resources.ApplyResources(this.pctImage, "pctImage");
+            this.pctImage.Name = "pctImage";
+            this.pctImage.TabStop = false;
             // 
             // Success
             // 
@@ -102,7 +103,7 @@ namespace Login
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rounded_Panel1.ResumeLayout(false);
             this.rounded_Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -113,6 +114,6 @@ namespace Login
         private System.Windows.Forms.Label label2;
         private CustomControls.Rounded_Button rounded_Button1;
         private System.Windows.Forms.Label label1;
-        private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox1;
+        private RJCodeAdvance.RJControls.RJCircularPictureBox pctImage;
     }
 }

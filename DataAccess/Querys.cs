@@ -12,68 +12,134 @@ namespace DataAccess
     {
         #region StoredProcedures
 
-            #region Inserts
+        #region IniciarSesion
 
-            public bool RegisterNew(UsuarioTemp temp)
+        public FullUser LoginUser(UsuarioTemp temp)
+        {
+            using (SqlConnection conexion = getConnection())
             {
-                using (SqlConnection conexion = getConnection())
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("Loggeo", conexion))
                 {
-                    conexion.Open();
-
-                    using (SqlCommand cmd = new SqlCommand("RegistroNormal", conexion))
+                    try
                     {
-                        try
+                        cmd.Connection = conexion;
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Correo", temp.Correo);
+                        cmd.Parameters.AddWithValue("@Contraseña", temp.Contraseña);
+                        cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
+                        cmd.Parameters.Add("@level", SqlDbType.VarChar).Direction = ParameterDirection.ReturnValue;
+
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            cmd.Connection = conexion;
-                            cmd.CommandType = CommandType.StoredProcedure;
+                            if (reader.Read())
+                            {
+                                FullUser retorno = new FullUser();
+                                retorno.Nombre = reader["Descripcion"].ToString();
+                                retorno.Apellidos = reader["Apellidos"].ToString();
+                                retorno.Correo = reader["Correo"].ToString();
+                                retorno.Entidad = reader["EntidadFederativa"].ToString();
+                                retorno.Genero = reader["Genero"].ToString();
+                                return retorno;
+                            }
+                            else
+                                return null;
 
-
-                            cmd.Parameters.AddWithValue("@nombre", temp.Nombre);
-                            cmd.Parameters.AddWithValue("@apellidos", temp.Apellidos);
-                            cmd.Parameters.AddWithValue("@correo", temp.Correo);
-                            cmd.Parameters.AddWithValue("@contraseña", temp.Contraseña);
-
-                            return (cmd.ExecuteNonQuery() > 0);
                         }
-                        catch (Exception e)
-                        {
-                            MessageBox.Show(e.Message);
-                            throw;
-                        }
-
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                        return null;
                     }
                 }
             }
+        }
 
-            public bool AddTema(Tema temp)
+        #endregion
+
+
+        #region Editorial
+
+
+
+        #endregion
+
+
+        #region Inserts
+
+        #region AddTema
+
+        public bool AddTema(Tema temp)
+        {
+            using (SqlConnection conexion = getConnection())
             {
-                using (SqlConnection conexion = getConnection())
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("AddTema", conexion))
                 {
-                    conexion.Open();
-
-                    using (SqlCommand cmd = new SqlCommand("Insercion_Genero", conexion))
+                    try
                     {
-                        try
-                        {
-                            cmd.Connection = conexion;
-                            cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Connection = conexion;
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Codigo", temp.Codigo);
+                        cmd.Parameters.AddWithValue("@Descripcion", temp.Descripcion);
 
-                            cmd.Parameters.AddWithValue("@cod", temp.Codigo);
-                            cmd.Parameters.AddWithValue("@tipo", temp.Nombre);
+                        cmd.ExecuteNonQuery();
 
-                            return (cmd.ExecuteNonQuery() > 0);
-                        }
-                        catch (Exception e)
-                        {
-                            MessageBox.Show(e.Message);
-                            return false;
-                        }
-
+                        bool val =  bool.Parse(cmd.Parameters["@ret"].Value.ToString());
+                        MessageBox.Show(val.ToString());
+                        return val;
                     }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                        return false;
+                    }
+
                 }
             }
+        }
 
 
+        #endregion
+
+        #region NewUser
+
+        public bool NewUser(UsuarioTemp temp)
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("NewUser", conexion))
+                {
+                    try
+                    {
+                        cmd.Connection = conexion;
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@Nombre", temp.Nombre);
+                        cmd.Parameters.AddWithValue("@Correo", temp.Correo);
+                        cmd.Parameters.AddWithValue("@Contraseña", temp.Contraseña);
+                        cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
+                        cmd.ExecuteNonQuery();
+
+                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString()));
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                        return false;
+                    }
+
+                }
+            }
+        }
+
+        #endregion
 
         public bool AddBook(Book tempBook)
             {
@@ -141,46 +207,7 @@ namespace DataAccess
 
             #region Logins
 
-        public FullUser LoginUser(UsuarioTemp temp)
-        {
-            using (SqlConnection conexion = getConnection())
-            {
-                conexion.Open();
-
-                using (SqlCommand cmd = new SqlCommand("IniciarSesion", conexion))
-                {
-                    try
-                    {
-                        cmd.Connection = conexion;
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@correo", temp.Correo);
-                        cmd.Parameters.AddWithValue("@contraseña", temp.Contraseña);
-
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                FullUser retorno = new FullUser();
-                                retorno.Nombre = reader["Nombre"].ToString();
-                                retorno.Apellidos = reader["Apellidos"].ToString();
-                                retorno.Correo = reader["Correo"].ToString();
-                                retorno.Entidad = reader["EntidadFederativa"].ToString();
-                                retorno.Genero = reader["Genero"].ToString();
-                                return retorno;
-                            }
-                            else
-                                return null;
-
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        MessageBox.Show(e.Message);
-                        return null;
-                    }
-                }
-            }
-        }
+        
 
         #endregion
 
@@ -249,7 +276,7 @@ namespace DataAccess
                                 {
                                     EditorialSencillo edit = new EditorialSencillo();
                                     edit.Codigo = reader["Codigo"].ToString();
-                                    edit.Nombre = reader["Nombre"].ToString();
+                                    edit.Nombre = reader["Descripcion"].ToString();
                                     listaEditorialesS.Add(edit);
                                 }
 

@@ -74,6 +74,7 @@ namespace Login
             this.rounded_Panel1.PanelColor = System.Drawing.Color.White;
             this.rounded_Panel1.Radio = 20;
             this.rounded_Panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.rounded_Panel1_MouseMove);
+            this.rounded_Panel1.Move += new System.EventHandler(this.rounded_Panel1_Move);
             // 
             // btnCerrar
             // 

@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Elementos
 {
-    public class FullUser
+    public class FullUser : UsuarioTemp
     {
-        public string Nombre { get; set; }
-        public string Apellidos { get; set; }
-        public string Correo { get; set; }
         public string Entidad { get; set; }
         public string Genero { get; set; }
         public string Domicilio { get; set; }

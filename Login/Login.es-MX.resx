@@ -124,6 +124,9 @@
   <data name="lnkForget.Size" type="System.Drawing.Size, System.Drawing">
     <value>297, 20</value>
   </data>
+  <data name="lnkForget.Text" xml:space="preserve">
+    <value>Olvidaste tu contraseña?</value>
+  </data>
   <data name="btnLogin.Location" type="System.Drawing.Point, System.Drawing">
     <value>62, 236</value>
   </data>
@@ -135,6 +138,12 @@
   </data>
   <data name="lnkSignUp.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
+  </data>
+  <data name="lnkSignUp.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lnkSignUp.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
   </data>
   <data name="lnkSignUp.Values.Text" xml:space="preserve">
     <value>Registrate</value>
@@ -150,10 +159,6 @@
   </data>
   <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 145</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="txtPassword.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
-    <value>●</value>
   </data>
   <data name="txtMail.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 101</value>

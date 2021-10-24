@@ -86,5 +86,11 @@ namespace Login
             frm.ShowDialog();
             this.Show();
         }
+
+        private void rounded_Panel1_Move(object sender, EventArgs e)
+        {
+            Funcionalidad_Formularios.Arrastre_Formularios.Llama_ReleaseCapture();
+
+        }
     }
 }

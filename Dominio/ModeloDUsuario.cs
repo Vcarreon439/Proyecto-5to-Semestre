@@ -13,9 +13,9 @@ namespace Dominio
     {
         private Querys obj = new Querys();
 
-        public bool RegisterNew(UsuarioTemp temp)
+        public bool NewUser(UsuarioTemp temp)
         {
-            return obj.RegisterNew(temp);
+            return obj.NewUser(temp);
         }
 
         public FullUser Login(UsuarioTemp temp)

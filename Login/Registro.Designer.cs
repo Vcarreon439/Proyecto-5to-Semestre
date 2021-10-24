@@ -38,7 +38,6 @@ namespace Login
             this.txtConfirm = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtSecondName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtFirstName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.rounded_Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +60,7 @@ namespace Login
             this.rounded_Panel1.Radio = 20;
             this.rounded_Panel1.Size = new System.Drawing.Size(376, 472);
             this.rounded_Panel1.TabIndex = 0;
+            this.rounded_Panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.rounded_Panel1_MouseMove);
             // 
             // txtMail
             // 
@@ -69,6 +69,7 @@ namespace Login
             this.txtMail.Size = new System.Drawing.Size(349, 36);
             this.txtMail.StateActive.Content.Color1 = System.Drawing.Color.Black;
             this.txtMail.StateActive.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMail.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
             this.txtMail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -77,6 +78,8 @@ namespace Login
             this.txtMail.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMail.TabIndex = 11;
             this.txtMail.Text = "Email";
+            this.txtMail.TextChanged += new System.EventHandler(this.txtMail_TextChanged);
+            this.txtMail.Enter += new System.EventHandler(this.txtMail_Enter);
             // 
             // btnRegister
             // 
@@ -92,7 +95,7 @@ namespace Login
             this.btnRegister.Location = new System.Drawing.Point(125, 395);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(150, 40);
-            this.btnRegister.TabIndex = 10;
+            this.btnRegister.TabIndex = 0;
             this.btnRegister.Text = "Sign Up";
             this.btnRegister.TextColor = System.Drawing.Color.White;
             this.btnRegister.UseVisualStyleBackColor = false;
@@ -105,6 +108,7 @@ namespace Login
             this.txtPassword.Size = new System.Drawing.Size(349, 36);
             this.txtPassword.StateActive.Content.Color1 = System.Drawing.Color.Black;
             this.txtPassword.StateActive.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
             this.txtPassword.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -113,13 +117,15 @@ namespace Login
             this.txtPassword.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.TabIndex = 8;
             this.txtPassword.Text = "Password";
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             // 
             // rjCircularPictureBox1
             // 
             this.rjCircularPictureBox1.BackColor = System.Drawing.Color.White;
             this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.Black;
-            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.Black;
+            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.MediumSlateBlue;
             this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.rjCircularPictureBox1.BorderSize = 2;
             this.rjCircularPictureBox1.GradientAngle = 50F;
@@ -138,6 +144,7 @@ namespace Login
             this.txtConfirm.Size = new System.Drawing.Size(349, 36);
             this.txtConfirm.StateActive.Content.Color1 = System.Drawing.Color.Black;
             this.txtConfirm.StateActive.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirm.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
             this.txtConfirm.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -146,6 +153,8 @@ namespace Login
             this.txtConfirm.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirm.TabIndex = 3;
             this.txtConfirm.Text = "Retry password";
+            this.txtConfirm.TextChanged += new System.EventHandler(this.txtConfirm_TextChanged);
+            this.txtConfirm.Enter += new System.EventHandler(this.txtConfirm_Enter);
             // 
             // txtSecondName
             // 
@@ -154,6 +163,7 @@ namespace Login
             this.txtSecondName.Size = new System.Drawing.Size(349, 36);
             this.txtSecondName.StateActive.Content.Color1 = System.Drawing.Color.Black;
             this.txtSecondName.StateActive.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSecondName.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
             this.txtSecondName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -162,6 +172,8 @@ namespace Login
             this.txtSecondName.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSecondName.TabIndex = 2;
             this.txtSecondName.Text = "Second Name";
+            this.txtSecondName.TextChanged += new System.EventHandler(this.txtSecondName_TextChanged);
+            this.txtSecondName.Enter += new System.EventHandler(this.txtSecondName_Enter);
             // 
             // txtFirstName
             // 
@@ -170,6 +182,7 @@ namespace Login
             this.txtFirstName.Size = new System.Drawing.Size(349, 36);
             this.txtFirstName.StateActive.Content.Color1 = System.Drawing.Color.Black;
             this.txtFirstName.StateActive.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
             this.txtFirstName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -181,6 +194,7 @@ namespace Login
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtFirstName.TabIndex = 1;
             this.txtFirstName.Text = "First Name";
+            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
             this.txtFirstName.Enter += new System.EventHandler(this.txtFirstName_Enter);
             // 
             // Registro
@@ -193,6 +207,7 @@ namespace Login
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Registro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Registro";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rounded_Panel1.ResumeLayout(false);
@@ -208,7 +223,6 @@ namespace Login
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtConfirm;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSecondName;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtFirstName;
-        private System.Windows.Forms.ToolTip toolTip1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPassword;
         private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox1;
         private CustomControls.Rounded_Button btnRegister;

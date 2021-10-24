@@ -28,7 +28,7 @@ namespace MainForm
                     ModeloDUsuario obj = new ModeloDUsuario();
                     Tema tema = new Tema();
                     tema.Codigo = txtCodigo.Text;
-                    tema.Nombre = txtDescripcion.Text;
+                    tema.Descripcion = txtDescripcion.Text;
 
                     obj.AddTema(tema);
 
