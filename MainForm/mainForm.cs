@@ -58,11 +58,6 @@ namespace MainForm
             Funcionalidad_Formularios.Arrastre_Formularios.Llama_SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnBooks_MouseEnter(object sender, EventArgs e)
-        {
-            //btnBooks.ShowDropDown();
-        }
-
         private Form FormularioAbierto = null;
 
 

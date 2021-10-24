@@ -99,7 +99,6 @@ namespace MainForm
             this.btnBooks.ForeColor = System.Drawing.Color.White;
             this.btnBooks.Image = global::MainForm.Properties.Resources.libro;
             this.btnBooks.Name = "btnBooks";
-            this.btnBooks.MouseEnter += new System.EventHandler(this.btnBooks_MouseEnter);
             // 
             // btnAgregarLibros
             // 
