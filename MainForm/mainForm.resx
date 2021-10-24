@@ -154,10 +154,16 @@
     <value>False</value>
   </data>
   <data name="manageStudentsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 26</value>
+    <value>180, 22</value>
   </data>
   <data name="manageStudentsToolStripMenuItem1.Text" xml:space="preserve">
     <value>Manage Students</value>
+  </data>
+  <data name="manageTopicsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="manageTopicsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Manage Topics</value>
   </data>
   <data name="btnAdministrator.Font" type="System.Drawing.Font, System.Drawing">
     <value>Open Sans Condensed, 11.25pt</value>
@@ -178,7 +184,7 @@
     <value>200, 30</value>
   </data>
   <data name="btnAgregarLibros.Text" xml:space="preserve">
-    <value>Add Book</value>
+    <value>Add Libro</value>
   </data>
   <data name="btnAgregarLibros.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -190,7 +196,7 @@
     <value>200, 30</value>
   </data>
   <data name="searchBookToolStripMenuItem.Text" xml:space="preserve">
-    <value>Search Book</value>
+    <value>Search Libro</value>
   </data>
   <data name="btnBooks.Font" type="System.Drawing.Font, System.Drawing">
     <value>Open Sans Condensed, 11.25pt</value>
@@ -4181,6 +4187,12 @@
     <value>btnReturnBooks</value>
   </data>
   <data name="&gt;&gt;btnReturnBooks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;manageTopicsToolStripMenuItem.Name" xml:space="preserve">
+    <value>manageTopicsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;manageTopicsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

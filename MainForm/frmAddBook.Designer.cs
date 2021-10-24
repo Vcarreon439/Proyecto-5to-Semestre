@@ -353,7 +353,7 @@ namespace MainForm
             this.Controls.Add(this.pctImagenLibro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frnAddBook";
-            this.Text = "Add  Book";
+            this.Text = "Add  Libro";
             this.Load += new System.EventHandler(this.frnAddBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctImagenLibro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEdicion)).EndInit();

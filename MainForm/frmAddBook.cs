@@ -73,23 +73,23 @@ namespace MainForm
             }
         }
 
-        private Book GenerarLibro()
+        private Libro GenerarLibro()
         {
-            Book tempBook = new Book();
-            tempBook.Descripcion = txtDescripcion.Text;
-            tempBook.Titulo = txtTitulo.Text;
-            tempBook.ISBN = txtISBN.Text;
-            tempBook.Copias = int.Parse(numCopias.Value.ToString());
-            tempBook.AñoEdicion = txtAño.Text;
-            tempBook.codEditorial = "1";
-            tempBook.numEdicion = int.Parse(numEdicion.Value.ToString());
-            tempBook.Imagen = ImagenAutor.ImageToBase64(pctImagenLibro.Image, ImageFormat.Jpeg);
-            return tempBook;
+            Libro tempLibro = new Libro();
+            tempLibro.Descripcion = txtDescripcion.Text;
+            tempLibro.Titulo = txtTitulo.Text;
+            tempLibro.ISBN = txtISBN.Text;
+            tempLibro.Copias = int.Parse(numCopias.Value.ToString());
+            tempLibro.AñoEdicion = txtAño.Text;
+            tempLibro.codEditorial = "1";
+            tempLibro.numEdicion = int.Parse(numEdicion.Value.ToString());
+            tempLibro.Imagen = ImageConvertions.ImageToBase64(pctImagenLibro.Image, ImageFormat.Jpeg);
+            return tempLibro;
         }
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            Book libro = GenerarLibro();
+            Libro libro = GenerarLibro();
             ModeloDUsuario Obj = new ModeloDUsuario();
             if (Obj.AddBook(libro))
                 MessageBox.Show("Si se inserto");

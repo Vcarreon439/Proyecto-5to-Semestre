@@ -43,6 +43,7 @@ namespace MainForm
             this.btnIssueBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.btnReturnBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.pctFondo = new System.Windows.Forms.PictureBox();
+            this.manageTopicsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctFondo)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +79,8 @@ namespace MainForm
             // btnAdministrator
             // 
             this.btnAdministrator.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manageStudentsToolStripMenuItem1});
+            this.manageStudentsToolStripMenuItem1,
+            this.manageTopicsToolStripMenuItem});
             resources.ApplyResources(this.btnAdministrator, "btnAdministrator");
             this.btnAdministrator.ForeColor = System.Drawing.Color.White;
             this.btnAdministrator.Image = global::MainForm.Properties.Resources.adminIcon;
@@ -146,6 +148,12 @@ namespace MainForm
             this.pctFondo.Name = "pctFondo";
             this.pctFondo.TabStop = false;
             // 
+            // manageTopicsToolStripMenuItem
+            // 
+            this.manageTopicsToolStripMenuItem.Name = "manageTopicsToolStripMenuItem";
+            resources.ApplyResources(this.manageTopicsToolStripMenuItem, "manageTopicsToolStripMenuItem");
+            this.manageTopicsToolStripMenuItem.Click += new System.EventHandler(this.manageTopicsToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             resources.ApplyResources(this, "$this");
@@ -179,6 +187,7 @@ namespace MainForm
         private System.Windows.Forms.ToolStripMenuItem btnAdministrator;
         private System.Windows.Forms.ToolStripMenuItem manageStudentsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem masterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageTopicsToolStripMenuItem;
     }
 }
 

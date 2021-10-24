@@ -29,16 +29,41 @@ namespace MainForm
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label codigoLabel;
+            System.Windows.Forms.Label descripcionLabel;
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.dgvGeneros = new System.Windows.Forms.DataGridView();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.codigoKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.descripcionKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.temaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            codigoLabel = new System.Windows.Forms.Label();
+            descripcionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.temaBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // codigoLabel
+            // 
+            codigoLabel.AutoSize = true;
+            codigoLabel.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
+            codigoLabel.Location = new System.Drawing.Point(17, 18);
+            codigoLabel.Name = "codigoLabel";
+            codigoLabel.Size = new System.Drawing.Size(62, 23);
+            codigoLabel.TabIndex = 16;
+            codigoLabel.Text = "Id Topic:";
+            // 
+            // descripcionLabel
+            // 
+            descripcionLabel.AutoSize = true;
+            descripcionLabel.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
+            descripcionLabel.Location = new System.Drawing.Point(17, 101);
+            descripcionLabel.Name = "descripcionLabel";
+            descripcionLabel.Size = new System.Drawing.Size(47, 23);
+            descripcionLabel.TabIndex = 17;
+            descripcionLabel.Text = "Topic:";
             // 
             // btnEliminar
             // 
@@ -57,6 +82,7 @@ namespace MainForm
             this.btnEditar.TabIndex = 14;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnAgregar
             // 
@@ -68,72 +94,72 @@ namespace MainForm
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 98);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 23);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Descripción";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 23);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Codigo del Tema:";
-            // 
             // dgvGeneros
             // 
             this.dgvGeneros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvGeneros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGeneros.Location = new System.Drawing.Point(314, 18);
+            this.dgvGeneros.Location = new System.Drawing.Point(330, 18);
             this.dgvGeneros.Name = "dgvGeneros";
-            this.dgvGeneros.Size = new System.Drawing.Size(474, 530);
+            this.dgvGeneros.ReadOnly = true;
+            this.dgvGeneros.Size = new System.Drawing.Size(474, 546);
             this.dgvGeneros.TabIndex = 10;
+            this.dgvGeneros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGeneros_CellContentClick);
             // 
-            // txtCodigo
+            // codigoKryptonTextBox
             // 
-            this.txtCodigo.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(21, 55);
-            this.txtCodigo.MaxLength = 5;
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(260, 29);
-            this.txtCodigo.TabIndex = 9;
+            this.codigoKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.temaBindingSource, "Codigo", true));
+            this.codigoKryptonTextBox.Location = new System.Drawing.Point(21, 55);
+            this.codigoKryptonTextBox.Name = "codigoKryptonTextBox";
+            this.codigoKryptonTextBox.Size = new System.Drawing.Size(260, 33);
+            this.codigoKryptonTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Silver;
+            this.codigoKryptonTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Silver;
+            this.codigoKryptonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.codigoKryptonTextBox.StateCommon.Border.Rounding = 5;
+            this.codigoKryptonTextBox.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codigoKryptonTextBox.TabIndex = 17;
+            this.codigoKryptonTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.codigoKryptonTextBox_KeyPress);
             // 
-            // txtDescripcion
+            // descripcionKryptonTextBox
             // 
-            this.txtDescripcion.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(21, 135);
-            this.txtDescripcion.MaxLength = 35;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(260, 29);
-            this.txtDescripcion.TabIndex = 8;
+            this.descripcionKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.temaBindingSource, "Descripcion", true));
+            this.descripcionKryptonTextBox.Location = new System.Drawing.Point(21, 135);
+            this.descripcionKryptonTextBox.Name = "descripcionKryptonTextBox";
+            this.descripcionKryptonTextBox.Size = new System.Drawing.Size(260, 33);
+            this.descripcionKryptonTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Silver;
+            this.descripcionKryptonTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Silver;
+            this.descripcionKryptonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.descripcionKryptonTextBox.StateCommon.Border.Rounding = 5;
+            this.descripcionKryptonTextBox.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 12F);
+            this.descripcionKryptonTextBox.TabIndex = 18;
+            // 
+            // temaBindingSource
+            // 
+            this.temaBindingSource.DataSource = typeof(Elementos.Tema);
             // 
             // frmAddTopics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 560);
+            this.ClientSize = new System.Drawing.Size(816, 576);
+            this.Controls.Add(descripcionLabel);
+            this.Controls.Add(this.descripcionKryptonTextBox);
+            this.Controls.Add(codigoLabel);
+            this.Controls.Add(this.codigoKryptonTextBox);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvGeneros);
-            this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.txtDescripcion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddTopics";
             this.Text = "frmAddTopics";
             this.Load += new System.EventHandler(this.frmAddTopics_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.temaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,10 +170,9 @@ namespace MainForm
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvGeneros;
-        private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.BindingSource temaBindingSource;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox codigoKryptonTextBox;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox descripcionKryptonTextBox;
     }
 }

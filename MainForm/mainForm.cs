@@ -44,8 +44,10 @@ namespace MainForm
 
                 case TipoUsuario.NivelAutorizacion.Master:
                     foreach (ToolStripMenuItem opciones in menuPrincipal.Items)
-                    {   
-                        opciones.ForeColor = Color.White;
+                    {
+                        foreach (ToolStripMenuItem opc in opciones.DropDownItems)
+                        {opc.Visible = true;}
+
                         opciones.Visible = true;
                     }
                     break;
@@ -93,6 +95,12 @@ namespace MainForm
             {
                 
             }
+        }
+
+        private void manageTopicsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioAbierto.Hide();
+            FormularioAbierto = FormEnPanel.AbrirForm<frmAddTopics>(ref pctFondo);
         }
     }
 }
