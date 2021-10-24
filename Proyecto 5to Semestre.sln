@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Login\Login.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{CADAD4F8-8E32-42EE-A19D-5E1A1AB335FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elementos", "Elementos\Elementos.csproj", "{8AFC182B-DADC-43F8-A574-AB0BFB9E0E9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaAuxiliar", "Elementos\BibliotecaAuxiliar.csproj", "{8AFC182B-DADC-43F8-A574-AB0BFB9E0E9D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "Dominio\Dominio.csproj", "{C7DF569D-FCB5-431E-9658-C50CC2121CB1}"
 EndProject

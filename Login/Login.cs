@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CustomControls;
 using Dominio;
 using Elementos;
+using FluentValidation.Results;
 
 namespace Login
 {
@@ -17,19 +18,13 @@ namespace Login
     {
         protected string mailtxt;
 
+        private TipoUsuario.NivelAutorizacion auth;
+        public TipoUsuario.NivelAutorizacion Auth => auth;
+
         public Login()
         {
             InitializeComponent();
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
-        {
-            mailtxt = txtMail.Text;
+            userAccesBindingSource.DataSource = new UserAcces();
         }
 
         private void lnkForget_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -48,7 +43,8 @@ namespace Login
 
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
 
         private void btnCerrar_MouseEnter(object sender, EventArgs e)
@@ -63,20 +59,61 @@ namespace Login
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            ModeloDUsuario mdDUsuario = new ModeloDUsuario();
-            UsuarioTemp obj = new UsuarioTemp();
-            obj.Correo = txtMail.Text;
-            obj.Contraseña = txtPassword.Text;
-            FullUser result = mdDUsuario.Login(obj);
-            
-            if (result == null)
+            try
             {
-                    
-            }
-            
+                userAccesBindingSource.EndEdit();
+                UserAcces user = userAccesBindingSource.Current as UserAcces;
 
-            this.DialogResult = DialogResult.OK;
-            MessageBox.Show("");
+                if (user != null)
+                {
+                    ValidarAcceso validador = new ValidarAcceso();
+                    ValidationResult resultado = validador.Validate(user);
+                    IList<ValidationFailure> fallas = resultado.Errors;
+
+                    if (!resultado.IsValid)
+                    {
+                        foreach (ValidationFailure errors in fallas)
+                        {
+                            MessageBox.Show(errors.ErrorMessage, errors.PropertyName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+
+                    }
+                    else
+                    {
+                        ModeloDUsuario mdDUsuario = new ModeloDUsuario();
+                        string newPass = Encriptado.Encrypt(user.Contraseña);
+                        user.Contraseña = newPass;
+                        this.auth = mdDUsuario.LoginUser(user);
+
+                        this.DialogResult = DialogResult.OK;
+
+                        switch (auth)
+                        {
+                            case TipoUsuario.NivelAutorizacion.Master:
+                                MessageBox.Show("Bienvenido Maestro");
+                                break;
+
+                            case TipoUsuario.NivelAutorizacion.Admin:
+                                MessageBox.Show("Bienvenido Administrador");
+                                break;
+
+                            case TipoUsuario.NivelAutorizacion.User:
+                                MessageBox.Show("Bienvenido Usuario");
+                                break;
+
+                            case TipoUsuario.NivelAutorizacion.Invitado:
+                                MessageBox.Show("Bienvenido Invitado");
+                                break;
+                        }
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+                return;
+            }
         }
 
         private void lnkSignUp_LinkClicked(object sender, EventArgs e)

@@ -30,56 +30,140 @@ namespace Login
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.rounded_Panel1 = new CustomControls.Rounded_Panel(this.components);
-            this.txtMail = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.apellidosKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.confirmarContraKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.contraseñaKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.correoKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.nombreKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnRegister = new CustomControls.Rounded_Button();
-            this.txtPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.rjCircularPictureBox1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
-            this.txtConfirm = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.txtSecondName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.txtFirstName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.usuarioTempBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rounded_Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioTempBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // rounded_Panel1
             // 
-            this.rounded_Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rounded_Panel1.Controls.Add(this.txtMail);
-            this.rounded_Panel1.Controls.Add(this.btnRegister);
-            this.rounded_Panel1.Controls.Add(this.txtPassword);
+            resources.ApplyResources(this.rounded_Panel1, "rounded_Panel1");
             this.rounded_Panel1.Controls.Add(this.rjCircularPictureBox1);
-            this.rounded_Panel1.Controls.Add(this.txtConfirm);
-            this.rounded_Panel1.Controls.Add(this.txtSecondName);
-            this.rounded_Panel1.Controls.Add(this.txtFirstName);
-            this.rounded_Panel1.Location = new System.Drawing.Point(12, 12);
+            this.rounded_Panel1.Controls.Add(this.label5);
+            this.rounded_Panel1.Controls.Add(this.label4);
+            this.rounded_Panel1.Controls.Add(this.label3);
+            this.rounded_Panel1.Controls.Add(this.label2);
+            this.rounded_Panel1.Controls.Add(this.label1);
+            this.rounded_Panel1.Controls.Add(this.apellidosKryptonTextBox);
+            this.rounded_Panel1.Controls.Add(this.confirmarContraKryptonTextBox);
+            this.rounded_Panel1.Controls.Add(this.contraseñaKryptonTextBox);
+            this.rounded_Panel1.Controls.Add(this.correoKryptonTextBox);
+            this.rounded_Panel1.Controls.Add(this.nombreKryptonTextBox);
+            this.rounded_Panel1.Controls.Add(this.btnRegister);
             this.rounded_Panel1.Name = "rounded_Panel1";
             this.rounded_Panel1.PanelColor = System.Drawing.Color.White;
             this.rounded_Panel1.Radio = 20;
-            this.rounded_Panel1.Size = new System.Drawing.Size(376, 472);
-            this.rounded_Panel1.TabIndex = 0;
             this.rounded_Panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.rounded_Panel1_MouseMove);
             // 
-            // txtMail
+            // label5
             // 
-            this.txtMail.Location = new System.Drawing.Point(12, 248);
-            this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(349, 36);
-            this.txtMail.StateActive.Content.Color1 = System.Drawing.Color.Black;
-            this.txtMail.StateActive.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMail.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.txtMail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Name = "label5";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Name = "label4";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Name = "label3";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Name = "label2";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Name = "label1";
+            // 
+            // apellidosKryptonTextBox
+            // 
+            this.apellidosKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioTempBindingSource, "Apellidos", true));
+            resources.ApplyResources(this.apellidosKryptonTextBox, "apellidosKryptonTextBox");
+            this.apellidosKryptonTextBox.Name = "apellidosKryptonTextBox";
+            this.apellidosKryptonTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.apellidosKryptonTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.apellidosKryptonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtMail.StateCommon.Border.Rounding = 20;
-            this.txtMail.StateCommon.Content.Color1 = System.Drawing.Color.Silver;
-            this.txtMail.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMail.TabIndex = 11;
-            this.txtMail.Text = "Email";
-            this.txtMail.TextChanged += new System.EventHandler(this.txtMail_TextChanged);
-            this.txtMail.Enter += new System.EventHandler(this.txtMail_Enter);
+            this.apellidosKryptonTextBox.StateCommon.Border.Rounding = 10;
+            this.apellidosKryptonTextBox.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // confirmarContraKryptonTextBox
+            // 
+            this.confirmarContraKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioTempBindingSource, "ConfirmarContra", true));
+            resources.ApplyResources(this.confirmarContraKryptonTextBox, "confirmarContraKryptonTextBox");
+            this.confirmarContraKryptonTextBox.Name = "confirmarContraKryptonTextBox";
+            this.confirmarContraKryptonTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.confirmarContraKryptonTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.confirmarContraKryptonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.confirmarContraKryptonTextBox.StateCommon.Border.Rounding = 10;
+            this.confirmarContraKryptonTextBox.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // contraseñaKryptonTextBox
+            // 
+            this.contraseñaKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioTempBindingSource, "Contraseña", true));
+            resources.ApplyResources(this.contraseñaKryptonTextBox, "contraseñaKryptonTextBox");
+            this.contraseñaKryptonTextBox.Name = "contraseñaKryptonTextBox";
+            this.contraseñaKryptonTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.contraseñaKryptonTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.contraseñaKryptonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.contraseñaKryptonTextBox.StateCommon.Border.Rounding = 10;
+            this.contraseñaKryptonTextBox.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // correoKryptonTextBox
+            // 
+            this.correoKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioTempBindingSource, "Correo", true));
+            resources.ApplyResources(this.correoKryptonTextBox, "correoKryptonTextBox");
+            this.correoKryptonTextBox.Name = "correoKryptonTextBox";
+            this.correoKryptonTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.correoKryptonTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.correoKryptonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.correoKryptonTextBox.StateCommon.Border.Rounding = 10;
+            this.correoKryptonTextBox.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // nombreKryptonTextBox
+            // 
+            this.nombreKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioTempBindingSource, "Nombre", true));
+            resources.ApplyResources(this.nombreKryptonTextBox, "nombreKryptonTextBox");
+            this.nombreKryptonTextBox.Name = "nombreKryptonTextBox";
+            this.nombreKryptonTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.nombreKryptonTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.nombreKryptonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.nombreKryptonTextBox.StateCommon.Border.Rounding = 10;
+            this.nombreKryptonTextBox.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btnRegister
             // 
@@ -89,130 +173,44 @@ namespace Login
             this.btnRegister.BorderRadius = 20;
             this.btnRegister.BorderSize = 0;
             this.btnRegister.FlatAppearance.BorderSize = 0;
-            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.btnRegister, "btnRegister");
             this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(125, 395);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(150, 40);
-            this.btnRegister.TabIndex = 0;
-            this.btnRegister.Text = "Sign Up";
             this.btnRegister.TextColor = System.Drawing.Color.White;
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(12, 293);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(349, 36);
-            this.txtPassword.StateActive.Content.Color1 = System.Drawing.Color.Black;
-            this.txtPassword.StateActive.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.txtPassword.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtPassword.StateCommon.Border.Rounding = 20;
-            this.txtPassword.StateCommon.Content.Color1 = System.Drawing.Color.Silver;
-            this.txtPassword.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.TabIndex = 8;
-            this.txtPassword.Text = "Password";
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
-            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
-            // 
             // rjCircularPictureBox1
             // 
-            this.rjCircularPictureBox1.BackColor = System.Drawing.Color.White;
+            this.rjCircularPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
             this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.MediumSlateBlue;
             this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.rjCircularPictureBox1.BorderSize = 2;
             this.rjCircularPictureBox1.GradientAngle = 50F;
-            this.rjCircularPictureBox1.Image = global::Login.Properties.Resources.profile;
-            this.rjCircularPictureBox1.Location = new System.Drawing.Point(140, 17);
+            resources.ApplyResources(this.rjCircularPictureBox1, "rjCircularPictureBox1");
             this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
-            this.rjCircularPictureBox1.Size = new System.Drawing.Size(120, 120);
-            this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.rjCircularPictureBox1.TabIndex = 7;
             this.rjCircularPictureBox1.TabStop = false;
             // 
-            // txtConfirm
+            // usuarioTempBindingSource
             // 
-            this.txtConfirm.Location = new System.Drawing.Point(12, 337);
-            this.txtConfirm.Name = "txtConfirm";
-            this.txtConfirm.Size = new System.Drawing.Size(349, 36);
-            this.txtConfirm.StateActive.Content.Color1 = System.Drawing.Color.Black;
-            this.txtConfirm.StateActive.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirm.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.txtConfirm.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtConfirm.StateCommon.Border.Rounding = 20;
-            this.txtConfirm.StateCommon.Content.Color1 = System.Drawing.Color.Silver;
-            this.txtConfirm.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirm.TabIndex = 3;
-            this.txtConfirm.Text = "Retry password";
-            this.txtConfirm.TextChanged += new System.EventHandler(this.txtConfirm_TextChanged);
-            this.txtConfirm.Enter += new System.EventHandler(this.txtConfirm_Enter);
-            // 
-            // txtSecondName
-            // 
-            this.txtSecondName.Location = new System.Drawing.Point(12, 203);
-            this.txtSecondName.Name = "txtSecondName";
-            this.txtSecondName.Size = new System.Drawing.Size(349, 36);
-            this.txtSecondName.StateActive.Content.Color1 = System.Drawing.Color.Black;
-            this.txtSecondName.StateActive.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSecondName.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.txtSecondName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtSecondName.StateCommon.Border.Rounding = 20;
-            this.txtSecondName.StateCommon.Content.Color1 = System.Drawing.Color.Silver;
-            this.txtSecondName.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSecondName.TabIndex = 2;
-            this.txtSecondName.Text = "Second Name";
-            this.txtSecondName.TextChanged += new System.EventHandler(this.txtSecondName_TextChanged);
-            this.txtSecondName.Enter += new System.EventHandler(this.txtSecondName_Enter);
-            // 
-            // txtFirstName
-            // 
-            this.txtFirstName.Location = new System.Drawing.Point(12, 158);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(349, 36);
-            this.txtFirstName.StateActive.Content.Color1 = System.Drawing.Color.Black;
-            this.txtFirstName.StateActive.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.txtFirstName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtFirstName.StateCommon.Border.Rounding = 20;
-            this.txtFirstName.StateCommon.Content.Color1 = System.Drawing.Color.Silver;
-            this.txtFirstName.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtFirstName.TabIndex = 1;
-            this.txtFirstName.Text = "First Name";
-            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
-            this.txtFirstName.Enter += new System.EventHandler(this.txtFirstName_Enter);
+            this.usuarioTempBindingSource.DataSource = typeof(Elementos.UsuarioTemp);
             // 
             // Registro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(400, 496);
             this.Controls.Add(this.rounded_Panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Registro";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Registro";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rounded_Panel1.ResumeLayout(false);
             this.rounded_Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioTempBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,12 +218,18 @@ namespace Login
         #endregion
 
         private CustomControls.Rounded_Panel rounded_Panel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtConfirm;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSecondName;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtFirstName;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPassword;
-        private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox1;
         private CustomControls.Rounded_Button btnRegister;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtMail;
+        private System.Windows.Forms.BindingSource usuarioTempBindingSource;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox apellidosKryptonTextBox;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox confirmarContraKryptonTextBox;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox contraseñaKryptonTextBox;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox correoKryptonTextBox;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox nombreKryptonTextBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox1;
     }
 }

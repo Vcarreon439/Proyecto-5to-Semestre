@@ -25,3 +25,14 @@ C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\bin\Debug\ComponentFa
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\bin\Debug\CustomControls.dll
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\bin\Debug\CustomControls.pdb
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.frmAddTopics.resources
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\bin\Debug\Login.exe
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\bin\Debug\FluentValidation.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\bin\Debug\Login.pdb
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\bin\Debug\Login.exe.config
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\bin\Debug\FluentValidation.xml
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\bin\Debug\es-419\Login.resources.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\bin\Debug\es-MX\Login.resources.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\bin\Debug\es-MX\MainForm.resources.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.frmPrincipal.es-MX.resources
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\es-MX\MainForm.resources.dll

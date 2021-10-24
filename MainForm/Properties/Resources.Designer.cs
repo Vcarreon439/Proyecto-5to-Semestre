@@ -73,6 +73,16 @@ namespace MainForm.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adminIcon {
+            get {
+                object obj = ResourceManager.GetObject("adminIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap estudiante {
             get {
                 object obj = ResourceManager.GetObject("estudiante", resourceCulture);
@@ -106,6 +116,16 @@ namespace MainForm.Properties {
         internal static System.Drawing.Bitmap libro {
             get {
                 object obj = ResourceManager.GetObject("libro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap masterIcon {
+            get {
+                object obj = ResourceManager.GetObject("masterIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

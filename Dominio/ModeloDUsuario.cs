@@ -18,7 +18,7 @@ namespace Dominio
             return obj.NewUser(temp);
         }
 
-        public FullUser Login(UsuarioTemp temp)
+        public TipoUsuario.NivelAutorizacion LoginUser(UserAcces temp)
         {
             return obj.LoginUser(temp);
         }

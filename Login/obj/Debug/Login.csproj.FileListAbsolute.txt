@@ -35,3 +35,6 @@ C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\bin\Debug\Elementos.pdb
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\bin\Debug\DataAccess.pdb
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\bin\Debug\Funcionalidad_Formularios.dll
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\bin\Debug\Funcionalidad_Formularios.pdb
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\bin\Debug\FluentValidation.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\bin\Debug\FluentValidation.xml
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\obj\Debug\Login.Registro.es-MX.resources

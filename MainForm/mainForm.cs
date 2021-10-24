@@ -7,15 +7,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Elementos;
 using Funcionalidad_Formularios;
 
 namespace MainForm
 {
     public partial class frmPrincipal : Form
     {
+        private TipoUsuario.NivelAutorizacion currentAutorizacion = TipoUsuario.NivelAutorizacion.Invitado;
+
+        public frmPrincipal(TipoUsuario.NivelAutorizacion recieverAutorizacion)
+        {
+            this.currentAutorizacion = recieverAutorizacion;
+        }
+
         public frmPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void DeterminComponents()
+        {
+            switch (currentAutorizacion)
+            {
+                case TipoUsuario.NivelAutorizacion.User:
+                    this.btnReturnBooks.Visible = true;
+                    this.btnIssueBooks.Visible = true;
+                    break;
+
+                case TipoUsuario.NivelAutorizacion.Admin:
+                    this.btnAgregarLibros.Visible = true;
+                    this.btnReturnBooks.Visible = true;
+                    this.btnIssueBooks.Visible = true;
+                    this.btnAdministrator.Visible = true;
+                    break;
+
+                case TipoUsuario.NivelAutorizacion.Master:
+                    foreach (ToolStripMenuItem opciones in menuPrincipal.Items)
+                    {   
+                        opciones.ForeColor = Color.White;
+                        opciones.Visible = true;
+                    }
+                    break;
+            }
         }
 
         private void menuPrincipal_MouseMove(object sender, MouseEventArgs e)
@@ -24,22 +58,13 @@ namespace MainForm
             Funcionalidad_Formularios.Arrastre_Formularios.Llama_SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBooks_MouseEnter(object sender, EventArgs e)
         {
-            btnBooks.ShowDropDown();
+            //btnBooks.ShowDropDown();
         }
 
         private Form FormularioAbierto = null;
 
-        private void btnBooks_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
@@ -50,27 +75,29 @@ namespace MainForm
         {
             FormularioAbierto.Hide();
             FormularioAbierto = FormEnPanel.AbrirForm<frnAddBook>(ref pctFondo);
-            //FormularioAbierto.Hide();
-            //Agregar_Libro frm = new Agregar_Libro();
-            //frm.TopLevel = false;
-            //frm.AutoScroll = true;
-            //this.pctFondo.Controls.Add(frm);
-            //frm.Show();
         }
 
-        private void btnBooks_MouseHover(object sender, EventArgs e)
+        private void btnMyProfile_Click(object sender, EventArgs e)
         {
-            
-        }
+            if (currentAutorizacion == TipoUsuario.NivelAutorizacion.Invitado)
+            {
+                using (Login.Login logg = new Login.Login())
+                {
+                    logg.StartPosition = FormStartPosition.CenterParent;
+                    DialogResult dr = logg.ShowDialog();
 
-        private void menuPrincipal_MouseUp(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void addTopicsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormularioAbierto = FormEnPanel.AbrirForm<frmAddTopics>(ref pctFondo);
+                    if (dr == DialogResult.OK & logg.Auth != TipoUsuario.NivelAutorizacion.Invitado)
+                    {
+                        MessageBox.Show($"{logg.Auth}");
+                        this.currentAutorizacion = logg.Auth;
+                        DeterminComponents();
+                    }
+                }
+            }
+            else
+            {
+                
+            }
         }
     }
 }

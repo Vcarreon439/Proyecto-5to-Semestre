@@ -118,49 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="contraseñaLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 19</value>
+  </data>
+  <data name="contraseñaLabel.Text" xml:space="preserve">
+    <value>Contraseña:</value>
+  </data>
+  <data name="correoLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 19</value>
+  </data>
+  <data name="correoLabel.Text" xml:space="preserve">
+    <value>Correo electronico:</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Iniciar Sesion</value>
+  </data>
   <data name="lnkForget.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 189</value>
+    <value>19, 242</value>
   </data>
   <data name="lnkForget.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 20</value>
+    <value>292, 20</value>
   </data>
   <data name="lnkForget.Text" xml:space="preserve">
     <value>Olvidaste tu contraseña?</value>
   </data>
   <data name="btnLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 236</value>
+    <value>77, 280</value>
   </data>
   <data name="btnLogin.Text" xml:space="preserve">
     <value>Iniciar Sesión</value>
   </data>
   <data name="lnkSignUp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 285</value>
+    <value>146, 328</value>
   </data>
   <data name="lnkSignUp.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
   </data>
-  <data name="lnkSignUp.Values.ExtraText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lnkSignUp.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value />
-  </data>
   <data name="lnkSignUp.Values.Text" xml:space="preserve">
     <value>Registrate</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 55</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 29</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Iniciar Sesion</value>
-  </data>
-  <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 145</value>
-  </data>
-  <data name="txtMail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 101</value>
   </data>
 </root>

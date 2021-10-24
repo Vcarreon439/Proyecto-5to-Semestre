@@ -117,4 +117,414 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="rounded_Panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="rjCircularPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAqBJREFUeF7t
+        W4FtAjEMZARGYARGYAQ2KBuU34ARGIENYAPYADagG5QN2rvKkVCUtv/5ONiQk05Q8bHP/4mTT9xJQ0M9
+        rNfredd17/g8Cj+FP3/Lb3O5/HmAoBbgFfzqSV67kOZ+gSCmIJ9uKsg+ZNupmPMFCJ+D7N6pwIaQNnwN
+        CwoW4amAcujnJkAou33J4ANp0/5wgMjTnejSPIobm4DAVSRYg0txZw8Q9xGJ1eBV3NkChDHxpQRr0F5C
+        hKhtJFKTG3FrBxClmfxinsStHUDUJRKpybO4tYOESFWKWztIidSkuLUDiKoxBQZexK0dQNTLJ8Ga0+BW
+        3NoBRC0jkZq0uRyGsFskVIM3cWcPELeLxGpwJ+7sAeJmkVgNzsSdTUCgZjK0l/xiQCR3hDTWBLTpY4MU
+        QrkNngpiDH1tk0Nwyd2hlZj1BQqPAsmhz+ADEACHQ05OYBv/p0MEAmFi5OzQZ6HEa3itzxOhv8CgQA4L
+        vjjdvzzx+wHkb88XeENDQ8PLAFl81nXdGz73IAsczuD9NDeEbEsbe7Fp901QBI4Jti/P9CVuHw8JfEj9
+        TyleH3ojIICLmhpP/D9SQ93FExyWLoEZy3olNHBUowgil7pvjnBQswYglzo9AYa1ip9KU6eYCkYtJLy+
+        LHt8DoOWx/1vLJcPYOwR8/xYlimmgiGPTz9wfC+AEU9jP+a4XAADNY66tJk/I6Cx5+4fmD8M0JgblSmj
+        nniQcIYDjWuWvWgxv5wGjT0nwMD8RJgw5pISznCgcc3qTy2OK6mDARY/sfSlRv1PKVIrNZctpoJBHnTy
+        3M5iz6AmaqtzoApHfD3mDdmAnC5rVorSF33SNzXYOU+EGG6acNhQHMmuGA5D+0yr99eybbBDm77+fa6h
+        wTomk2+DYREDTrYtCgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="rjCircularPictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="rjCircularPictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>153, 24</value>
+  </data>
+  <data name="rjCircularPictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 116</value>
+  </data>
+  <data name="rjCircularPictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="rjCircularPictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;rjCircularPictureBox1.Name" xml:space="preserve">
+    <value>rjCircularPictureBox1</value>
+  </data>
+  <data name="&gt;&gt;rjCircularPictureBox1.Type" xml:space="preserve">
+    <value>RJCodeAdvance.RJControls.RJCircularPictureBox, RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;rjCircularPictureBox1.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;rjCircularPictureBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans Condensed SemiBold, 9.75pt, style=Bold</value>
+  </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 407</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 19</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Confirm password:</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans Condensed SemiBold, 9.75pt, style=Bold</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 347</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 19</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans Condensed SemiBold, 9.75pt, style=Bold</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 287</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 19</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans Condensed SemiBold, 9.75pt, style=Bold</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 227</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 19</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Second name:</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans Condensed SemiBold, 9.75pt, style=Bold</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 167</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 19</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>First name:</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="usuarioTempBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="apellidosKryptonTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 251</value>
+  </data>
+  <data name="apellidosKryptonTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 31</value>
+  </data>
+  <data name="apellidosKryptonTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;apellidosKryptonTextBox.Name" xml:space="preserve">
+    <value>apellidosKryptonTextBox</value>
+  </data>
+  <data name="&gt;&gt;apellidosKryptonTextBox.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;apellidosKryptonTextBox.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;apellidosKryptonTextBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="confirmarContraKryptonTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 431</value>
+  </data>
+  <data name="confirmarContraKryptonTextBox.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>•</value>
+  </data>
+  <data name="confirmarContraKryptonTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 31</value>
+  </data>
+  <data name="confirmarContraKryptonTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;confirmarContraKryptonTextBox.Name" xml:space="preserve">
+    <value>confirmarContraKryptonTextBox</value>
+  </data>
+  <data name="&gt;&gt;confirmarContraKryptonTextBox.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;confirmarContraKryptonTextBox.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;confirmarContraKryptonTextBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="contraseñaKryptonTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 371</value>
+  </data>
+  <data name="contraseñaKryptonTextBox.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>•</value>
+  </data>
+  <data name="contraseñaKryptonTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 31</value>
+  </data>
+  <data name="contraseñaKryptonTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;contraseñaKryptonTextBox.Name" xml:space="preserve">
+    <value>contraseñaKryptonTextBox</value>
+  </data>
+  <data name="&gt;&gt;contraseñaKryptonTextBox.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;contraseñaKryptonTextBox.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;contraseñaKryptonTextBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="correoKryptonTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 311</value>
+  </data>
+  <data name="correoKryptonTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 31</value>
+  </data>
+  <data name="correoKryptonTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;correoKryptonTextBox.Name" xml:space="preserve">
+    <value>correoKryptonTextBox</value>
+  </data>
+  <data name="&gt;&gt;correoKryptonTextBox.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;correoKryptonTextBox.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;correoKryptonTextBox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="nombreKryptonTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 191</value>
+  </data>
+  <data name="nombreKryptonTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 31</value>
+  </data>
+  <data name="nombreKryptonTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;nombreKryptonTextBox.Name" xml:space="preserve">
+    <value>nombreKryptonTextBox</value>
+  </data>
+  <data name="&gt;&gt;nombreKryptonTextBox.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;nombreKryptonTextBox.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;nombreKryptonTextBox.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="btnRegister.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnRegister.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans SemiBold, 12pt, style=Bold</value>
+  </data>
+  <data name="btnRegister.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnRegister.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 480</value>
+  </data>
+  <data name="btnRegister.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 40</value>
+  </data>
+  <data name="btnRegister.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnRegister.Text" xml:space="preserve">
+    <value>Sign Up</value>
+  </data>
+  <data name="&gt;&gt;btnRegister.Name" xml:space="preserve">
+    <value>btnRegister</value>
+  </data>
+  <data name="&gt;&gt;btnRegister.Type" xml:space="preserve">
+    <value>CustomControls.Rounded_Button, CustomControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnRegister.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;btnRegister.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="rounded_Panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 12</value>
+  </data>
+  <data name="rounded_Panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 543</value>
+  </data>
+  <data name="rounded_Panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;rounded_Panel1.Name" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;rounded_Panel1.Type" xml:space="preserve">
+    <value>CustomControls.Rounded_Panel, CustomControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;rounded_Panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rounded_Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>420, 567</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Registro</value>
+  </data>
+  <data name="&gt;&gt;usuarioTempBindingSource.Name" xml:space="preserve">
+    <value>usuarioTempBindingSource</value>
+  </data>
+  <data name="&gt;&gt;usuarioTempBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Registro</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

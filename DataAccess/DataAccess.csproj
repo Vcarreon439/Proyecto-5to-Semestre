@@ -47,9 +47,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Elementos\Elementos.csproj">
+    <ProjectReference Include="..\Elementos\BibliotecaAuxiliar.csproj">
       <Project>{8afc182b-dadc-43f8-a574-ab0bfb9e0e9d}</Project>
-      <Name>Elementos</Name>
+      <Name>BibliotecaAuxiliar</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

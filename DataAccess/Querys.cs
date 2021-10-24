@@ -14,7 +14,7 @@ namespace DataAccess
 
         #region IniciarSesion
 
-        public FullUser LoginUser(UsuarioTemp temp)
+        public TipoUsuario.NivelAutorizacion LoginUser(UserAcces temp)
         {
             using (SqlConnection conexion = getConnection())
             {
@@ -28,31 +28,15 @@ namespace DataAccess
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@Correo", temp.Correo);
                         cmd.Parameters.AddWithValue("@Contraseña", temp.Contraseña);
-                        cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
-                        cmd.Parameters.Add("@level", SqlDbType.VarChar).Direction = ParameterDirection.ReturnValue;
+                        cmd.Parameters.Add("@level", SqlDbType.VarChar, Int32.MaxValue).Direction = ParameterDirection.Output;
+                        cmd.ExecuteNonQuery();
 
-
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                FullUser retorno = new FullUser();
-                                retorno.Nombre = reader["Descripcion"].ToString();
-                                retorno.Apellidos = reader["Apellidos"].ToString();
-                                retorno.Correo = reader["Correo"].ToString();
-                                retorno.Entidad = reader["EntidadFederativa"].ToString();
-                                retorno.Genero = reader["Genero"].ToString();
-                                return retorno;
-                            }
-                            else
-                                return null;
-
-                        }
+                        return TipoUsuario.ConvertirNivelAutorizacion(cmd.Parameters["@level"].Value.ToString());
                     }
                     catch (Exception e)
                     {
                         MessageBox.Show(e.Message);
-                        return null;
+                        return TipoUsuario.NivelAutorizacion.Invitado;
                     }
                 }
             }
@@ -122,6 +106,7 @@ namespace DataAccess
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.AddWithValue("@Nombre", temp.Nombre);
+                        cmd.Parameters.AddWithValue("@Apellidos", temp.Apellidos);
                         cmd.Parameters.AddWithValue("@Correo", temp.Correo);
                         cmd.Parameters.AddWithValue("@Contraseña", temp.Contraseña);
                         cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
