@@ -23,16 +23,17 @@ namespace Dominio
             return obj.LoginUser(temp);
         }
 
-        public List<LibroSencillo> MostrarPopulares()
+        public List<LibroSencillo> LibrosPopulares_4()
         {
-            return obj.MostrarPopulares();
+            return obj.LibrosPopulares_4();
         }
+
         public List<EditorialSencillo> Editoriales100()
         {
             return obj.Editoriales();
         }
 
-        public bool AddBook(Book temp)
+        public bool AddBook(Libro temp)
         {
             return obj.AddBook(temp);
         }
@@ -42,10 +43,20 @@ namespace Dominio
             return obj.AddTema(temp);
         }
 
-        public DataTable MostrarGeneros50()
+        public DataTable ShowAllTopics()
         {
-            return obj.MostrarGeneros50();
+            return obj.ShowAllTopics();
         }
 
+        public bool UpdateTema(Tema topic, string newCode = "", string newDesc = "")
+        {
+            if (newCode=="")
+                newCode = topic.Codigo;
+
+            if (newDesc == "")
+                newDesc = topic.Descripcion;
+
+            return obj.UpdateTema(topic, newCode, newDesc);
+        }
     }
 }
