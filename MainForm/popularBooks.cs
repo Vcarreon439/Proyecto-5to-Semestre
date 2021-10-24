@@ -25,12 +25,23 @@ namespace MainForm
         private void popularBooks_Load(object sender, EventArgs e)
         {
             ModeloDUsuario mdDUsuario = new ModeloDUsuario();
-            listaLibros = mdDUsuario.MostrarPopulares();
-            CargarLibros();
+            CargarLibros(mdDUsuario.LibrosPopulares_4());
         }
 
-        private void CargarLibros()
+        private void CargarLibros(List<LibroSencillo> listaLibros)
         {
+            if (listaLibros==null)
+                return;
+
+            Control[] imagesControls;
+
+            for (int i = 0; i < listaLibros.Capacity; i++)
+            {
+                imagesControls = this.Controls.Find($"pctRecomendado{i + 1}", true);
+            }
+
+            MessageBox.Show("");
+
             if (listaLibros != null)
             {
 
@@ -38,25 +49,25 @@ namespace MainForm
                 {
                     if (i == 0)
                     {
-                        this.pctRecomendado1.Image = ImagenAutor.Base64ToImage(listaLibros[0].Imagen);
+                        this.pctRecomendado1.Image = ImageConvertions.Base64ToImage(listaLibros[0].Imagen);
                         this.lblLibro1.Text = listaLibros[0].Titulo;
                     }
 
                     if (i == 1)
                     {
-                        this.pctRecomendado2.Image = ImagenAutor.Base64ToImage(listaLibros[1].Imagen);
+                        this.pctRecomendado2.Image = ImageConvertions.Base64ToImage(listaLibros[1].Imagen);
                         this.lblLibro2.Text = listaLibros[1].Titulo;
                     }
 
                     if (i == 2)
                     {
-                        this.pctRecomendado3.Image = ImagenAutor.Base64ToImage(listaLibros[2].Imagen);
+                        this.pctRecomendado3.Image = ImageConvertions.Base64ToImage(listaLibros[2].Imagen);
                         this.lblLibro3.Text = listaLibros[2].Titulo;
                     }
 
                     if (i == 3)
                     {
-                        this.pctRecomendado4.Image = ImagenAutor.Base64ToImage(listaLibros[3].Imagen);
+                        this.pctRecomendado4.Image = ImageConvertions.Base64ToImage(listaLibros[3].Imagen);
                         this.lblLibro4.Text = listaLibros[3].Titulo;
                     }
                 }
