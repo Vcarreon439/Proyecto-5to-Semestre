@@ -67,8 +67,8 @@ namespace Login
             // 
             // txtUserName
             // 
-            resources.ApplyResources(this.txtUserName, "txtUserName");
             this.txtUserName.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
+            resources.ApplyResources(this.txtUserName, "txtUserName");
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -101,8 +101,8 @@ namespace Login
             // 
             // correoKryptonTextBox
             // 
-            resources.ApplyResources(this.correoKryptonTextBox, "correoKryptonTextBox");
             this.correoKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userAccesBindingSource, "Correo", true));
+            resources.ApplyResources(this.correoKryptonTextBox, "correoKryptonTextBox");
             this.correoKryptonTextBox.Name = "correoKryptonTextBox";
             this.correoKryptonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -116,8 +116,8 @@ namespace Login
             // 
             // contraseñaKryptonTextBox
             // 
-            resources.ApplyResources(this.contraseñaKryptonTextBox, "contraseñaKryptonTextBox");
             this.contraseñaKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userAccesBindingSource, "Contraseña", true));
+            resources.ApplyResources(this.contraseñaKryptonTextBox, "contraseñaKryptonTextBox");
             this.contraseñaKryptonTextBox.Name = "contraseñaKryptonTextBox";
             this.contraseñaKryptonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -127,12 +127,12 @@ namespace Login
             // 
             // btnCerrar
             // 
-            resources.ApplyResources(this.btnCerrar, "btnCerrar");
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCerrar.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.btnCerrar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            resources.ApplyResources(this.btnCerrar, "btnCerrar");
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.iconPictureBox1_Click);
@@ -148,13 +148,13 @@ namespace Login
             // 
             // btnLogin
             // 
-            resources.ApplyResources(this.btnLogin, "btnLogin");
             this.btnLogin.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnLogin.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.btnLogin.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnLogin.BorderRadius = 20;
             this.btnLogin.BorderSize = 0;
             this.btnLogin.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnLogin, "btnLogin");
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.TextColor = System.Drawing.Color.White;
@@ -165,8 +165,6 @@ namespace Login
             // 
             resources.ApplyResources(this.lnkSignUp, "lnkSignUp");
             this.lnkSignUp.Name = "lnkSignUp";
-            this.lnkSignUp.Values.ExtraText = resources.GetString("lnkSignUp.Values.ExtraText");
-            this.lnkSignUp.Values.ImageTransparentColor = ((System.Drawing.Color)(resources.GetObject("lnkSignUp.Values.ImageTransparentColor")));
             this.lnkSignUp.Values.Text = resources.GetString("lnkSignUp.Values.Text");
             this.lnkSignUp.LinkClicked += new System.EventHandler(this.lnkSignUp_LinkClicked);
             // 
