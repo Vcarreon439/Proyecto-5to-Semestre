@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccess;
 using Elementos;
+using Elementos.ElementosBiblioteca.Editorial;
 
 namespace Dominio
 {
@@ -43,6 +44,11 @@ namespace Dominio
             return obj.AddTema(temp);
         }
 
+        public bool DeleteTema(Tema temp)
+        {
+            return obj.DeleteTema(temp);
+        }
+
         public DataTable ShowAllTopics()
         {
             return obj.ShowAllTopics();
@@ -57,6 +63,16 @@ namespace Dominio
                 newDesc = topic.Descripcion;
 
             return obj.UpdateTema(topic, newCode, newDesc);
+        }
+
+        public bool AddEditorial(FullEditorial publisher)
+        {
+            return obj.AddEditorial(publisher);
+        }
+
+        public DataTable MostrarEditoriales()
+        {
+            return obj.MostrarEditoriales();
         }
     }
 }
