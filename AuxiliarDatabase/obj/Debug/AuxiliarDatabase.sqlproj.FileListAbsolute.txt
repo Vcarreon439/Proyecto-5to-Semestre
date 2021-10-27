@@ -2,9 +2,5 @@ C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\AuxiliarDatabase\bin\Debug\Aux
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\AuxiliarDatabase\bin\Debug\AuxiliarDatabase.dll
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\AuxiliarDatabase\bin\Debug\AuxiliarDatabase.pdb
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\AuxiliarDatabase\obj\Debug\AuxiliarDatabase.sqlprojAssemblyReference.cache
-C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\AuxiliarDatabase\obj\Debug\Model.xml
-C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\AuxiliarDatabase\obj\Debug\refactor.xml
-C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\AuxiliarDatabase\obj\Debug\postdeploy.sql
-C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\AuxiliarDatabase\obj\Debug\predeploy.sql
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\AuxiliarDatabase\obj\Debug\AuxiliarDatabase.dll
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\AuxiliarDatabase\obj\Debug\AuxiliarDatabase.pdb
