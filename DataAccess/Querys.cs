@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics.Eventing.Reader;
 using System.Windows.Forms;
 using Elementos;
+using Elementos.ElementosBiblioteca.Editorial;
+
 
 namespace DataAccess
 {
@@ -44,48 +45,11 @@ namespace DataAccess
 
         #endregion
 
-
         #region Editorial
 
-
-
         #endregion
-
 
         #region Inserts
-
-        #region AddTema
-
-        public bool AddTema(Tema temp)
-        {
-            using (SqlConnection conexion = getConnection())
-            {
-                conexion.Open();
-
-                using (SqlCommand cmd = new SqlCommand("AddTema", conexion))
-                {
-                    try
-                    {
-                        cmd.Connection = conexion;
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@Codigo", temp.Codigo);
-                        cmd.Parameters.AddWithValue("@Descripcion", temp.Descripcion);
-                        cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
-                        cmd.ExecuteNonQuery();
-                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString())); ;
-                    }
-                    catch (Exception e)
-                    {
-                        MessageBox.Show(e.Message);
-                        return false;
-                    }
-
-                }
-            }
-        }
-
-
-        #endregion
 
         #region NewUser
 
@@ -123,79 +87,196 @@ namespace DataAccess
 
         #endregion
 
-        public bool AddBook(Libro tempLibro)
+        #endregion
+
+        #region Tema
+
+        #region AddTema
+
+        public bool AddTema(Tema temp)
+        {
+            using (SqlConnection conexion = getConnection())
             {
-                using (SqlConnection conexion = getConnection())
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("AddTema", conexion))
                 {
-                    conexion.Open();
-
-                    using (SqlCommand cmd = new SqlCommand("AgregarLibro", conexion))
+                    try
                     {
-                        try
-                        {
-                            cmd.Connection = conexion;
-                            cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Connection = conexion;
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Codigo", temp.Codigo);
+                        cmd.Parameters.AddWithValue("@Descripcion", temp.Descripcion);
+                        cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
+                        cmd.ExecuteNonQuery();
+                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString())); ;
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                        return false;
+                    }
 
-                            //El titulo nunca pueden ir vacios
-                            cmd.Parameters.AddWithValue("@titulo", tempLibro.Titulo);
-                            cmd.Parameters.AddWithValue("@numEdicion", tempLibro.numEdicion);
-                            cmd.Parameters.AddWithValue("@copias", tempLibro.Copias);
+                }
+            }
+        }
 
-                            //Parametros opcionales
+        #endregion
 
-                            //ISBN
-                            if (tempLibro.ISBN == "" | tempLibro.ISBN == null)
-                                cmd.Parameters.AddWithValue("@isbn", DBNull.Value);
-                            else
-                                cmd.Parameters.AddWithValue("@isbn", tempLibro.ISBN);
+        #region UpdateTema
 
-                            //Descripcion
-                            if (tempLibro.Descripcion == "" | tempLibro.Descripcion == null)
-                                cmd.Parameters.AddWithValue("@descripcion", DBNull.Value);
-                            else
-                                cmd.Parameters.AddWithValue("@descripcion", tempLibro.Descripcion);
+        public bool UpdateTema(Tema topic, string newCode, string newDesc)
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("UpdateTema", conexion))
+                {
+                    try
+                    {
+                        cmd.Connection = conexion;
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@oldCode", topic.Codigo);
+                        cmd.Parameters.AddWithValue("@oldDesc", topic.Descripcion);
+                        cmd.Parameters.AddWithValue("@newCode", newCode);
+                        cmd.Parameters.AddWithValue("@newDesc", newDesc);
+                        cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
+                        cmd.ExecuteNonQuery();
+
+                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString()));
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                        return false;
+                    }
+
+                }
+            }
+        }
+
+        #endregion
+
+        #region DeleteTema
+
+        public bool DeleteTema(Tema temp)
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("DeleteTema", conexion))
+                {
+                    try
+                    {
+                        cmd.Connection = conexion;
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Codigo", temp.Codigo);
+                        cmd.Parameters.AddWithValue("@Descripcion", temp.Descripcion);
+                        cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
+                        cmd.ExecuteNonQuery();
+                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString())); ;
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                        return false;
+                    }
+                }
+            }
+        }
+
+        #endregion
+
+
+        #endregion
+
+        #region Book
+
+        public bool AddBook(Libro tempLibro)
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("AgregarLibro", conexion))
+                {
+                    try
+                    {
+                        cmd.Connection = conexion;
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        //El titulo nunca pueden ir vacios
+                        cmd.Parameters.AddWithValue("@titulo", tempLibro.Titulo);
+                        cmd.Parameters.AddWithValue("@numEdicion", tempLibro.numEdicion);
+                        cmd.Parameters.AddWithValue("@copias", tempLibro.Copias);
+
+                        //Parametros opcionales
+
+                        //ISBN
+                        if (tempLibro.ISBN == "" | tempLibro.ISBN == null)
+                            cmd.Parameters.AddWithValue("@isbn", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@isbn", tempLibro.ISBN);
+
+                        //Descripcion
+                        if (tempLibro.Descripcion == "" | tempLibro.Descripcion == null)
+                            cmd.Parameters.AddWithValue("@descripcion", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@descripcion", tempLibro.Descripcion);
 
 
                         //codEditorial
                         if (tempLibro.codEditorial == "" | tempLibro.codEditorial == null)
-                                cmd.Parameters.AddWithValue("@codEditorial", DBNull.Value);
-                            else
-                                cmd.Parameters.AddWithValue("@codEditorial", tempLibro.codEditorial);
+                            cmd.Parameters.AddWithValue("@codEditorial", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@codEditorial", tempLibro.codEditorial);
 
-                            //numEdicion
-                            if (tempLibro.AñoEdicion == "")
-                                cmd.Parameters.AddWithValue("@añoEdicion", DBNull.Value);
-                            else
-                                cmd.Parameters.AddWithValue("@añoEdicion", tempLibro.AñoEdicion);
+                        //numEdicion
+                        if (tempLibro.AñoEdicion == "")
+                            cmd.Parameters.AddWithValue("@añoEdicion", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@añoEdicion", tempLibro.AñoEdicion);
 
-                            if (tempLibro.Imagen == null)
-                                cmd.Parameters.AddWithValue("@imagen", DBNull.Value);
-                            else
-                                cmd.Parameters.AddWithValue("@imagen", tempLibro.Imagen);
+                        if (tempLibro.Imagen == null)
+                            cmd.Parameters.AddWithValue("@imagen", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@imagen", tempLibro.Imagen);
 
 
                         return (cmd.ExecuteNonQuery() > 0);
-                        }
-                        catch (Exception e)
-                        {
-                            MessageBox.Show(e.Message);
-                            return false;
-                        }
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                        return false;
                     }
                 }
             }
-
-            #endregion
-
-            #region Logins
-
-        
+        }
 
         #endregion
 
         #endregion
 
         #region Views
+
+        public DataTable ShowAllTopics()
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlDataAdapter adaptador = new SqlDataAdapter("Select * From ShowAllTopics", conexion))
+                {
+                    DataTable tabla = new DataTable();
+                    adaptador.Fill(tabla);
+                    return tabla;
+                }
+            }
+        }
 
         public List<LibroSencillo> LibrosPopulares_4()
         {
@@ -280,43 +361,28 @@ namespace DataAccess
 
         #endregion
 
-
-        public DataTable ShowAllTopics()
+        public bool AddEditorial(FullEditorial publisher)
         {
             using (SqlConnection conexion = getConnection())
             {
                 conexion.Open();
 
-                using (SqlDataAdapter adaptador = new SqlDataAdapter("Select * From ShowAllTopics", conexion))
-                {
-                    DataTable tabla = new DataTable();
-                    adaptador.Fill(tabla);
-                    return tabla;
-                }
-            }
-        }
-
-        public bool UpdateTema(Tema topic, string newCode, string newDesc)
-        {
-            using (SqlConnection conexion = getConnection())
-            {
-                conexion.Open();
-
-                using (SqlCommand cmd = new SqlCommand("UpdateTema", conexion))
+                using (SqlCommand cmd = new SqlCommand("AddEditorial", conexion))
                 {
                     try
                     {
                         cmd.Connection = conexion;
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.AddWithValue("@oldCode", topic.Codigo);
-                        cmd.Parameters.AddWithValue("@oldDesc", topic.Descripcion);
-                        cmd.Parameters.AddWithValue("@newCode", newCode);
-                        cmd.Parameters.AddWithValue("@newDesc", newDesc);
+                        cmd.Parameters.AddWithValue("@Codigo", publisher.Codigo);
+                        cmd.Parameters.AddWithValue("@Nombre", publisher.Nombre);
+                        cmd.Parameters.AddWithValue("@Telefono", publisher.Telefono);
+                        cmd.Parameters.AddWithValue("@Correo", publisher.Correo);
+                        cmd.Parameters.AddWithValue("@Direccion", publisher.Direccion);
+
                         cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
                         cmd.ExecuteNonQuery();
-
-                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString()));
+                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString())); ;
                     }
                     catch (Exception e)
                     {
@@ -327,5 +393,21 @@ namespace DataAccess
                 }
             }
         }
+
+        public DataTable MostrarEditoriales()
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlDataAdapter adaptador = new SqlDataAdapter("Select * From MostrarEditoriales", conexion))
+                {
+                    DataTable tabla = new DataTable();
+                    adaptador.Fill(tabla);
+                    return tabla;
+                }
+            }
+        }
     }
 }
+

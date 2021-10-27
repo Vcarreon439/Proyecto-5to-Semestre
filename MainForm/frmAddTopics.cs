@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -57,6 +58,7 @@ namespace MainForm
                         if (mdDUsuario.AddTema(topic))
                         {
                             FillData();
+                            temaBindingSource.Clear();
                             temaBindingSource.DataSource = new Tema();
                         }
                     }
@@ -91,26 +93,62 @@ namespace MainForm
 
         private void codigoKryptonTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (codigoKryptonTextBox.Text=="")
-                e.KeyChar = Char.ToUpper(e.KeyChar);
-            
+            e.KeyChar = Char.ToUpper(e.KeyChar);
         }
 
         private void dgvGeneros_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            temaBindingSource.DataSource = new Tema();
-            codigoKryptonTextBox.Text = dgvGeneros.SelectedCells[0].Value.ToString();
-            descripcionKryptonTextBox.Text = dgvGeneros.SelectedCells[1].Value.ToString();
-            selectedTema = new Tema(codigoKryptonTextBox.Text, descripcionKryptonTextBox.Text);
+            selectedTema = new Tema(dgvGeneros.SelectedCells[0].Value.ToString(), dgvGeneros.SelectedCells[1].Value.ToString());
+            temaBindingSource.DataSource = new Tema(dgvGeneros.SelectedCells[0].Value.ToString(), dgvGeneros.SelectedCells[1].Value.ToString());
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             try
             {
-                updatedTema = new Tema(codigoKryptonTextBox.Text, descripcionKryptonTextBox.Text);
                 temaBindingSource.EndEdit();
+                updatedTema = temaBindingSource.Current as Tema;
 
+                if (updatedTema != null)
+                {
+                    ValidateTopic validador = new ValidateTopic();
+                    ValidationResult resultado = validador.Validate(updatedTema);
+                    IList<ValidationFailure> fallas = resultado.Errors;
+
+                    if (!resultado.IsValid)
+                    {
+                        foreach (ValidationFailure errors in fallas)
+                        {
+                            MessageBox.Show(errors.ErrorMessage, errors.PropertyName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        ModeloDUsuario mdDUsuario = new ModeloDUsuario();
+
+                        if (mdDUsuario.UpdateTema(selectedTema, updatedTema.Codigo, updatedTema.Descripcion))
+                        {
+                            FillData();
+                            temaBindingSource.Clear();
+                            selectedTema = null;
+                            updatedTema = null;
+                        }
+                    }
+
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                temaBindingSource.EndEdit();
                 Tema topic = temaBindingSource.Current as Tema;
 
                 if (topic != null)
@@ -131,12 +169,12 @@ namespace MainForm
                     {
                         ModeloDUsuario mdDUsuario = new ModeloDUsuario();
 
-                        if (mdDUsuario.UpdateTema(topic, updatedTema.Codigo, updatedTema.Descripcion))
+                        if (mdDUsuario.DeleteTema(topic))
                         {
                             FillData();
+                            temaBindingSource.Clear();
+                            temaBindingSource.DataSource = new Tema();
                         }
-
-                        temaBindingSource.DataSource = new Tema();
                     }
 
                 }

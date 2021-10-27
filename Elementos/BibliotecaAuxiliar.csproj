@@ -34,6 +34,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,15 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ElementosBiblioteca\Libro.cs" />
+    <Compile Include="ElementosBiblioteca\Editorial\EditorialSimple.cs" />
+    <Compile Include="ElementosBiblioteca\Editorial\FullEditorial.cs" />
+    <Compile Include="ElementosBiblioteca\Libros\Libro.cs" />
     <Compile Include="ElementosBiblioteca\EditorialSencillo.cs" />
     <Compile Include="Encriptado.cs" />
-    <Compile Include="ElementosBiblioteca\FullUser.cs" />
-    <Compile Include="ElementosBiblioteca\LibroSencillo.cs" />
+    <Compile Include="ElementosBiblioteca\Usuarios\FullUser.cs" />
+    <Compile Include="ElementosBiblioteca\Libros\LibroSencillo.cs" />
     <Compile Include="ElementosBiblioteca\Tema.cs" />
-    <Compile Include="ElementosBiblioteca\TipoUsuario.cs" />
-    <Compile Include="ElementosBiblioteca\UserAcces.cs" />
-    <Compile Include="ElementosBiblioteca\UsuarioTemp.cs" />
+    <Compile Include="ElementosBiblioteca\Usuarios\TipoUsuario.cs" />
+    <Compile Include="ElementosBiblioteca\Usuarios\UserAcces.cs" />
+    <Compile Include="ElementosBiblioteca\Usuarios\UsuarioTemp.cs" />
     <Compile Include="ImageConvertions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

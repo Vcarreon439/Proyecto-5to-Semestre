@@ -35,6 +35,9 @@ namespace MainForm
             this.masterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAdministrator = new System.Windows.Forms.ToolStripMenuItem();
             this.manageStudentsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageTopicsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bookPublishersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.authorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAgregarLibros = new System.Windows.Forms.ToolStripMenuItem();
             this.searchBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,7 +46,6 @@ namespace MainForm
             this.btnIssueBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.btnReturnBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.pctFondo = new System.Windows.Forms.PictureBox();
-            this.manageTopicsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctFondo)).BeginInit();
             this.SuspendLayout();
@@ -80,7 +82,9 @@ namespace MainForm
             // 
             this.btnAdministrator.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageStudentsToolStripMenuItem1,
-            this.manageTopicsToolStripMenuItem});
+            this.manageTopicsToolStripMenuItem,
+            this.bookPublishersToolStripMenuItem,
+            this.authorsToolStripMenuItem});
             resources.ApplyResources(this.btnAdministrator, "btnAdministrator");
             this.btnAdministrator.ForeColor = System.Drawing.Color.White;
             this.btnAdministrator.Image = global::MainForm.Properties.Resources.adminIcon;
@@ -91,6 +95,23 @@ namespace MainForm
             this.manageStudentsToolStripMenuItem1.Image = global::MainForm.Properties.Resources.estudiante;
             this.manageStudentsToolStripMenuItem1.Name = "manageStudentsToolStripMenuItem1";
             resources.ApplyResources(this.manageStudentsToolStripMenuItem1, "manageStudentsToolStripMenuItem1");
+            // 
+            // manageTopicsToolStripMenuItem
+            // 
+            this.manageTopicsToolStripMenuItem.Name = "manageTopicsToolStripMenuItem";
+            resources.ApplyResources(this.manageTopicsToolStripMenuItem, "manageTopicsToolStripMenuItem");
+            this.manageTopicsToolStripMenuItem.Click += new System.EventHandler(this.manageTopicsToolStripMenuItem_Click);
+            // 
+            // bookPublishersToolStripMenuItem
+            // 
+            this.bookPublishersToolStripMenuItem.Name = "bookPublishersToolStripMenuItem";
+            resources.ApplyResources(this.bookPublishersToolStripMenuItem, "bookPublishersToolStripMenuItem");
+            this.bookPublishersToolStripMenuItem.Click += new System.EventHandler(this.bookPublishersToolStripMenuItem_Click);
+            // 
+            // authorsToolStripMenuItem
+            // 
+            this.authorsToolStripMenuItem.Name = "authorsToolStripMenuItem";
+            resources.ApplyResources(this.authorsToolStripMenuItem, "authorsToolStripMenuItem");
             // 
             // btnBooks
             // 
@@ -148,12 +169,6 @@ namespace MainForm
             this.pctFondo.Name = "pctFondo";
             this.pctFondo.TabStop = false;
             // 
-            // manageTopicsToolStripMenuItem
-            // 
-            this.manageTopicsToolStripMenuItem.Name = "manageTopicsToolStripMenuItem";
-            resources.ApplyResources(this.manageTopicsToolStripMenuItem, "manageTopicsToolStripMenuItem");
-            this.manageTopicsToolStripMenuItem.Click += new System.EventHandler(this.manageTopicsToolStripMenuItem_Click);
-            // 
             // frmPrincipal
             // 
             resources.ApplyResources(this, "$this");
@@ -188,6 +203,8 @@ namespace MainForm
         private System.Windows.Forms.ToolStripMenuItem manageStudentsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem masterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageTopicsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bookPublishersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem authorsToolStripMenuItem;
     }
 }
 

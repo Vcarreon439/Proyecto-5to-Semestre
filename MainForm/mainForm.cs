@@ -14,7 +14,7 @@ namespace MainForm
 {
     public partial class frmPrincipal : Form
     {
-        private TipoUsuario.NivelAutorizacion currentAutorizacion = TipoUsuario.NivelAutorizacion.Invitado;
+        private TipoUsuario.NivelAutorizacion currentAutorizacion = TipoUsuario.NivelAutorizacion.Master;
 
         public frmPrincipal(TipoUsuario.NivelAutorizacion recieverAutorizacion)
         {
@@ -24,6 +24,7 @@ namespace MainForm
         public frmPrincipal()
         {
             InitializeComponent();
+            DeterminComponents();
         }
 
         private void DeterminComponents()
@@ -101,6 +102,12 @@ namespace MainForm
         {
             FormularioAbierto.Hide();
             FormularioAbierto = FormEnPanel.AbrirForm<frmAddTopics>(ref pctFondo);
+        }
+
+        private void bookPublishersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioAbierto.Hide();
+            FormularioAbierto = FormEnPanel.AbrirForm<frmAddEditorials>(ref pctFondo);
         }
     }
 }

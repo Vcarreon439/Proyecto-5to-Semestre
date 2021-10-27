@@ -37,8 +37,8 @@ namespace MainForm
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvGeneros = new System.Windows.Forms.DataGridView();
             this.codigoKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.descripcionKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.temaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.descripcionKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             codigoLabel = new System.Windows.Forms.Label();
             descripcionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).BeginInit();
@@ -67,30 +67,34 @@ namespace MainForm
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(116, 302);
+            this.btnEliminar.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEliminar.Location = new System.Drawing.Point(143, 297);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(165, 47);
             this.btnEliminar.TabIndex = 15;
-            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Text = "Delete";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(116, 249);
+            this.btnEditar.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEditar.Location = new System.Drawing.Point(143, 244);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(165, 47);
             this.btnEditar.TabIndex = 14;
-            this.btnEditar.Text = "Editar";
+            this.btnEditar.Text = "Edit";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(116, 196);
+            this.btnAgregar.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAgregar.Location = new System.Drawing.Point(143, 191);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(165, 47);
             this.btnAgregar.TabIndex = 13;
-            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Text = "Add";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
@@ -111,7 +115,7 @@ namespace MainForm
             this.codigoKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.temaBindingSource, "Codigo", true));
             this.codigoKryptonTextBox.Location = new System.Drawing.Point(21, 55);
             this.codigoKryptonTextBox.Name = "codigoKryptonTextBox";
-            this.codigoKryptonTextBox.Size = new System.Drawing.Size(260, 33);
+            this.codigoKryptonTextBox.Size = new System.Drawing.Size(287, 33);
             this.codigoKryptonTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Silver;
             this.codigoKryptonTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Silver;
             this.codigoKryptonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -122,12 +126,16 @@ namespace MainForm
             this.codigoKryptonTextBox.TabIndex = 17;
             this.codigoKryptonTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.codigoKryptonTextBox_KeyPress);
             // 
+            // temaBindingSource
+            // 
+            this.temaBindingSource.DataSource = typeof(Elementos.Tema);
+            // 
             // descripcionKryptonTextBox
             // 
             this.descripcionKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.temaBindingSource, "Descripcion", true));
             this.descripcionKryptonTextBox.Location = new System.Drawing.Point(21, 135);
             this.descripcionKryptonTextBox.Name = "descripcionKryptonTextBox";
-            this.descripcionKryptonTextBox.Size = new System.Drawing.Size(260, 33);
+            this.descripcionKryptonTextBox.Size = new System.Drawing.Size(287, 33);
             this.descripcionKryptonTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Silver;
             this.descripcionKryptonTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Silver;
             this.descripcionKryptonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -136,10 +144,6 @@ namespace MainForm
             this.descripcionKryptonTextBox.StateCommon.Border.Rounding = 5;
             this.descripcionKryptonTextBox.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 12F);
             this.descripcionKryptonTextBox.TabIndex = 18;
-            // 
-            // temaBindingSource
-            // 
-            this.temaBindingSource.DataSource = typeof(Elementos.Tema);
             // 
             // frmAddTopics
             // 

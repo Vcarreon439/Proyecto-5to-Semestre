@@ -104,7 +104,7 @@ namespace MainForm
             // btnInsertar
             // 
             this.btnInsertar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInsertar.Location = new System.Drawing.Point(682, 375);
+            this.btnInsertar.Location = new System.Drawing.Point(682, 383);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(106, 23);
             this.btnInsertar.TabIndex = 37;
@@ -290,7 +290,7 @@ namespace MainForm
             this.txtDescripcion.Location = new System.Drawing.Point(259, 232);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(529, 137);
+            this.txtDescripcion.Size = new System.Drawing.Size(529, 145);
             this.txtDescripcion.TabIndex = 22;
             // 
             // txtAño
@@ -329,7 +329,7 @@ namespace MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 412);
+            this.ClientSize = new System.Drawing.Size(800, 420);
             this.Controls.Add(this.cbochkTema);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
