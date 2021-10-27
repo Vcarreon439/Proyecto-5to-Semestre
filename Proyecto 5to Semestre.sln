@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainForm", "MainForm\MainFo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControls", "..\Evidencia-de-Proyecto-Final\CustomControls\CustomControls.csproj", "{275C59E3-3F7E-4C80-9963-8E3E4B2A0BCC}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AuxiliarDatabase", "AuxiliarDatabase\AuxiliarDatabase.sqlproj", "{F447CA32-0B86-4B2E-A1AA-80F9B07D5C6F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,12 +51,6 @@ Global
 		{275C59E3-3F7E-4C80-9963-8E3E4B2A0BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{275C59E3-3F7E-4C80-9963-8E3E4B2A0BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{275C59E3-3F7E-4C80-9963-8E3E4B2A0BCC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F447CA32-0B86-4B2E-A1AA-80F9B07D5C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F447CA32-0B86-4B2E-A1AA-80F9B07D5C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F447CA32-0B86-4B2E-A1AA-80F9B07D5C6F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{F447CA32-0B86-4B2E-A1AA-80F9B07D5C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F447CA32-0B86-4B2E-A1AA-80F9B07D5C6F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F447CA32-0B86-4B2E-A1AA-80F9B07D5C6F}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
