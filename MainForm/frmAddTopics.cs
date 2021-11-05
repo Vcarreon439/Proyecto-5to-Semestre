@@ -98,8 +98,6 @@ namespace MainForm
 
         private void dgvGeneros_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            selectedTema = new Tema(dgvGeneros.SelectedCells[0].Value.ToString(), dgvGeneros.SelectedCells[1].Value.ToString());
-            temaBindingSource.DataSource = new Tema(dgvGeneros.SelectedCells[0].Value.ToString(), dgvGeneros.SelectedCells[1].Value.ToString());
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -183,6 +181,12 @@ namespace MainForm
             {
                 MessageBox.Show(exception.Message);
             }
+        }
+
+        private void dgvGeneros_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedTema = new Tema(dgvGeneros.SelectedCells[0].Value.ToString(), dgvGeneros.SelectedCells[1].Value.ToString());
+            temaBindingSource.DataSource = new Tema(dgvGeneros.SelectedCells[0].Value.ToString(), dgvGeneros.SelectedCells[1].Value.ToString());
         }
     }
 }

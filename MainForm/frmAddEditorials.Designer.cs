@@ -36,6 +36,7 @@ namespace MainForm
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label telefonoLabel;
             this.codigoKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.fullEditorialBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.correoKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.direccionKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.nombreKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -44,14 +45,13 @@ namespace MainForm
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.telefonoKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.fullEditorialBindingSource = new System.Windows.Forms.BindingSource(this.components);
             codigoLabel = new System.Windows.Forms.Label();
             correoLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             telefonoLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEditoriales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullEditorialBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEditoriales)).BeginInit();
             this.SuspendLayout();
             // 
             // codigoLabel
@@ -94,6 +94,16 @@ namespace MainForm
             nombreLabel.TabIndex = 6;
             nombreLabel.Text = "Nombre:";
             // 
+            // telefonoLabel
+            // 
+            telefonoLabel.AutoSize = true;
+            telefonoLabel.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
+            telefonoLabel.Location = new System.Drawing.Point(22, 149);
+            telefonoLabel.Name = "telefonoLabel";
+            telefonoLabel.Size = new System.Drawing.Size(68, 23);
+            telefonoLabel.TabIndex = 12;
+            telefonoLabel.Text = "Telefono:";
+            // 
             // codigoKryptonTextBox
             // 
             this.codigoKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fullEditorialBindingSource, "Codigo", true));
@@ -106,6 +116,10 @@ namespace MainForm
             this.codigoKryptonTextBox.StateCommon.Border.Rounding = 5;
             this.codigoKryptonTextBox.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 12F);
             this.codigoKryptonTextBox.TabIndex = 1;
+            // 
+            // fullEditorialBindingSource
+            // 
+            this.fullEditorialBindingSource.DataSource = typeof(Elementos.ElementosBiblioteca.Editorial.FullEditorial);
             // 
             // correoKryptonTextBox
             // 
@@ -155,7 +169,7 @@ namespace MainForm
             this.dgvEditoriales.ReadOnly = true;
             this.dgvEditoriales.Size = new System.Drawing.Size(765, 192);
             this.dgvEditoriales.TabIndex = 10;
-            this.dgvEditoriales.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEditoriales_CellContentClick);
+            this.dgvEditoriales.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEditoriales_CellClick);
             // 
             // btnEliminar
             // 
@@ -165,6 +179,7 @@ namespace MainForm
             this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "Delete";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -186,16 +201,6 @@ namespace MainForm
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // telefonoLabel
-            // 
-            telefonoLabel.AutoSize = true;
-            telefonoLabel.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
-            telefonoLabel.Location = new System.Drawing.Point(22, 149);
-            telefonoLabel.Name = "telefonoLabel";
-            telefonoLabel.Size = new System.Drawing.Size(68, 23);
-            telefonoLabel.TabIndex = 12;
-            telefonoLabel.Text = "Telefono:";
-            // 
             // telefonoKryptonTextBox
             // 
             this.telefonoKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fullEditorialBindingSource, "Telefono", true));
@@ -208,10 +213,6 @@ namespace MainForm
             this.telefonoKryptonTextBox.StateCommon.Border.Rounding = 5;
             this.telefonoKryptonTextBox.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 12F);
             this.telefonoKryptonTextBox.TabIndex = 13;
-            // 
-            // fullEditorialBindingSource
-            // 
-            this.fullEditorialBindingSource.DataSource = typeof(Elementos.ElementosBiblioteca.Editorial.FullEditorial);
             // 
             // frmAddEditorials
             // 
@@ -236,8 +237,8 @@ namespace MainForm
             this.Name = "frmAddEditorials";
             this.Text = "frmAddEditorials";
             this.Load += new System.EventHandler(this.frmAddEditorials_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEditoriales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullEditorialBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEditoriales)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

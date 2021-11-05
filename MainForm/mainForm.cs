@@ -71,7 +71,6 @@ namespace MainForm
 
         private void btnAgregarLibros_Click(object sender, EventArgs e)
         {
-            FormularioAbierto.Hide();
             FormularioAbierto = FormEnPanel.AbrirForm<frnAddBook>(ref pctFondo);
         }
 
@@ -100,14 +99,17 @@ namespace MainForm
 
         private void manageTopicsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormularioAbierto.Hide();
             FormularioAbierto = FormEnPanel.AbrirForm<frmAddTopics>(ref pctFondo);
         }
 
         private void bookPublishersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormularioAbierto.Hide();
             FormularioAbierto = FormEnPanel.AbrirForm<frmAddEditorials>(ref pctFondo);
+        }
+
+        private void authorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioAbierto = FormEnPanel.AbrirForm<addAuthors>(ref pctFondo);
         }
     }
 }

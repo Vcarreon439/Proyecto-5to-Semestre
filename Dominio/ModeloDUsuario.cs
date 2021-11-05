@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccess;
 using Elementos;
+using Elementos.ElementosBiblioteca.Autor;
 using Elementos.ElementosBiblioteca.Editorial;
 
 namespace Dominio
@@ -13,6 +14,8 @@ namespace Dominio
     public class ModeloDUsuario
     {
         private Querys obj = new Querys();
+
+        #region Users
 
         public bool NewUser(UsuarioTemp temp)
         {
@@ -23,6 +26,8 @@ namespace Dominio
         {
             return obj.LoginUser(temp);
         }
+
+        #endregion
 
         public List<LibroSencillo> LibrosPopulares_4()
         {
@@ -54,6 +59,21 @@ namespace Dominio
             return obj.ShowAllTopics();
         }
 
+        public DataTable AutoresTabla()
+        {
+            return obj.AutoresTabla();
+        }
+
+        public DataTable TakeExtraDataAutor(string codigo)
+        {
+            return obj.TakeExtraDataAutor(codigo);
+        }
+
+        public bool UpdateAutor(FullAutor autor)
+        {
+            return obj.UpdateAutor(autor);
+        }
+
         public bool UpdateTema(Tema topic, string newCode = "", string newDesc = "")
         {
             if (newCode=="")
@@ -73,6 +93,26 @@ namespace Dominio
         public DataTable MostrarEditoriales()
         {
             return obj.MostrarEditoriales();
+        }
+
+        public bool UpdateEditorial(FullEditorial oldEditorial, FullEditorial newEditorial)
+        {
+            return obj.UpdateEditorial(oldEditorial, newEditorial);
+        }
+
+        public bool DeletePublisher(FullEditorial editorial)
+        {
+            return obj.DeletePublisher(editorial);
+        }
+
+        public bool AddAuthor(FullAutor autor)
+        {
+            return obj.AddAuthor(autor);
+        }
+
+        public bool DeleteAutor(string codigo)
+        {
+            return obj.DeleteAutor(codigo);
         }
     }
 }

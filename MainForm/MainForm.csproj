@@ -36,6 +36,9 @@
     <Reference Include="ComponentFactory.Krypton.Toolkit">
       <HintPath>E:\hv_ca\Descargas\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
+    <Reference Include="FlagsISO, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FlagsISO.1.0.0.1\lib\net45\FlagsISO.dll</HintPath>
+    </Reference>
     <Reference Include="FluentValidation, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentValidation.10.3.4\lib\netstandard2.0\FluentValidation.dll</HintPath>
     </Reference>
@@ -56,6 +59,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addAuthors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addAuthors.Designer.cs">
+      <DependentUpon>addAuthors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fichaAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fichaAutor.Designer.cs">
+      <DependentUpon>fichaAutor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,8 +103,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tableAuthor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tableAuthor.Designer.cs">
+      <DependentUpon>tableAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateData\ValidateAuthor.cs" />
     <Compile Include="ValidateData\ValidatePublisher.cs" />
     <Compile Include="ValidateData\ValidateTopic.cs" />
+    <EmbeddedResource Include="addAuthors.resx">
+      <DependentUpon>addAuthors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fichaAutor.resx">
+      <DependentUpon>fichaAutor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddBook.resx">
       <DependentUpon>frmAddBook.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,7 +141,11 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="tableAuthor.resx">
+      <DependentUpon>tableAuthor.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Elementos.ElementosBiblioteca.Autor.FullAutor.datasource" />
     <None Include="Properties\DataSources\Elementos.ElementosBiblioteca.Editorial.FullEditorial.datasource" />
     <None Include="Properties\DataSources\Elementos.Tema.datasource" />
     <None Include="Properties\Settings.settings">
@@ -189,6 +221,8 @@
   <ItemGroup>
     <None Include="Resources\masterIcon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="library.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

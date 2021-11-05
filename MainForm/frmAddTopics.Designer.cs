@@ -108,6 +108,7 @@ namespace MainForm
             this.dgvGeneros.ReadOnly = true;
             this.dgvGeneros.Size = new System.Drawing.Size(474, 546);
             this.dgvGeneros.TabIndex = 10;
+            this.dgvGeneros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGeneros_CellClick);
             this.dgvGeneros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGeneros_CellContentClick);
             // 
             // codigoKryptonTextBox

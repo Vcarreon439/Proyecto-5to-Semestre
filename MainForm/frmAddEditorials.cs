@@ -91,7 +91,7 @@ namespace MainForm
             FillData();
         }
 
-        private void dgvEditoriales_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvEditoriales_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             selectEditorial = new FullEditorial(dgvEditoriales.SelectedCells);
             fullEditorialBindingSource.DataSource = new FullEditorial(dgvEditoriales.SelectedCells);
@@ -99,7 +99,85 @@ namespace MainForm
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                fullEditorialBindingSource.EndEdit();
+                updatEditorial = fullEditorialBindingSource.Current as FullEditorial;
 
+                if (updatEditorial != null)
+                {
+                    ValidatePublisher validador = new ValidatePublisher();
+                    ValidationResult resultado = validador.Validate(updatEditorial);
+                    IList<ValidationFailure> fallas = resultado.Errors;
+
+                    if (!resultado.IsValid)
+                    {
+                        foreach (ValidationFailure errors in fallas)
+                        {
+                            MessageBox.Show(errors.ErrorMessage, errors.PropertyName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        ModeloDUsuario mdDUsuario = new ModeloDUsuario();
+
+                        if (mdDUsuario.UpdateEditorial(selectEditorial, updatEditorial))
+                        {
+                            FillData();
+                            fullEditorialBindingSource.Clear();
+                            selectEditorial = null;
+                            updatEditorial = null;
+                        }
+                    }
+
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                fullEditorialBindingSource.EndEdit();
+                FullEditorial editorial = fullEditorialBindingSource.Current as FullEditorial;
+
+                if (editorial != null)
+                {
+                    ValidatePublisher validador = new ValidatePublisher();
+                    ValidationResult resultado = validador.Validate(editorial);
+                    IList<ValidationFailure> fallas = resultado.Errors;
+
+                    if (!resultado.IsValid)
+                    {
+                        foreach (ValidationFailure errors in fallas)
+                        {
+                            MessageBox.Show(errors.ErrorMessage, errors.PropertyName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        ModeloDUsuario mdDUsuario = new ModeloDUsuario();
+
+                        if (mdDUsuario.DeletePublisher(editorial))
+                        {
+                            FillData();
+                            fullEditorialBindingSource.Clear();
+                            fullEditorialBindingSource.DataSource = new FullEditorial();
+                        }
+                    }
+
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
     }
 }

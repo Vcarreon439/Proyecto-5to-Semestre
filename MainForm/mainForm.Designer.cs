@@ -69,6 +69,7 @@ namespace MainForm
             this.btnReturnBooks,
             this.btnExit});
             this.menuPrincipal.Name = "menuPrincipal";
+            this.menuPrincipal.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.menuPrincipal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuPrincipal_MouseMove);
             // 
             // masterToolStripMenuItem
@@ -112,6 +113,7 @@ namespace MainForm
             // 
             this.authorsToolStripMenuItem.Name = "authorsToolStripMenuItem";
             resources.ApplyResources(this.authorsToolStripMenuItem, "authorsToolStripMenuItem");
+            this.authorsToolStripMenuItem.Click += new System.EventHandler(this.authorsToolStripMenuItem_Click);
             // 
             // btnBooks
             // 

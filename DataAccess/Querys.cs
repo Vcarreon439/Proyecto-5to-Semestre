@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using Elementos;
+using Elementos.ElementosBiblioteca.Autor;
 using Elementos.ElementosBiblioteca.Editorial;
 
 
@@ -408,6 +409,230 @@ namespace DataAccess
                 }
             }
         }
+
+        public bool UpdateEditorial(FullEditorial oldEditorial, FullEditorial newEditorial)
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("UpdatePublishers", conexion))
+                {
+                    try
+                    {
+                        cmd.Connection = conexion;
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@oldCode", oldEditorial.Codigo);
+                        cmd.Parameters.AddWithValue("@newCode", newEditorial.Codigo);
+
+                        cmd.Parameters.AddWithValue("@newName", newEditorial.Nombre);
+                        cmd.Parameters.AddWithValue("@newPhone", newEditorial.Telefono);
+                        cmd.Parameters.AddWithValue("@newMail", newEditorial.Correo);
+                        cmd.Parameters.AddWithValue("@newAddress", newEditorial.Direccion);
+
+                        cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
+                        cmd.ExecuteNonQuery();
+
+                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString()));
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                        return false;
+                    }
+
+                }
+            }
+        }
+
+        public bool DeletePublisher(FullEditorial editorial)
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("DeletePublisher", conexion))
+                {
+                    try
+                    {
+                        cmd.Connection = conexion;
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Code", editorial.Codigo);
+                        cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
+                        cmd.ExecuteNonQuery();
+                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString())); ;
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                        return false;
+                    }
+                }
+            }
+        }
+
+        public bool AddAuthor(FullAutor autor)
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("AddAuthor", conexion))
+                {
+                    try
+                    {
+                        cmd.Connection = conexion;
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@Nombre", autor.Nombre);
+
+                        //Apellidos
+                        if (autor.Apellido == "" | autor.Apellido == null)
+                            cmd.Parameters.AddWithValue("@Apellidos", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@Apellidos", autor.Apellido);
+
+                        //Pais
+                        if (autor.pais == "" | autor.pais == null)
+                            cmd.Parameters.AddWithValue("@pais", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@pais", autor.pais);
+
+                        //Ciudad
+                        if (autor.ciudad == "" | autor.ciudad == null)
+                            cmd.Parameters.AddWithValue("@ciudad", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@ciudad", autor.ciudad);
+
+                        //Comentarios
+                        if (autor.comentarios == "" | autor.comentarios == null)
+                            cmd.Parameters.AddWithValue("@coment", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@coment", autor.comentarios);
+
+
+                        //Foto
+                        if (autor.foto == "" | autor.foto == null)
+                            cmd.Parameters.AddWithValue("@foto", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@foto", autor.foto);
+
+
+                        cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
+                        cmd.ExecuteNonQuery();
+                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString())); ;
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                        return false;
+                    }
+
+                }
+            }
+        }
+
+        public DataTable AutoresTabla()
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlDataAdapter adaptador = new SqlDataAdapter("Select * From AutoresTabla", conexion))
+                {
+                    DataTable tabla = new DataTable();
+                    adaptador.Fill(tabla);
+                    return tabla;
+                }
+            }
+        }
+
+        public DataTable TakeExtraDataAutor(string codigo)
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("TakeExtraDataAutor", conexion))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@code", codigo);
+
+                    using (SqlDataAdapter adaptador = new SqlDataAdapter(cmd))
+                    {
+                        DataTable tabla = new DataTable();
+                        adaptador.Fill(tabla);
+                        return tabla;
+                    }
+                }
+            }
+        }
+
+        public bool UpdateAutor(FullAutor autor)
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("UpdateAutor", conexion))
+                {
+                    try
+                    {
+                        cmd.Connection = conexion;
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@code", autor.Codigo);
+
+                        cmd.Parameters.AddWithValue("@newName", autor.Nombre);
+                        cmd.Parameters.AddWithValue("@newSecond", autor.Apellido);
+                        cmd.Parameters.AddWithValue("@newCountry", autor.pais);
+                        cmd.Parameters.AddWithValue("@newCity", autor.ciudad);
+                        cmd.Parameters.AddWithValue("@newComments", autor.comentarios);
+                        cmd.Parameters.AddWithValue("@newFoto", autor.foto);
+
+
+                        cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
+                        cmd.ExecuteNonQuery();
+
+                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString()));
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                        return false;
+                    }
+
+                }
+            }
+        }
+
+        public bool DeleteAutor(string codigo)
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("DeleteAutor", conexion))
+                {
+                    try
+                    {
+                        cmd.Connection = conexion;
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Codigo", codigo);
+                        cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
+                        cmd.ExecuteNonQuery();
+                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString())); ;
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                        return false;
+                    }
+                }
+            }
+        }
     }
 }
+
 

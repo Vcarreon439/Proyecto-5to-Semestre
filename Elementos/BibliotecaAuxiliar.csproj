@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ElementosBiblioteca\Autor\AutorSimple.cs" />
+    <Compile Include="ElementosBiblioteca\Autor\FullAutor.cs" />
     <Compile Include="ElementosBiblioteca\Editorial\EditorialSimple.cs" />
     <Compile Include="ElementosBiblioteca\Editorial\FullEditorial.cs" />
     <Compile Include="ElementosBiblioteca\Libros\Libro.cs" />
@@ -54,6 +56,7 @@
     <Compile Include="ElementosBiblioteca\Usuarios\TipoUsuario.cs" />
     <Compile Include="ElementosBiblioteca\Usuarios\UserAcces.cs" />
     <Compile Include="ElementosBiblioteca\Usuarios\UsuarioTemp.cs" />
+    <Compile Include="FlllTable.cs" />
     <Compile Include="ImageConvertions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
