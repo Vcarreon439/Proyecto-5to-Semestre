@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Elementos.ElementosBiblioteca.Editorial
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class EditorialSimple
     {
+        /// <summary>
+        /// Nombre de la editorial
+        /// </summary>
         public string Nombre { get; set; }
     }
 }

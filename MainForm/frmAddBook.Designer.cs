@@ -318,8 +318,6 @@ namespace MainForm
             this.cboTema.Name = "cboTema";
             this.cboTema.Size = new System.Drawing.Size(167, 26);
             this.cboTema.TabIndex = 4;
-            this.cboTema.SelectedIndexChanged += new System.EventHandler(this.cboTema_SelectedIndexChanged);
-            this.cboTema.Enter += new System.EventHandler(this.cboTema_Enter);
             // 
             // frnAddBook
             // 
@@ -350,7 +348,6 @@ namespace MainForm
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frnAddBook";
             this.Text = "Add  Libro";
-            this.Load += new System.EventHandler(this.frnAddBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctImagenLibro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEdicion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCopias)).EndInit();

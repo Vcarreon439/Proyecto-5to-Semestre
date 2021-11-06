@@ -41,11 +41,6 @@ namespace MainForm
             e.Effect = DragDropEffects.Copy;
         }
 
-        private void frnAddBook_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private Libro GenerarLibro()
         {
             Libro tempLibro = new Libro();
