@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ElementosBiblioteca\Autor\autorLibro.cs" />
     <Compile Include="ElementosBiblioteca\Autor\AutorSimple.cs" />
     <Compile Include="ElementosBiblioteca\Autor\FullAutor.cs" />
     <Compile Include="ElementosBiblioteca\Editorial\EditorialSimple.cs" />
