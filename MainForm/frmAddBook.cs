@@ -1,13 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.Drawing.Text;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CustomControls.CheckBoxComboBox;
 using Dominio;
@@ -48,29 +43,7 @@ namespace MainForm
 
         private void frnAddBook_Load(object sender, EventArgs e)
         {
-            FillEditoriales();
-        }
 
-
-        private List<EditorialSencillo> listaEditorialSencillos;
-
-        private async void FillEditoriales()
-        {
-            try
-            {
-                ModeloDUsuario Obj = new ModeloDUsuario();
-                listaEditorialSencillos = Obj.Editoriales100();
-
-                if (listaEditorialSencillos != null)
-                {
-                    foreach (EditorialSencillo editorial in listaEditorialSencillos)
-                        cboEditorial.Items.Add(editorial.Nombre);
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
         }
 
         private Libro GenerarLibro()

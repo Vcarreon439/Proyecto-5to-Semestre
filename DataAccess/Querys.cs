@@ -632,6 +632,46 @@ namespace DataAccess
                 }
             }
         }
+
+        public List<Tema> ListarTemas(int start, int end)
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("ListarTemas", conexion))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@inicio", start);
+                    cmd.Parameters.AddWithValue("@final", end);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        try
+                        {
+                            if (reader.HasRows)
+                            {
+                                List<Tema> listaTemas = new List<Tema>();
+
+                                while (reader.Read())
+                                    listaTemas.Add(new Tema(reader["Codigo"].ToString(), reader["Descripcion"].ToString()));
+
+                                return listaTemas;
+                            }
+                            else
+                                return null;
+                        }
+                        catch (Exception e)
+                        {
+                            MessageBox.Show(e.Message);
+                            Console.WriteLine(e);
+                        }
+                    }
+                }
+            }
+
+            return null;
+        }
     }
 }
 

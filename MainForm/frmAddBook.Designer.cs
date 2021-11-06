@@ -51,7 +51,7 @@ namespace MainForm
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtAño = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.cbochkTema = new CustomControls.CheckBoxComboBox.CheckBoxComboBox();
+            this.cboTema = new CustomControls.CheckBoxComboBox.CheckBoxComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctImagenLibro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEdicion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCopias)).BeginInit();
@@ -78,12 +78,6 @@ namespace MainForm
             this.cbochkAutores.DisplayMemberSingleItem = "";
             this.cbochkAutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbochkAutores.FormattingEnabled = true;
-            this.cbochkAutores.Items.AddRange(new object[] {
-            "a",
-            "b",
-            "c",
-            "d",
-            "e"});
             this.cbochkAutores.Location = new System.Drawing.Point(541, 165);
             this.cbochkAutores.Name = "cbochkAutores";
             this.cbochkAutores.Size = new System.Drawing.Size(247, 26);
@@ -313,24 +307,26 @@ namespace MainForm
             this.button1.Text = "Agregar Imagen";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // cbochkTema
+            // cboTema
             // 
             checkBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cbochkTema.CheckBoxProperties = checkBoxProperties2;
-            this.cbochkTema.DisplayMemberSingleItem = "";
-            this.cbochkTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.cbochkTema.FormattingEnabled = true;
-            this.cbochkTema.Location = new System.Drawing.Point(303, 126);
-            this.cbochkTema.Name = "cbochkTema";
-            this.cbochkTema.Size = new System.Drawing.Size(167, 26);
-            this.cbochkTema.TabIndex = 4;
+            this.cboTema.CheckBoxProperties = checkBoxProperties2;
+            this.cboTema.DisplayMemberSingleItem = "";
+            this.cboTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.cboTema.FormattingEnabled = true;
+            this.cboTema.Location = new System.Drawing.Point(303, 126);
+            this.cboTema.Name = "cboTema";
+            this.cboTema.Size = new System.Drawing.Size(167, 26);
+            this.cboTema.TabIndex = 4;
+            this.cboTema.SelectedIndexChanged += new System.EventHandler(this.cboTema_SelectedIndexChanged);
+            this.cboTema.Enter += new System.EventHandler(this.cboTema_Enter);
             // 
             // frnAddBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 420);
-            this.Controls.Add(this.cbochkTema);
+            this.Controls.Add(this.cboTema);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnInsertar);
@@ -385,6 +381,6 @@ namespace MainForm
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtAño;
         private System.Windows.Forms.Button button1;
-        private CustomControls.CheckBoxComboBox.CheckBoxComboBox cbochkTema;
+        private CustomControls.CheckBoxComboBox.CheckBoxComboBox cboTema;
     }
 }

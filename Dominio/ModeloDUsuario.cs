@@ -114,5 +114,10 @@ namespace Dominio
         {
             return obj.DeleteAutor(codigo);
         }
+
+        public List<Tema> ListarTemas(int start, int end)
+        {
+            return obj.ListarTemas(start, end);
+        }
     }
 }
