@@ -45,10 +45,9 @@
   <ItemGroup>
     <Compile Include="ElementosBiblioteca\Autor\AutorSimple.cs" />
     <Compile Include="ElementosBiblioteca\Autor\FullAutor.cs" />
-    <Compile Include="ElementosBiblioteca\Editorial\EditorialSimple.cs" />
     <Compile Include="ElementosBiblioteca\Editorial\FullEditorial.cs" />
     <Compile Include="ElementosBiblioteca\Libros\Libro.cs" />
-    <Compile Include="ElementosBiblioteca\EditorialSencillo.cs" />
+    <Compile Include="ElementosBiblioteca\Editorial\EditorialSencillo.cs" />
     <Compile Include="Encriptado.cs" />
     <Compile Include="ElementosBiblioteca\Usuarios\FullUser.cs" />
     <Compile Include="ElementosBiblioteca\Libros\LibroSencillo.cs" />

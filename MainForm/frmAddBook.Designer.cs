@@ -29,8 +29,8 @@ namespace MainForm
         /// </summary>
         private void InitializeComponent()
         {
-            CustomControls.CheckBoxComboBox.CheckBoxProperties checkBoxProperties1 = new CustomControls.CheckBoxComboBox.CheckBoxProperties();
             CustomControls.CheckBoxComboBox.CheckBoxProperties checkBoxProperties2 = new CustomControls.CheckBoxComboBox.CheckBoxProperties();
+            CustomControls.CheckBoxComboBox.CheckBoxProperties checkBoxProperties3 = new CustomControls.CheckBoxComboBox.CheckBoxProperties();
             this.pctImagenLibro = new System.Windows.Forms.PictureBox();
             this.cbochkAutores = new CustomControls.CheckBoxComboBox.CheckBoxComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -73,8 +73,8 @@ namespace MainForm
             // 
             this.cbochkAutores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            checkBoxProperties1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cbochkAutores.CheckBoxProperties = checkBoxProperties1;
+            checkBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cbochkAutores.CheckBoxProperties = checkBoxProperties2;
             this.cbochkAutores.DisplayMemberSingleItem = "";
             this.cbochkAutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbochkAutores.FormattingEnabled = true;
@@ -82,6 +82,7 @@ namespace MainForm
             this.cbochkAutores.Name = "cbochkAutores";
             this.cbochkAutores.Size = new System.Drawing.Size(247, 26);
             this.cbochkAutores.TabIndex = 8;
+            this.cbochkAutores.Enter += new System.EventHandler(this.cbochkAutores_Enter);
             // 
             // label9
             // 
@@ -275,6 +276,7 @@ namespace MainForm
             this.cboEditorial.Name = "cboEditorial";
             this.cboEditorial.Size = new System.Drawing.Size(228, 26);
             this.cboEditorial.TabIndex = 2;
+            this.cboEditorial.Enter += new System.EventHandler(this.cboEditorial_Enter);
             // 
             // txtDescripcion
             // 
@@ -309,8 +311,8 @@ namespace MainForm
             // 
             // cboTema
             // 
-            checkBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cboTema.CheckBoxProperties = checkBoxProperties2;
+            checkBoxProperties3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cboTema.CheckBoxProperties = checkBoxProperties3;
             this.cboTema.DisplayMemberSingleItem = "";
             this.cboTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.cboTema.FormattingEnabled = true;
@@ -318,6 +320,7 @@ namespace MainForm
             this.cboTema.Name = "cboTema";
             this.cboTema.Size = new System.Drawing.Size(167, 26);
             this.cboTema.TabIndex = 4;
+            this.cboTema.Enter += new System.EventHandler(this.cboTema_Enter);
             // 
             // frnAddBook
             // 

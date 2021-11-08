@@ -672,6 +672,110 @@ namespace DataAccess
 
             return null;
         }
+
+        public List<EditorialSencillo> LoadEditoriales()
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("Select Codigo, Nombre from MostrarEditoriales", conexion))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        try
+                        {
+                            if (reader.HasRows)
+                            {
+                                List<EditorialSencillo> editoriales = new List<EditorialSencillo>();
+
+                                while (reader.Read())
+                                    editoriales.Add(new EditorialSencillo(reader["Codigo"].ToString(), reader["Nombre"].ToString()));
+
+                                return editoriales;
+                            }
+                            else
+                                return null;
+                        }
+                        catch (Exception e)
+                        {
+                            MessageBox.Show(e.Message);
+                        }
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        public List<Tema> LoadTemas()
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("Select * from ShowAllTopics", conexion))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        try
+                        {
+                            if (reader.HasRows)
+                            {
+                                List<Tema> topics = new List<Tema>();
+
+                                while (reader.Read())
+                                    topics.Add(new Tema(reader["Codigo"].ToString(), reader["Descripcion"].ToString()));
+
+                                return topics;
+                            }
+                            else
+                                return null;
+                        }
+                        catch (Exception e)
+                        {
+                            MessageBox.Show(e.Message);
+                        }
+                    }
+                }
+            }
+
+            return null;
+        }
+        
+        public List<AutorSimple> LoadAutores()
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("Select Codigo, Nombre, Apellido from AutoresTabla", conexion))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        try
+                        {
+                            if (reader.HasRows)
+                            {
+                                List<AutorSimple> autores = new List<AutorSimple>();
+
+                                while (reader.Read())
+                                    autores.Add(new AutorSimple(reader["Codigo"].ToString(), reader["Nombre"].ToString(), reader["Apellido"].ToString()));
+
+                                return autores;
+                            }
+                            else
+                                return null;
+                        }
+                        catch (Exception e)
+                        {
+                            MessageBox.Show(e.Message);
+                        }
+                    }
+                }
+            }
+            return null;
+        }
     }
 }
 

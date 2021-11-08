@@ -8,14 +8,12 @@ namespace Elementos.ElementosBiblioteca.Autor
 {
     public class FullAutor : AutorSimple
     {
-        private string _codigo;
         public string pais { get; set; }
         public string ciudad { get; set; }
         public string comentarios { get; set; }
         public string foto { get; set; }
-        public string Codigo => _codigo;
 
-        public FullAutor(string codigo)
+        public FullAutor(string codigo) : base(codigo)
         {
             this._codigo = codigo;
         }
@@ -24,7 +22,5 @@ namespace Elementos.ElementosBiblioteca.Autor
         {
 
         }
-
-
     }
 }

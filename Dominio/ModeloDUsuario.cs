@@ -119,5 +119,20 @@ namespace Dominio
         {
             return obj.ListarTemas(start, end);
         }
+
+        public List<EditorialSencillo> LoadEditoriales()
+        {
+            return obj.LoadEditoriales();
+        }
+
+        public List<Tema> LoadTemas()
+        {
+            return obj.LoadTemas();
+        }
+
+        public List<AutorSimple> LoadAutores()
+        {
+            return obj.LoadAutores();
+        }
     }
 }

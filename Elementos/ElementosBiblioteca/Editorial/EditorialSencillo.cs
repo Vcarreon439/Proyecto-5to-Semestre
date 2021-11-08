@@ -26,6 +26,12 @@ namespace Elementos
         /// </summary>
         public EditorialSencillo() { }
 
+        public EditorialSencillo(string codigo, string nombre)
+        {
+            this.Codigo = codigo;
+            this.Nombre = nombre;
+        }
+
         ~EditorialSencillo() { }
 
     }

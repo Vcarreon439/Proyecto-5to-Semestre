@@ -13,5 +13,26 @@ namespace Elementos.ElementosBiblioteca.Autor
     {
         public string Nombre { get; set; }
         public string Apellido { get; set; }
+
+        public string Codigo => _codigo;
+
+        protected string _codigo;
+
+        public AutorSimple(string codigo)
+        {
+            this._codigo = codigo;
+        }
+
+        public AutorSimple(string codigo, string nombre, string apellido)
+        {
+            this._codigo = codigo;
+            this.Nombre = nombre;
+            this.Apellido = apellido;
+        }
+
+        public AutorSimple()
+        {
+
+        }
     }
 }

@@ -149,6 +149,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Elementos.ElementosBiblioteca.Autor.FullAutor.datasource" />
     <None Include="Properties\DataSources\Elementos.ElementosBiblioteca.Editorial.FullEditorial.datasource" />
+    <None Include="Properties\DataSources\Elementos.Libro.datasource" />
     <None Include="Properties\DataSources\Elementos.Tema.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
