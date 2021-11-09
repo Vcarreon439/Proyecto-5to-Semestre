@@ -4,11 +4,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using CustomControls.CheckBoxComboBox;
 using Dominio;
 using Elementos;
 using Elementos.ElementosBiblioteca.Autor;
+using FluentValidation.Results;
+using MainForm.ValidateData;
 
 namespace MainForm
 {
@@ -79,39 +83,57 @@ namespace MainForm
             e.Effect = DragDropEffects.Copy;
         }
 
-        private Libro GenerarLibro()
-        {
-            Libro tempLibro = new Libro();
-            tempLibro.Descripcion = txtDescripcion.Text;
-            tempLibro.Titulo = txtTitulo.Text;
-            tempLibro.ISBN = txtISBN.Text;
-            tempLibro.Copias = int.Parse(numCopias.Value.ToString());
-            tempLibro.AñoEdicion = txtAño.Text;
-            tempLibro.codEditorial = "1";
-            tempLibro.numEdicion = int.Parse(numEdicion.Value.ToString());
-            tempLibro.Imagen = ImageConvertions.ImageToBase64(pctImagenLibro.Image, ImageFormat.Jpeg);
-            return tempLibro;
-        }
-
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            Libro libro = GenerarLibro();
-            ModeloDUsuario Obj = new ModeloDUsuario();
-            if (Obj.AddBook(libro))
-                MessageBox.Show("Si se inserto");
-            else
-                MessageBox.Show("No se inserto");
-            
+            try
+            {
+                libroBindingSource.EndEdit();
+                Libro temp = libroBindingSource.Current as Libro;
 
-            List<CheckBoxComboBoxItem> lista = cbochkAutores.CheckBoxItems.FindAll(new Predicate<CheckBoxComboBoxItem>(x=> x.Checked==true));
+                
 
-            string aa = " ";
+
+                if (temp != null)
+                {
+                    ValidateBook validador = new ValidateBook();
+                    ValidationResult resultado = validador.Validate(temp);
+                    IList<ValidationFailure> fallas = resultado.Errors;
+
+                    if (!resultado.IsValid)
+                    {
+                        foreach (ValidationFailure errors in fallas)
+                        {
+                            MessageBox.Show(errors.ErrorMessage, errors.PropertyName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        ModeloDUsuario mdDUsuario = new ModeloDUsuario();
+
+                        //if (mdDUsuario.AddAuthor(temp))
+                        //{
+                        //    pctPrueba.Image = null;
+                        //    fullAutorBindingSource.Clear();
+                        //    fullAutorBindingSource.DataSource = new FullAutor();
+
+                        //    if (forma != null)
+                        //        forma.Refresh();
+                        //}
+                    }
+
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
         private void cboEditorial_Enter(object sender, EventArgs e)
         {
             ListasObjetos.LoadEditoriales(ref internalList.Editoriales);
-            FillCbo(ref cboEditorial, internalList.Editoriales);
+            FillCbo(ref codEditorialComboBox, internalList.Editoriales);
         }
         private void FillCbo(ref ComboBox comboBox, List<EditorialSencillo> elemetos = null, List<Tema> temas = null)
         {
@@ -147,6 +169,23 @@ namespace MainForm
         {
             ListasObjetos.LoadAutores(ref internalList.Autores);
             FillCbo3(ref cbochkAutores, internalList.Autores);
+        }
+
+        private void iSBNTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrueba_Click(object sender, EventArgs e)
+        {
+            List<CheckBoxComboBoxItem> elementos = cboTema.CheckBoxItems.FindAll(x => x.CheckState == CheckState.Checked);
+            List<Tema> lista = new List<Tema>();
+
+            foreach (CheckBoxComboBoxItem el in elementos)
+                lista.Add(new Tema(internalList.Temas.Find(x => x.Descripcion == el.Text).Codigo, el.Text));
+
+            foreach (Tema tt in lista)
+                Console.WriteLine($"{tt.Codigo} - {tt.Descripcion}");
         }
     }
 }

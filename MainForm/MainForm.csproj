@@ -112,6 +112,7 @@
       <DependentUpon>tableAuthor.cs</DependentUpon>
     </Compile>
     <Compile Include="ValidateData\ValidateAuthor.cs" />
+    <Compile Include="ValidateData\ValidateBook.cs" />
     <Compile Include="ValidateData\ValidatePublisher.cs" />
     <Compile Include="ValidateData\ValidateTopic.cs" />
     <EmbeddedResource Include="addAuthors.resx">

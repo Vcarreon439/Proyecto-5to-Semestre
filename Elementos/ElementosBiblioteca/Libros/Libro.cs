@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Elementos.ElementosBiblioteca.Autor;
 
 namespace Elementos
 {
@@ -11,6 +12,9 @@ namespace Elementos
     /// </summary>
     public class Libro : LibroSencillo
     {
+        public List<Tema> listaTemas;
+        public List<AutorSimple> listaAtores;
+        
         //Codigo, titulo, Descripcion, Imagen
 
         /// <summary>
@@ -36,7 +40,7 @@ namespace Elementos
         /// <summary>
         /// Año de edicion del libro
         /// </summary>
-        public string AñoEdicion { get; set; }
+        public int AñoEdicion { get; set; }
         
         /// <summary>
         /// Constructor por defecto

@@ -236,7 +236,7 @@ namespace DataAccess
                             cmd.Parameters.AddWithValue("@codEditorial", tempLibro.codEditorial);
 
                         //numEdicion
-                        if (tempLibro.AñoEdicion == "")
+                        if (tempLibro.AñoEdicion == null)
                             cmd.Parameters.AddWithValue("@añoEdicion", DBNull.Value);
                         else
                             cmd.Parameters.AddWithValue("@añoEdicion", tempLibro.AñoEdicion);
