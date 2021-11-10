@@ -252,19 +252,15 @@ namespace DataAccess
                         cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.Output;
                         cmd.Parameters.Add("@codLibro", SqlDbType.Int).Direction = ParameterDirection.Output;
 
-                        if (cmd.ExecuteNonQuery()>0)
-                        {
-                            return true;
-                        }
+                        cmd.ExecuteNonQuery();
+                        tempLibro.Codigo = int.Parse(cmd.Parameters["@codLibro"].Value.ToString());
+
+                        if (Convert.ToBoolean(cmd.Parameters["@ret"].Value.ToString()))
+                            InsertTemaLibro(tempLibro);
                         else
-                        {
                             return false;
-                        }
 
-                        //tempLibro.Codigo = Convert.ToInt16(cmd.Parameters["@codLibro"].Value);
-                        //    InsertTemaLibro(tempLibro);
-
-                        //return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString()));
+                        return Convert.ToBoolean(cmd.Parameters["@ret"].Value.ToString());
                     }
                     catch (Exception e)
                     {
@@ -298,6 +294,8 @@ namespace DataAccess
 
                             cmd.Parameters.AddWithValue("@codLibro", libro.Codigo);
                             cmd.Parameters.AddWithValue("@codTema", tem.Codigo);
+
+                            cmd.ExecuteNonQuery();
                         }
                         catch (Exception e)
                         {

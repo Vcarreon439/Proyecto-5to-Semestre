@@ -12,45 +12,13 @@ using Dominio;
 using Elementos;
 using Elementos.ElementosBiblioteca.Autor;
 using FluentValidation.Results;
+using MainForm.Auxiliares;
 using MainForm.ValidateData;
 
 namespace MainForm
 {
     public partial class frnAddBook : Form
     {
-        internal class ListasObjetos
-        {
-            public List<EditorialSencillo> Editoriales;
-            public List<Tema> Temas;
-            public List<AutorSimple> Autores;
-
-            public ListasObjetos()
-            {
-                Editoriales = new List<EditorialSencillo>();
-                Temas = new List<Tema>();
-                Autores = new List<AutorSimple>();
-            }
-
-            public static void LoadEditoriales(ref List<EditorialSencillo> listaEditoriales)
-            {
-                ModeloDUsuario objDUsuario = new ModeloDUsuario();
-                listaEditoriales = objDUsuario.LoadEditoriales();
-            }
-
-            public static void LoadTemas(ref List<Tema> listaTemas)
-            {
-                ModeloDUsuario objDUsuario = new ModeloDUsuario();
-                listaTemas = objDUsuario.LoadTemas();
-            }
-
-            public static void LoadAutores(ref List<AutorSimple> listaAutores)
-            {
-                ModeloDUsuario objDUsuario = new ModeloDUsuario();
-                listaAutores = objDUsuario.LoadAutores();
-            }
-
-        }
-
         private ListasObjetos internalList;
 
         public frnAddBook()
@@ -90,6 +58,8 @@ namespace MainForm
             {
                 libroBindingSource.EndEdit();
                 Libro temp = libroBindingSource.Current as Libro;
+                temp.Copias += 1;
+                temp.numEdicion += 1;
 
                 if (temp != null)
                 {
@@ -121,6 +91,8 @@ namespace MainForm
                         if (mdDUsuario.AddBook(temp))
                         {
                             libroBindingSource.Clear();
+                            cboTema.Text = "";
+                            checkBoxComboBox1.Text = "";
                             MessageBox.Show("Se ha insertado el libro");
                         }
                     }

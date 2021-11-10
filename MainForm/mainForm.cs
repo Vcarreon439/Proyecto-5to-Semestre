@@ -112,5 +112,10 @@ namespace MainForm
         {
             Environment.Exit(0);
         }
+
+        private void btnIssueBooks_Click(object sender, EventArgs e)
+        {
+            FormularioAbierto = FormEnPanel.AbrirForm<searchBooks>(ref pctFondo);
+        }
     }
 }

@@ -154,25 +154,25 @@
     <value>False</value>
   </data>
   <data name="manageStudentsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 26</value>
+    <value>179, 26</value>
   </data>
   <data name="manageStudentsToolStripMenuItem1.Text" xml:space="preserve">
     <value>Manage Students</value>
   </data>
   <data name="manageTopicsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 26</value>
+    <value>179, 26</value>
   </data>
   <data name="manageTopicsToolStripMenuItem.Text" xml:space="preserve">
     <value>Manage Topics</value>
   </data>
   <data name="bookPublishersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 26</value>
+    <value>179, 26</value>
   </data>
   <data name="bookPublishersToolStripMenuItem.Text" xml:space="preserve">
     <value>Manage Publishers</value>
   </data>
   <data name="authorsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 26</value>
+    <value>179, 26</value>
   </data>
   <data name="authorsToolStripMenuItem.Text" xml:space="preserve">
     <value>Manage Authors</value>
@@ -4177,6 +4177,18 @@
   <data name="&gt;&gt;authorsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;btnStudentOptions.Name" xml:space="preserve">
+    <value>btnStudentOptions</value>
+  </data>
+  <data name="&gt;&gt;btnStudentOptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMyProfile.Name" xml:space="preserve">
+    <value>btnMyProfile</value>
+  </data>
+  <data name="&gt;&gt;btnMyProfile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;btnBooks.Name" xml:space="preserve">
     <value>btnBooks</value>
   </data>
@@ -4193,18 +4205,6 @@
     <value>searchBookToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;searchBookToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnStudentOptions.Name" xml:space="preserve">
-    <value>btnStudentOptions</value>
-  </data>
-  <data name="&gt;&gt;btnStudentOptions.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnMyProfile.Name" xml:space="preserve">
-    <value>btnMyProfile</value>
-  </data>
-  <data name="&gt;&gt;btnMyProfile.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnIssueBooks.Name" xml:space="preserve">

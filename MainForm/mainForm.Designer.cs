@@ -38,11 +38,11 @@ namespace MainForm
             this.manageTopicsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookPublishersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.authorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnStudentOptions = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnMyProfile = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAgregarLibros = new System.Windows.Forms.ToolStripMenuItem();
             this.searchBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnStudentOptions = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnMyProfile = new System.Windows.Forms.ToolStripMenuItem();
             this.btnIssueBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.btnReturnBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.pctFondo = new System.Windows.Forms.PictureBox();
@@ -117,6 +117,21 @@ namespace MainForm
             resources.ApplyResources(this.authorsToolStripMenuItem, "authorsToolStripMenuItem");
             this.authorsToolStripMenuItem.Click += new System.EventHandler(this.authorsToolStripMenuItem_Click);
             // 
+            // btnStudentOptions
+            // 
+            this.btnStudentOptions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnMyProfile});
+            resources.ApplyResources(this.btnStudentOptions, "btnStudentOptions");
+            this.btnStudentOptions.ForeColor = System.Drawing.Color.White;
+            this.btnStudentOptions.Name = "btnStudentOptions";
+            // 
+            // btnMyProfile
+            // 
+            resources.ApplyResources(this.btnMyProfile, "btnMyProfile");
+            this.btnMyProfile.Image = global::MainForm.Properties.Resources.myProfile;
+            this.btnMyProfile.Name = "btnMyProfile";
+            this.btnMyProfile.Click += new System.EventHandler(this.btnMyProfile_Click);
+            // 
             // btnBooks
             // 
             this.btnBooks.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -140,26 +155,12 @@ namespace MainForm
             this.searchBookToolStripMenuItem.Image = global::MainForm.Properties.Resources.searchbook;
             this.searchBookToolStripMenuItem.Name = "searchBookToolStripMenuItem";
             // 
-            // btnStudentOptions
-            // 
-            this.btnStudentOptions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnMyProfile});
-            resources.ApplyResources(this.btnStudentOptions, "btnStudentOptions");
-            this.btnStudentOptions.ForeColor = System.Drawing.Color.White;
-            this.btnStudentOptions.Name = "btnStudentOptions";
-            // 
-            // btnMyProfile
-            // 
-            resources.ApplyResources(this.btnMyProfile, "btnMyProfile");
-            this.btnMyProfile.Image = global::MainForm.Properties.Resources.myProfile;
-            this.btnMyProfile.Name = "btnMyProfile";
-            this.btnMyProfile.Click += new System.EventHandler(this.btnMyProfile_Click);
-            // 
             // btnIssueBooks
             // 
             resources.ApplyResources(this.btnIssueBooks, "btnIssueBooks");
             this.btnIssueBooks.ForeColor = System.Drawing.Color.White;
             this.btnIssueBooks.Name = "btnIssueBooks";
+            this.btnIssueBooks.Click += new System.EventHandler(this.btnIssueBooks_Click);
             // 
             // btnReturnBooks
             // 

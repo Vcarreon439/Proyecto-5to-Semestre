@@ -33,7 +33,7 @@ namespace MainForm
             if (libro.Imagen == "")
                 caja.Image = Resources.ImageNotAvalible;
             else
-                caja.Image = ImageConvertions.Base64ToImage(listaLibros[0].Imagen);
+                caja.Image = ImageConvertions.Base64ToImage(libro.Imagen);
 
             Titulo.Text = libro.Titulo;
 
