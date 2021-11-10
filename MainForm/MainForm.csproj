@@ -227,6 +227,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="library.ico" />
+    <None Include="Resources\temas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -30,23 +30,22 @@ namespace MainForm
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            CustomControls.CheckBoxComboBox.CheckBoxProperties checkBoxProperties1 = new CustomControls.CheckBoxComboBox.CheckBoxProperties();
-            CustomControls.CheckBoxComboBox.CheckBoxProperties checkBoxProperties2 = new CustomControls.CheckBoxComboBox.CheckBoxProperties();
             System.Windows.Forms.Label tituloLabel;
             System.Windows.Forms.Label numEdicionLabel;
             System.Windows.Forms.Label copiasLabel;
             System.Windows.Forms.Label añoEdicionLabel;
             System.Windows.Forms.Label descripcionLabel;
             System.Windows.Forms.Label codEditorialLabel;
+            CustomControls.CheckBoxComboBox.CheckBoxProperties checkBoxProperties1 = new CustomControls.CheckBoxComboBox.CheckBoxProperties();
+            CustomControls.CheckBoxComboBox.CheckBoxProperties checkBoxProperties2 = new CustomControls.CheckBoxComboBox.CheckBoxProperties();
             this.pctImagenLibro = new System.Windows.Forms.PictureBox();
-            this.cbochkAutores = new CustomControls.CheckBoxComboBox.CheckBoxComboBox();
+            this.libroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.cboTema = new CustomControls.CheckBoxComboBox.CheckBoxComboBox();
-            this.libroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tituloTextBox = new System.Windows.Forms.TextBox();
             this.iSBNTextBox = new System.Windows.Forms.TextBox();
             this.numEdicionNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -54,7 +53,7 @@ namespace MainForm
             this.añoEdicionTextBox = new System.Windows.Forms.TextBox();
             this.descripcionTextBox = new System.Windows.Forms.TextBox();
             this.codEditorialComboBox = new System.Windows.Forms.ComboBox();
-            this.btnPrueba = new System.Windows.Forms.Button();
+            this.checkBoxComboBox1 = new CustomControls.CheckBoxComboBox.CheckBoxComboBox();
             tituloLabel = new System.Windows.Forms.Label();
             numEdicionLabel = new System.Windows.Forms.Label();
             copiasLabel = new System.Windows.Forms.Label();
@@ -66,6 +65,72 @@ namespace MainForm
             ((System.ComponentModel.ISupportInitialize)(this.numEdicionNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.copiasNumericUpDown)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tituloLabel
+            // 
+            tituloLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            tituloLabel.AutoSize = true;
+            tituloLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 12F, System.Drawing.FontStyle.Bold);
+            tituloLabel.Location = new System.Drawing.Point(257, 12);
+            tituloLabel.Name = "tituloLabel";
+            tituloLabel.Size = new System.Drawing.Size(48, 23);
+            tituloLabel.TabIndex = 41;
+            tituloLabel.Text = "Titulo:";
+            // 
+            // numEdicionLabel
+            // 
+            numEdicionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            numEdicionLabel.AutoSize = true;
+            numEdicionLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
+            numEdicionLabel.Location = new System.Drawing.Point(478, 116);
+            numEdicionLabel.Name = "numEdicionLabel";
+            numEdicionLabel.Size = new System.Drawing.Size(120, 22);
+            numEdicionLabel.TabIndex = 44;
+            numEdicionLabel.Text = "Numero de edicion:";
+            // 
+            // copiasLabel
+            // 
+            copiasLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            copiasLabel.AutoSize = true;
+            copiasLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
+            copiasLabel.Location = new System.Drawing.Point(673, 116);
+            copiasLabel.Name = "copiasLabel";
+            copiasLabel.Size = new System.Drawing.Size(50, 22);
+            copiasLabel.TabIndex = 45;
+            copiasLabel.Text = "Copias:";
+            // 
+            // añoEdicionLabel
+            // 
+            añoEdicionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            añoEdicionLabel.AutoSize = true;
+            añoEdicionLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
+            añoEdicionLabel.Location = new System.Drawing.Point(257, 156);
+            añoEdicionLabel.Name = "añoEdicionLabel";
+            añoEdicionLabel.Size = new System.Drawing.Size(77, 22);
+            añoEdicionLabel.TabIndex = 46;
+            añoEdicionLabel.Text = "Año Edicion:";
+            // 
+            // descripcionLabel
+            // 
+            descripcionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            descripcionLabel.AutoSize = true;
+            descripcionLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
+            descripcionLabel.Location = new System.Drawing.Point(257, 195);
+            descripcionLabel.Name = "descripcionLabel";
+            descripcionLabel.Size = new System.Drawing.Size(78, 22);
+            descripcionLabel.TabIndex = 47;
+            descripcionLabel.Text = "Descripcion:";
+            // 
+            // codEditorialLabel
+            // 
+            codEditorialLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            codEditorialLabel.AutoSize = true;
+            codEditorialLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
+            codEditorialLabel.Location = new System.Drawing.Point(257, 80);
+            codEditorialLabel.Name = "codEditorialLabel";
+            codEditorialLabel.Size = new System.Drawing.Size(59, 22);
+            codEditorialLabel.TabIndex = 48;
+            codEditorialLabel.Text = "Editorial:";
             // 
             // pctImagenLibro
             // 
@@ -82,20 +147,9 @@ namespace MainForm
             this.pctImagenLibro.DragDrop += new System.Windows.Forms.DragEventHandler(this.pctImagenLibro_DragDrop);
             this.pctImagenLibro.DragEnter += new System.Windows.Forms.DragEventHandler(this.pctImagenLibro_DragEnter);
             // 
-            // cbochkAutores
+            // libroBindingSource
             // 
-            this.cbochkAutores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            checkBoxProperties1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cbochkAutores.CheckBoxProperties = checkBoxProperties1;
-            this.cbochkAutores.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.libroBindingSource, "numEdicion", true));
-            this.cbochkAutores.DisplayMemberSingleItem = "";
-            this.cbochkAutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbochkAutores.FormattingEnabled = true;
-            this.cbochkAutores.Location = new System.Drawing.Point(543, 150);
-            this.cbochkAutores.Name = "cbochkAutores";
-            this.cbochkAutores.Size = new System.Drawing.Size(247, 26);
-            this.cbochkAutores.TabIndex = 8;
-            this.cbochkAutores.Enter += new System.EventHandler(this.cbochkAutores_Enter);
+            this.libroBindingSource.DataSource = typeof(Elementos.Libro);
             // 
             // label9
             // 
@@ -155,8 +209,8 @@ namespace MainForm
             // cboTema
             // 
             this.cboTema.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            checkBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cboTema.CheckBoxProperties = checkBoxProperties2;
+            checkBoxProperties1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cboTema.CheckBoxProperties = checkBoxProperties1;
             this.cboTema.DisplayMemberSingleItem = "";
             this.cboTema.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.cboTema.FormattingEnabled = true;
@@ -165,21 +219,6 @@ namespace MainForm
             this.cboTema.Size = new System.Drawing.Size(153, 26);
             this.cboTema.TabIndex = 4;
             this.cboTema.Enter += new System.EventHandler(this.cboTema_Enter);
-            // 
-            // libroBindingSource
-            // 
-            this.libroBindingSource.DataSource = typeof(Elementos.Libro);
-            // 
-            // tituloLabel
-            // 
-            tituloLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            tituloLabel.AutoSize = true;
-            tituloLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 12F, System.Drawing.FontStyle.Bold);
-            tituloLabel.Location = new System.Drawing.Point(257, 12);
-            tituloLabel.Name = "tituloLabel";
-            tituloLabel.Size = new System.Drawing.Size(48, 23);
-            tituloLabel.TabIndex = 41;
-            tituloLabel.Text = "Titulo:";
             // 
             // tituloTextBox
             // 
@@ -200,18 +239,6 @@ namespace MainForm
             this.iSBNTextBox.Name = "iSBNTextBox";
             this.iSBNTextBox.Size = new System.Drawing.Size(202, 24);
             this.iSBNTextBox.TabIndex = 44;
-            this.iSBNTextBox.TextChanged += new System.EventHandler(this.iSBNTextBox_TextChanged);
-            // 
-            // numEdicionLabel
-            // 
-            numEdicionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            numEdicionLabel.AutoSize = true;
-            numEdicionLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
-            numEdicionLabel.Location = new System.Drawing.Point(478, 116);
-            numEdicionLabel.Name = "numEdicionLabel";
-            numEdicionLabel.Size = new System.Drawing.Size(120, 22);
-            numEdicionLabel.TabIndex = 44;
-            numEdicionLabel.Text = "Numero de edicion:";
             // 
             // numEdicionNumericUpDown
             // 
@@ -219,6 +246,11 @@ namespace MainForm
             this.numEdicionNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.libroBindingSource, "numEdicion", true));
             this.numEdicionNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.numEdicionNumericUpDown.Location = new System.Drawing.Point(604, 116);
+            this.numEdicionNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numEdicionNumericUpDown.Name = "numEdicionNumericUpDown";
             this.numEdicionNumericUpDown.Size = new System.Drawing.Size(64, 24);
             this.numEdicionNumericUpDown.TabIndex = 45;
@@ -229,23 +261,17 @@ namespace MainForm
             0,
             0});
             // 
-            // copiasLabel
-            // 
-            copiasLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            copiasLabel.AutoSize = true;
-            copiasLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
-            copiasLabel.Location = new System.Drawing.Point(673, 116);
-            copiasLabel.Name = "copiasLabel";
-            copiasLabel.Size = new System.Drawing.Size(50, 22);
-            copiasLabel.TabIndex = 45;
-            copiasLabel.Text = "Copias:";
-            // 
             // copiasNumericUpDown
             // 
             this.copiasNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.copiasNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.libroBindingSource, "Copias", true));
             this.copiasNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.copiasNumericUpDown.Location = new System.Drawing.Point(729, 116);
+            this.copiasNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.copiasNumericUpDown.Name = "copiasNumericUpDown";
             this.copiasNumericUpDown.Size = new System.Drawing.Size(61, 24);
             this.copiasNumericUpDown.TabIndex = 46;
@@ -256,17 +282,6 @@ namespace MainForm
             0,
             0});
             // 
-            // añoEdicionLabel
-            // 
-            añoEdicionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            añoEdicionLabel.AutoSize = true;
-            añoEdicionLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
-            añoEdicionLabel.Location = new System.Drawing.Point(257, 156);
-            añoEdicionLabel.Name = "añoEdicionLabel";
-            añoEdicionLabel.Size = new System.Drawing.Size(77, 22);
-            añoEdicionLabel.TabIndex = 46;
-            añoEdicionLabel.Text = "Año Edicion:";
-            // 
             // añoEdicionTextBox
             // 
             this.añoEdicionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -276,17 +291,6 @@ namespace MainForm
             this.añoEdicionTextBox.Name = "añoEdicionTextBox";
             this.añoEdicionTextBox.Size = new System.Drawing.Size(132, 24);
             this.añoEdicionTextBox.TabIndex = 47;
-            // 
-            // descripcionLabel
-            // 
-            descripcionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            descripcionLabel.AutoSize = true;
-            descripcionLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
-            descripcionLabel.Location = new System.Drawing.Point(257, 195);
-            descripcionLabel.Name = "descripcionLabel";
-            descripcionLabel.Size = new System.Drawing.Size(78, 22);
-            descripcionLabel.TabIndex = 47;
-            descripcionLabel.Text = "Descripcion:";
             // 
             // descripcionTextBox
             // 
@@ -300,17 +304,6 @@ namespace MainForm
             this.descripcionTextBox.Size = new System.Drawing.Size(529, 149);
             this.descripcionTextBox.TabIndex = 48;
             // 
-            // codEditorialLabel
-            // 
-            codEditorialLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            codEditorialLabel.AutoSize = true;
-            codEditorialLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
-            codEditorialLabel.Location = new System.Drawing.Point(257, 80);
-            codEditorialLabel.Name = "codEditorialLabel";
-            codEditorialLabel.Size = new System.Drawing.Size(59, 22);
-            codEditorialLabel.TabIndex = 48;
-            codEditorialLabel.Text = "Editorial:";
-            // 
             // codEditorialComboBox
             // 
             this.codEditorialComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -321,24 +314,27 @@ namespace MainForm
             this.codEditorialComboBox.Name = "codEditorialComboBox";
             this.codEditorialComboBox.Size = new System.Drawing.Size(217, 26);
             this.codEditorialComboBox.TabIndex = 49;
+            this.codEditorialComboBox.Enter += new System.EventHandler(this.codEditorialComboBox_Enter);
             // 
-            // btnPrueba
+            // checkBoxComboBox1
             // 
-            this.btnPrueba.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrueba.Location = new System.Drawing.Point(492, 381);
-            this.btnPrueba.Name = "btnPrueba";
-            this.btnPrueba.Size = new System.Drawing.Size(106, 23);
-            this.btnPrueba.TabIndex = 50;
-            this.btnPrueba.Text = "Prueba";
-            this.btnPrueba.UseVisualStyleBackColor = true;
-            this.btnPrueba.Click += new System.EventHandler(this.btnPrueba_Click);
+            checkBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxComboBox1.CheckBoxProperties = checkBoxProperties2;
+            this.checkBoxComboBox1.DisplayMemberSingleItem = "";
+            this.checkBoxComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.checkBoxComboBox1.FormattingEnabled = true;
+            this.checkBoxComboBox1.Location = new System.Drawing.Point(543, 150);
+            this.checkBoxComboBox1.Name = "checkBoxComboBox1";
+            this.checkBoxComboBox1.Size = new System.Drawing.Size(247, 26);
+            this.checkBoxComboBox1.TabIndex = 51;
+            this.checkBoxComboBox1.Enter += new System.EventHandler(this.checkBoxComboBox1_Enter);
             // 
             // frnAddBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 426);
-            this.Controls.Add(this.btnPrueba);
+            this.Controls.Add(this.checkBoxComboBox1);
             this.Controls.Add(codEditorialLabel);
             this.Controls.Add(this.codEditorialComboBox);
             this.Controls.Add(descripcionLabel);
@@ -357,7 +353,6 @@ namespace MainForm
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.cbochkAutores);
             this.Controls.Add(this.pctImagenLibro);
             this.Controls.Add(this.tituloTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -375,7 +370,6 @@ namespace MainForm
         #endregion
 
         private System.Windows.Forms.PictureBox pctImagenLibro;
-        private CustomControls.CheckBoxComboBox.CheckBoxComboBox cbochkAutores;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Label label5;
@@ -390,6 +384,6 @@ namespace MainForm
         private System.Windows.Forms.TextBox añoEdicionTextBox;
         private System.Windows.Forms.TextBox descripcionTextBox;
         private System.Windows.Forms.ComboBox codEditorialComboBox;
-        private System.Windows.Forms.Button btnPrueba;
+        private CustomControls.CheckBoxComboBox.CheckBoxComboBox checkBoxComboBox1;
     }
 }

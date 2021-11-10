@@ -14,7 +14,7 @@ namespace MainForm
 {
     public partial class frmPrincipal : Form
     {
-        private TipoUsuario.NivelAutorizacion currentAutorizacion = TipoUsuario.NivelAutorizacion.Invitado;
+        private TipoUsuario.NivelAutorizacion currentAutorizacion = TipoUsuario.NivelAutorizacion.Master;
 
         public frmPrincipal(TipoUsuario.NivelAutorizacion recieverAutorizacion)
         {
@@ -91,10 +91,6 @@ namespace MainForm
                     }
                 }
             }
-            else
-            {
-                
-            }
         }
 
         private void manageTopicsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -110,6 +106,11 @@ namespace MainForm
         private void authorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormularioAbierto = FormEnPanel.AbrirForm<addAuthors>(ref pctFondo);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

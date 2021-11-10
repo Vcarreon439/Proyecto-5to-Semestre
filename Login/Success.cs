@@ -39,5 +39,10 @@ namespace Login
             Funcionalidad_Formularios.Arrastre_Formularios.Llama_ReleaseCapture();
             Funcionalidad_Formularios.Arrastre_Formularios.Llama_SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

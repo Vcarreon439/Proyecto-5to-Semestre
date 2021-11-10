@@ -57,6 +57,7 @@ namespace MainForm
         {
             InitializeComponent();
             internalList = new ListasObjetos();
+            libroBindingSource.DataSource = new Libro();
             pctImagenLibro.AllowDrop = true;
         }
 
@@ -90,9 +91,6 @@ namespace MainForm
                 libroBindingSource.EndEdit();
                 Libro temp = libroBindingSource.Current as Libro;
 
-                
-
-
                 if (temp != null)
                 {
                     ValidateBook validador = new ValidateBook();
@@ -109,17 +107,22 @@ namespace MainForm
                     }
                     else
                     {
+                        if (pctImagenLibro.Image != null)
+                            temp.Imagen = Elementos.ImageConvertions.ImageToBase64(pctImagenLibro.Image, ImageFormat.Jpeg);
+                        else
+                            temp.Imagen = null;
+
+                        temp.listaTemas = GenerarTemas();
+                        temp.codEditorial = GenerarEditorial();
+                        temp.listaAutores = GenerarAutores();
+
                         ModeloDUsuario mdDUsuario = new ModeloDUsuario();
 
-                        //if (mdDUsuario.AddAuthor(temp))
-                        //{
-                        //    pctPrueba.Image = null;
-                        //    fullAutorBindingSource.Clear();
-                        //    fullAutorBindingSource.DataSource = new FullAutor();
-
-                        //    if (forma != null)
-                        //        forma.Refresh();
-                        //}
+                        if (mdDUsuario.AddBook(temp))
+                        {
+                            libroBindingSource.Clear();
+                            MessageBox.Show("Se ha insertado el libro");
+                        }
                     }
 
                 }
@@ -130,11 +133,8 @@ namespace MainForm
             }
         }
 
-        private void cboEditorial_Enter(object sender, EventArgs e)
-        {
-            ListasObjetos.LoadEditoriales(ref internalList.Editoriales);
-            FillCbo(ref codEditorialComboBox, internalList.Editoriales);
-        }
+       
+
         private void FillCbo(ref ComboBox comboBox, List<EditorialSencillo> elemetos = null, List<Tema> temas = null)
         {
             comboBox.Items.Clear();
@@ -156,7 +156,7 @@ namespace MainForm
             comboBox.Items.Clear();
 
             foreach (AutorSimple autor in autores)
-                comboBox.Items.Add((autor.Nombre + " " + autor.Apellido));
+                comboBox.Items.Add((autor.Nombre + "_" + autor.Apellido));
         }
 
         private void cboTema_Enter(object sender, EventArgs e)
@@ -165,18 +165,7 @@ namespace MainForm
             FillCbo2(ref cboTema, internalList.Temas);
         }
 
-        private void cbochkAutores_Enter(object sender, EventArgs e)
-        {
-            ListasObjetos.LoadAutores(ref internalList.Autores);
-            FillCbo3(ref cbochkAutores, internalList.Autores);
-        }
-
-        private void iSBNTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPrueba_Click(object sender, EventArgs e)
+        private List<Tema> GenerarTemas()
         {
             List<CheckBoxComboBoxItem> elementos = cboTema.CheckBoxItems.FindAll(x => x.CheckState == CheckState.Checked);
             List<Tema> lista = new List<Tema>();
@@ -184,8 +173,44 @@ namespace MainForm
             foreach (CheckBoxComboBoxItem el in elementos)
                 lista.Add(new Tema(internalList.Temas.Find(x => x.Descripcion == el.Text).Codigo, el.Text));
 
-            foreach (Tema tt in lista)
-                Console.WriteLine($"{tt.Codigo} - {tt.Descripcion}");
+            return lista;
+        }
+
+        private string GenerarEditorial()
+        {
+            return internalList.Editoriales.Find(x => x.Nombre == codEditorialComboBox.Text).Codigo;
+        }
+
+        private List<AutorSimple> GenerarAutores()
+        {
+            List<AutorSimple> listaAutorSimples = new List<AutorSimple>();
+
+            foreach (CheckBoxComboBoxItem item in checkBoxComboBox1.CheckBoxItems.FindAll(x=>x.CheckState == CheckState.Checked))
+            {
+                listaAutorSimples.Add(new AutorSimple
+                    (
+                        internalList.Autores.Find(x=> x.Nombre == item.Text.Split('_')[0] && x.Apellido == item.Text.Split('_')[1]).Codigo
+                        ));
+            }
+
+            foreach (AutorSimple autor in listaAutorSimples)
+            {
+                Console.WriteLine($"{autor.Codigo}");
+            }
+
+            return listaAutorSimples;
+        }
+
+        private void codEditorialComboBox_Enter(object sender, EventArgs e)
+        {
+            ListasObjetos.LoadEditoriales(ref internalList.Editoriales);
+            FillCbo(ref codEditorialComboBox, internalList.Editoriales);
+        }
+
+        private void checkBoxComboBox1_Enter(object sender, EventArgs e)
+        {
+            ListasObjetos.LoadAutores(ref internalList.Autores);
+            FillCbo3(ref checkBoxComboBox1, internalList.Autores);
         }
     }
 }

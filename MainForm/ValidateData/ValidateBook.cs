@@ -16,7 +16,6 @@ namespace MainForm.ValidateData
         public ValidateBook()
         {
             RuleFor(x => x.Titulo).NotEmpty();
-            RuleFor(x => x.AñoEdicion).GreaterThan(0);
             RuleFor(x => x.Copias).GreaterThan(-1);
         }
     }

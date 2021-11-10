@@ -198,11 +198,13 @@ namespace DataAccess
 
         public bool AddBook(Libro tempLibro)
         {
+            string valor;
+
             using (SqlConnection conexion = getConnection())
             {
                 conexion.Open();
 
-                using (SqlCommand cmd = new SqlCommand("AgregarLibro", conexion))
+                using (SqlCommand cmd = new SqlCommand("AddBook", conexion))
                 {
                     try
                     {
@@ -210,44 +212,59 @@ namespace DataAccess
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         //El titulo nunca pueden ir vacios
-                        cmd.Parameters.AddWithValue("@titulo", tempLibro.Titulo);
-                        cmd.Parameters.AddWithValue("@numEdicion", tempLibro.numEdicion);
-                        cmd.Parameters.AddWithValue("@copias", tempLibro.Copias);
+                        cmd.Parameters.AddWithValue("@Titulo", tempLibro.Titulo);
 
-                        //Parametros opcionales
-
-                        //ISBN
-                        if (tempLibro.ISBN == "" | tempLibro.ISBN == null)
-                            cmd.Parameters.AddWithValue("@isbn", DBNull.Value);
-                        else
-                            cmd.Parameters.AddWithValue("@isbn", tempLibro.ISBN);
-
-                        //Descripcion
-                        if (tempLibro.Descripcion == "" | tempLibro.Descripcion == null)
-                            cmd.Parameters.AddWithValue("@descripcion", DBNull.Value);
-                        else
-                            cmd.Parameters.AddWithValue("@descripcion", tempLibro.Descripcion);
-
-
-                        //codEditorial
-                        if (tempLibro.codEditorial == "" | tempLibro.codEditorial == null)
+                        if (tempLibro.codEditorial == ""|tempLibro.codEditorial == null)
                             cmd.Parameters.AddWithValue("@codEditorial", DBNull.Value);
                         else
                             cmd.Parameters.AddWithValue("@codEditorial", tempLibro.codEditorial);
 
-                        //numEdicion
-                        if (tempLibro.AñoEdicion == null)
+                        if (tempLibro.ISBN == "" | tempLibro.ISBN == null)
+                            cmd.Parameters.AddWithValue("@ISBN", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@ISBN", tempLibro.ISBN);
+
+                        if (tempLibro.numEdicion == -1 | tempLibro.numEdicion == null)
+                            cmd.Parameters.AddWithValue("@numEdicion", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@numEdicion", tempLibro.numEdicion);
+
+                        if (tempLibro.Copias == -1 | tempLibro.Copias == null)
+                            cmd.Parameters.AddWithValue("@copias", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@copias", tempLibro.Copias);
+
+                        if (tempLibro.AñoEdicion == 0 | tempLibro.AñoEdicion == null)
                             cmd.Parameters.AddWithValue("@añoEdicion", DBNull.Value);
                         else
-                            cmd.Parameters.AddWithValue("@añoEdicion", tempLibro.AñoEdicion);
+                            cmd.Parameters.AddWithValue("@añoEdicion", tempLibro.AñoEdicion.ToString());
 
-                        if (tempLibro.Imagen == null)
-                            cmd.Parameters.AddWithValue("@imagen", DBNull.Value);
+                        if (tempLibro.Descripcion==null| tempLibro.Descripcion=="")
+                            cmd.Parameters.AddWithValue("@descripcion", DBNull.Value);
                         else
-                            cmd.Parameters.AddWithValue("@imagen", tempLibro.Imagen);
+                            cmd.Parameters.AddWithValue("@descripcion", tempLibro.Descripcion);
 
+                        if (tempLibro.Imagen == null | tempLibro.Imagen == "")
+                            cmd.Parameters.AddWithValue("@foto", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@foto", tempLibro.Imagen);
 
-                        return (cmd.ExecuteNonQuery() > 0);
+                        cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add("@codLibro", SqlDbType.Int).Direction = ParameterDirection.Output;
+
+                        if (cmd.ExecuteNonQuery()>0)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+
+                        //tempLibro.Codigo = Convert.ToInt16(cmd.Parameters["@codLibro"].Value);
+                        //    InsertTemaLibro(tempLibro);
+
+                        //return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString()));
                     }
                     catch (Exception e)
                     {
@@ -255,12 +272,44 @@ namespace DataAccess
                         return false;
                     }
                 }
+
+                conexion.Close();
             }
         }
 
         #endregion
 
         #endregion
+
+        private void InsertTemaLibro(Libro libro)
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                foreach (Tema tem in libro.listaTemas)
+                {
+                    using (SqlCommand cmd = new SqlCommand("InsertarTemaLibro", conexion))
+                    {
+                        try
+                        {
+                            cmd.Connection = conexion;
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.AddWithValue("@codLibro", libro.Codigo);
+                            cmd.Parameters.AddWithValue("@codTema", tem.Codigo);
+                        }
+                        catch (Exception e)
+                        {
+                            MessageBox.Show(e.Message);
+                        }
+                    }
+                }
+
+                conexion.Close();
+            }
+        }
+
 
         #region Views
 

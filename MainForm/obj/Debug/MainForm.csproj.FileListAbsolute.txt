@@ -41,3 +41,4 @@ C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\bin\Debug\FlagsISO.xm
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.tableAuthor.resources
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.fichaAutor.resources
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.csproj.AssemblyReference.cache
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.csproj.CopyComplete

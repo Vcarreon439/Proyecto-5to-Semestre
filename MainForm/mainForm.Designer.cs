@@ -55,6 +55,7 @@ namespace MainForm
             resources.ApplyResources(this.btnExit, "btnExit");
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Name = "btnExit";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // menuPrincipal
             // 
@@ -63,8 +64,8 @@ namespace MainForm
             this.menuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.masterToolStripMenuItem,
             this.btnAdministrator,
-            this.btnBooks,
             this.btnStudentOptions,
+            this.btnBooks,
             this.btnIssueBooks,
             this.btnReturnBooks,
             this.btnExit});
@@ -99,6 +100,7 @@ namespace MainForm
             // 
             // manageTopicsToolStripMenuItem
             // 
+            this.manageTopicsToolStripMenuItem.Image = global::MainForm.Properties.Resources.temas;
             this.manageTopicsToolStripMenuItem.Name = "manageTopicsToolStripMenuItem";
             resources.ApplyResources(this.manageTopicsToolStripMenuItem, "manageTopicsToolStripMenuItem");
             this.manageTopicsToolStripMenuItem.Click += new System.EventHandler(this.manageTopicsToolStripMenuItem_Click);

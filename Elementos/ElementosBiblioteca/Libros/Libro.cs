@@ -13,7 +13,7 @@ namespace Elementos
     public class Libro : LibroSencillo
     {
         public List<Tema> listaTemas;
-        public List<AutorSimple> listaAtores;
+        public List<AutorSimple> listaAutores;
         
         //Codigo, titulo, Descripcion, Imagen
 

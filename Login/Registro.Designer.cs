@@ -32,19 +32,19 @@ namespace Login
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.rounded_Panel1 = new CustomControls.Rounded_Panel(this.components);
+            this.rjCircularPictureBox1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.apellidosKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.usuarioTempBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.confirmarContraKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.contraseñaKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.correoKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.nombreKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnRegister = new CustomControls.Rounded_Button();
-            this.rjCircularPictureBox1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
-            this.usuarioTempBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rounded_Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioTempBindingSource)).BeginInit();
@@ -69,6 +69,19 @@ namespace Login
             this.rounded_Panel1.PanelColor = System.Drawing.Color.White;
             this.rounded_Panel1.Radio = 20;
             this.rounded_Panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.rounded_Panel1_MouseMove);
+            // 
+            // rjCircularPictureBox1
+            // 
+            this.rjCircularPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.MediumSlateBlue;
+            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.rjCircularPictureBox1.BorderSize = 2;
+            this.rjCircularPictureBox1.GradientAngle = 50F;
+            resources.ApplyResources(this.rjCircularPictureBox1, "rjCircularPictureBox1");
+            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
+            this.rjCircularPictureBox1.TabStop = false;
             // 
             // label5
             // 
@@ -112,6 +125,10 @@ namespace Login
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.apellidosKryptonTextBox.StateCommon.Border.Rounding = 10;
             this.apellidosKryptonTextBox.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // usuarioTempBindingSource
+            // 
+            this.usuarioTempBindingSource.DataSource = typeof(Elementos.UsuarioTemp);
             // 
             // confirmarContraKryptonTextBox
             // 
@@ -172,6 +189,7 @@ namespace Login
             this.btnRegister.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnRegister.BorderRadius = 20;
             this.btnRegister.BorderSize = 0;
+            this.btnRegister.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnRegister.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btnRegister, "btnRegister");
             this.btnRegister.ForeColor = System.Drawing.Color.White;
@@ -179,23 +197,6 @@ namespace Login
             this.btnRegister.TextColor = System.Drawing.Color.White;
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-            // 
-            // rjCircularPictureBox1
-            // 
-            this.rjCircularPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.MediumSlateBlue;
-            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox1.BorderSize = 2;
-            this.rjCircularPictureBox1.GradientAngle = 50F;
-            resources.ApplyResources(this.rjCircularPictureBox1, "rjCircularPictureBox1");
-            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
-            this.rjCircularPictureBox1.TabStop = false;
-            // 
-            // usuarioTempBindingSource
-            // 
-            this.usuarioTempBindingSource.DataSource = typeof(Elementos.UsuarioTemp);
             // 
             // Registro
             // 

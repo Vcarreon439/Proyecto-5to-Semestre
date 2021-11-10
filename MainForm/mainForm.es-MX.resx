@@ -119,41 +119,55 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 20</value>
+    <value>44, 26</value>
   </data>
   <data name="btnExit.Text" xml:space="preserve">
     <value>Salir</value>
   </data>
-  <data name="btnReturnBooks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 20</value>
-  </data>
-  <data name="btnReturnBooks.Text" xml:space="preserve">
-    <value>Regresar Libros</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pctFondo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnAdministrator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 20</value>
-  </data>
-  <data name="btnAdministrator.Text" xml:space="preserve">
-    <value>Administrador</value>
-  </data>
   <data name="manageStudentsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 22</value>
+    <value>203, 26</value>
   </data>
   <data name="manageStudentsToolStripMenuItem1.Text" xml:space="preserve">
     <value>Administrar Estudiantes</value>
   </data>
-  <data name="btnBooks.Text" xml:space="preserve">
-    <value>Libros</value>
+  <data name="manageTopicsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 26</value>
+  </data>
+  <data name="manageTopicsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Administrar Temas</value>
+  </data>
+  <data name="bookPublishersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 26</value>
+  </data>
+  <data name="bookPublishersToolStripMenuItem.Text" xml:space="preserve">
+    <value>Administrar Editoriales</value>
+  </data>
+  <data name="authorsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 26</value>
+  </data>
+  <data name="authorsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Administrar Autores</value>
+  </data>
+  <data name="btnAdministrator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 26</value>
+  </data>
+  <data name="btnAdministrator.Text" xml:space="preserve">
+    <value>Administrador</value>
   </data>
   <data name="btnAgregarLibros.Text" xml:space="preserve">
     <value>Agregar Libros</value>
   </data>
   <data name="searchBookToolStripMenuItem.Text" xml:space="preserve">
     <value>Buscar Libros</value>
+  </data>
+  <data name="btnBooks.Text" xml:space="preserve">
+    <value>Libros</value>
+  </data>
+  <data name="btnMyProfile.Text" xml:space="preserve">
+    <value>Mi perfil</value>
+  </data>
+  <data name="btnMyProfile.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomCenter</value>
   </data>
   <data name="btnStudentOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3604,16 +3618,10 @@
 </value>
   </data>
   <data name="btnStudentOptions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 20</value>
+    <value>93, 26</value>
   </data>
   <data name="btnStudentOptions.Text" xml:space="preserve">
     <value>Estudiante</value>
-  </data>
-  <data name="btnMyProfile.Text" xml:space="preserve">
-    <value>Mi perfil</value>
-  </data>
-  <data name="btnMyProfile.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomCenter</value>
   </data>
   <data name="btnIssueBooks.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3979,12 +3987,15 @@
 </value>
   </data>
   <data name="btnIssueBooks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 20</value>
+    <value>107, 26</value>
   </data>
   <data name="btnIssueBooks.Text" xml:space="preserve">
     <value>Rentar Libros</value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnReturnBooks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 26</value>
+  </data>
+  <data name="btnReturnBooks.Text" xml:space="preserve">
+    <value>Regresar Libros</value>
   </data>
 </root>

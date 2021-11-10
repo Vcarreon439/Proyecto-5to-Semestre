@@ -28,51 +28,47 @@ namespace MainForm
             CargarLibros(mdDUsuario.LibrosPopulares_4());
         }
 
+        private void CargarPortada(ref PictureBox caja, ref Label Titulo, ref Label Descripcion, LibroSencillo libro = null)
+        {
+            if (libro.Imagen == "")
+                caja.Image = Resources.ImageNotAvalible;
+            else
+                caja.Image = ImageConvertions.Base64ToImage(listaLibros[0].Imagen);
+
+            Titulo.Text = libro.Titulo;
+
+            Descripcion.Text = libro.Descripcion;
+        }
+
         private void CargarLibros(List<LibroSencillo> listaLibros)
         {
-            if (listaLibros==null)
+            if (listaLibros == null)
                 return;
 
-            Control[] imagesControls;
-
-            for (int i = 0; i < listaLibros.Capacity; i++)
+            for (int i = 0; i < listaLibros.Count; i++)
             {
-                imagesControls = this.Controls.Find($"pctRecomendado{i + 1}", true);
-            }
-
-            MessageBox.Show("");
-
-            if (listaLibros != null)
-            {
-
-                for (int i = 0; i < listaLibros.Count; i++)
+                switch (i)
                 {
-                    if (i == 0)
-                    {
-                        this.pctRecomendado1.Image = ImageConvertions.Base64ToImage(listaLibros[0].Imagen);
-                        this.lblLibro1.Text = listaLibros[0].Titulo;
-                    }
+                    case 0:
+                        CargarPortada(ref pctRecomendado1, ref lblLibro1, ref lblDescripcionL1, listaLibros[i]);
+                        break;
 
-                    if (i == 1)
-                    {
-                        this.pctRecomendado2.Image = ImageConvertions.Base64ToImage(listaLibros[1].Imagen);
-                        this.lblLibro2.Text = listaLibros[1].Titulo;
-                    }
+                    case 1:
+                        CargarPortada(ref pctRecomendado2, ref lblLibro2, ref lblDescripcionL2, listaLibros[i]);
+                        break;
 
-                    if (i == 2)
-                    {
-                        this.pctRecomendado3.Image = ImageConvertions.Base64ToImage(listaLibros[2].Imagen);
-                        this.lblLibro3.Text = listaLibros[2].Titulo;
-                    }
+                    case 2:
+                        CargarPortada(ref pctRecomendado3, ref lblLibro3, ref lblDescripcionL3, listaLibros[i]);
+                        break;
 
-                    if (i == 3)
-                    {
-                        this.pctRecomendado4.Image = ImageConvertions.Base64ToImage(listaLibros[3].Imagen);
-                        this.lblLibro4.Text = listaLibros[3].Titulo;
-                    }
+                    case 3:
+                        CargarPortada(ref pctRecomendado4, ref lblLibro4, ref lblDescripcionL4, listaLibros[i]);
+                        break;
                 }
             }
+
         }
+    
 
         private void popularBooks_MouseMove(object sender, MouseEventArgs e)
         {

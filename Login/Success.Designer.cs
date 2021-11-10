@@ -33,7 +33,7 @@ namespace Login
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Success));
             this.rounded_Panel1 = new CustomControls.Rounded_Panel(this.components);
             this.label2 = new System.Windows.Forms.Label();
-            this.rounded_Button1 = new CustomControls.Rounded_Button();
+            this.btnOK = new CustomControls.Rounded_Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pctImage = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.rounded_Panel1.SuspendLayout();
@@ -44,7 +44,7 @@ namespace Login
             // 
             resources.ApplyResources(this.rounded_Panel1, "rounded_Panel1");
             this.rounded_Panel1.Controls.Add(this.label2);
-            this.rounded_Panel1.Controls.Add(this.rounded_Button1);
+            this.rounded_Panel1.Controls.Add(this.btnOK);
             this.rounded_Panel1.Controls.Add(this.label1);
             this.rounded_Panel1.Controls.Add(this.pctImage);
             this.rounded_Panel1.Name = "rounded_Panel1";
@@ -58,19 +58,20 @@ namespace Login
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
-            // rounded_Button1
+            // btnOK
             // 
-            this.rounded_Button1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rounded_Button1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rounded_Button1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rounded_Button1.BorderRadius = 20;
-            this.rounded_Button1.BorderSize = 0;
-            this.rounded_Button1.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.rounded_Button1, "rounded_Button1");
-            this.rounded_Button1.ForeColor = System.Drawing.Color.White;
-            this.rounded_Button1.Name = "rounded_Button1";
-            this.rounded_Button1.TextColor = System.Drawing.Color.White;
-            this.rounded_Button1.UseVisualStyleBackColor = false;
+            this.btnOK.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnOK.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnOK.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnOK.BorderRadius = 20;
+            this.btnOK.BorderSize = 0;
+            this.btnOK.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnOK, "btnOK");
+            this.btnOK.ForeColor = System.Drawing.Color.White;
+            this.btnOK.Name = "btnOK";
+            this.btnOK.TextColor = System.Drawing.Color.White;
+            this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // label1
             // 
@@ -112,7 +113,7 @@ namespace Login
 
         private CustomControls.Rounded_Panel rounded_Panel1;
         private System.Windows.Forms.Label label2;
-        private CustomControls.Rounded_Button rounded_Button1;
+        private CustomControls.Rounded_Button btnOK;
         private System.Windows.Forms.Label label1;
         private RJCodeAdvance.RJControls.RJCircularPictureBox pctImage;
     }
