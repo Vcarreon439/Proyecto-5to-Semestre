@@ -117,63 +117,56 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnAdministrator.Text" xml:space="preserve">
-    <value>Manager</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnBooks.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans Condensed, 11.25pt</value>
-  </data>
-  <data name="&gt;&gt;btnBooks.Name" xml:space="preserve">
-    <value>btnBooks</value>
-  </data>
-  <data name="menuPrincipal.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="btnReturnBooks.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans Condensed, 11.25pt</value>
-  </data>
-  <data name="btnBooks.Text" xml:space="preserve">
-    <value>Books</value>
-  </data>
-  <data name="manageTopicsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Manage Topics</value>
-  </data>
-  <data name="menuPrincipal.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
-    <value>btnExit</value>
-  </data>
-  <data name="&gt;&gt;btnAgregarLibros.Name" xml:space="preserve">
-    <value>btnAgregarLibros</value>
-  </data>
-  <data name="&gt;&gt;btnAdministrator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="authorsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 26</value>
-  </data>
-  <data name="&gt;&gt;authorsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="btnExit.Font" type="System.Drawing.Font, System.Drawing">
     <value>Open Sans Condensed, 11.25pt</value>
   </data>
-  <data name="&gt;&gt;manageTopicsToolStripMenuItem.Name" xml:space="preserve">
-    <value>manageTopicsToolStripMenuItem</value>
-  </data>
-  <data name="bookPublishersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 26</value>
-  </data>
-  <data name="&gt;&gt;btnIssueBooks.Name" xml:space="preserve">
-    <value>btnIssueBooks</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnExit.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Alt+F14</value>
   </data>
   <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 26</value>
   </data>
-  <data name="pctFondo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 30</value>
+  <data name="btnExit.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <metadata name="menuPrincipal.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>172, 18</value>
+  </metadata>
+  <data name="menuPrincipal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="masterToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans Condensed, 11.25pt</value>
+  </data>
+  <data name="masterToolStripMenuItem.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="masterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 26</value>
+  </data>
+  <data name="masterToolStripMenuItem.Text" xml:space="preserve">
+    <value>Master</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="masterToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnAdministrator.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans Condensed, 11.25pt</value>
+  </data>
+  <data name="btnAdministrator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 26</value>
+  </data>
+  <data name="btnAdministrator.Text" xml:space="preserve">
+    <value>Manager</value>
+  </data>
+  <data name="btnAdministrator.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnStudentOptions.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans Condensed, 11.25pt</value>
   </data>
   <data name="btnStudentOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3623,139 +3616,44 @@
         DeZuw6qbzhzjsesV1YWgPMGqm85DH02YFZ3vTz5U/9//D7h5mKeZfCZ7AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnAdministrator.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans Condensed, 11.25pt</value>
+  <data name="btnStudentOptions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 26</value>
   </data>
-  <data name="&gt;&gt;manageStudentsToolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnStudentOptions.Text" xml:space="preserve">
+    <value>Student</value>
   </data>
-  <data name="&gt;&gt;masterToolStripMenuItem.Name" xml:space="preserve">
-    <value>masterToolStripMenuItem</value>
+  <data name="searchBookToolStripMenuItem.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="searchBookToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 30</value>
   </data>
-  <data name="&gt;&gt;btnIssueBooks.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="searchBookToolStripMenuItem.Text" xml:space="preserve">
+    <value>Search Book</value>
   </data>
-  <data name="&gt;&gt;pctFondo.Name" xml:space="preserve">
-    <value>pctFondo</value>
-  </data>
-  <data name="manageTopicsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 26</value>
-  </data>
-  <data name="&gt;&gt;btnMyProfile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="bookPublishersToolStripMenuItem.Text" xml:space="preserve">
-    <value>Manage Publishers</value>
-  </data>
-  <data name="&gt;&gt;pctFondo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnReturnBooks.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnAdministrator.Visible" type="System.Boolean, mscorlib">
+  <data name="btnAgregarLibros.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="btnAgregarLibros.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 30</value>
   </data>
-  <data name="&gt;&gt;bookPublishersToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnStudentOptions.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans Condensed, 11.25pt</value>
-  </data>
-  <data name="btnIssueBooks.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans Condensed, 11.25pt</value>
-  </data>
-  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pctFondo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 420</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="masterToolStripMenuItem.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="btnStudentOptions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 26</value>
-  </data>
-  <data name="btnIssueBooks.Text" xml:space="preserve">
-    <value>Issue Books</value>
-  </data>
-  <data name="pctFondo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="btnExit.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Alt+F14</value>
-  </data>
-  <data name="&gt;&gt;menuPrincipal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="masterToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans Condensed, 11.25pt</value>
-  </data>
-  <data name="&gt;&gt;manageStudentsToolStripMenuItem1.Name" xml:space="preserve">
-    <value>manageStudentsToolStripMenuItem1</value>
-  </data>
-  <data name="btnReturnBooks.Text" xml:space="preserve">
-    <value>Return Books</value>
-  </data>
-  <data name="btnStudentOptions.Text" xml:space="preserve">
-    <value>Student</value>
-  </data>
-  <data name="menuPrincipal.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btnReturnBooks.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="searchBookToolStripMenuItem.Text" xml:space="preserve">
-    <value>Search Book</value>
-  </data>
-  <data name="&gt;&gt;searchBookToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pctFondo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnMyProfile.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="btnMyProfile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 30</value>
-  </data>
-  <data name="btnExit.Text" xml:space="preserve">
-    <value>Exit</value>
-  </data>
-  <data name="manageStudentsToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Manage Students</value>
-  </data>
-  <data name="&gt;&gt;pctFondo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="btnAgregarLibros.Text" xml:space="preserve">
     <value>Add Book</value>
   </data>
-  <data name="&gt;&gt;btnStudentOptions.Name" xml:space="preserve">
-    <value>btnStudentOptions</value>
+  <data name="btnAgregarLibros.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;searchBookToolStripMenuItem.Name" xml:space="preserve">
-    <value>searchBookToolStripMenuItem</value>
-  </data>
-  <data name="searchBookToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 30</value>
+  <data name="btnBooks.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans Condensed, 11.25pt</value>
   </data>
   <data name="btnBooks.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 26</value>
+  </data>
+  <data name="btnBooks.Text" xml:space="preserve">
+    <value>Books</value>
+  </data>
+  <data name="btnIssueBooks.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans Condensed, 11.25pt</value>
   </data>
   <data name="btnIssueBooks.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -4120,109 +4018,211 @@
         AvUpAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="&gt;&gt;btnReturnBooks.Name" xml:space="preserve">
-    <value>btnReturnBooks</value>
+  <data name="btnIssueBooks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 26</value>
   </data>
-  <data name="masterToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="pctFondo.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;bookPublishersToolStripMenuItem.Name" xml:space="preserve">
-    <value>bookPublishersToolStripMenuItem</value>
-  </data>
-  <data name="btnReturnBooks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 26</value>
-  </data>
-  <data name="&gt;&gt;authorsToolStripMenuItem.Name" xml:space="preserve">
-    <value>authorsToolStripMenuItem</value>
+  <data name="btnIssueBooks.Text" xml:space="preserve">
+    <value>Issue Books</value>
   </data>
   <data name="btnIssueBooks.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;menuPrincipal.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="btnReturnBooks.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans Condensed, 11.25pt</value>
   </data>
-  <data name="authorsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Manage Authors</value>
+  <data name="btnReturnBooks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 26</value>
   </data>
-  <data name="btnMyProfile.Text" xml:space="preserve">
-    <value>My Profile</value>
+  <data name="btnReturnBooks.Text" xml:space="preserve">
+    <value>Return Books</value>
   </data>
-  <data name="&gt;&gt;btnMyProfile.Name" xml:space="preserve">
-    <value>btnMyProfile</value>
-  </data>
-  <data name="&gt;&gt;btnBooks.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuPrincipal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 30</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Form1</value>
-  </data>
-  <data name="btnIssueBooks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 26</value>
-  </data>
-  <data name="masterToolStripMenuItem.Text" xml:space="preserve">
-    <value>Master</value>
-  </data>
-  <data name="btnAgregarLibros.Visible" type="System.Boolean, mscorlib">
+  <data name="btnReturnBooks.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="btnAgregarLibros.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btnStudentOptions.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pctFondo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="searchBookToolStripMenuItem.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btnAgregarLibros.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuPrincipal.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="menuPrincipal.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="manageStudentsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 26</value>
+  <data name="menuPrincipal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 30</value>
   </data>
-  <data name="&gt;&gt;masterToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="menuPrincipal.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="menuPrincipal.Text" xml:space="preserve">
+    <value>menuStrip1</value>
   </data>
   <data name="&gt;&gt;menuPrincipal.Name" xml:space="preserve">
     <value>menuPrincipal</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+  <data name="&gt;&gt;menuPrincipal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>frmPrincipal</value>
+  <data name="&gt;&gt;menuPrincipal.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="btnAdministrator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 26</value>
+  <data name="&gt;&gt;menuPrincipal.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;manageTopicsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="manageStudentsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 26</value>
   </data>
-  <data name="masterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 26</value>
+  <data name="manageStudentsToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Manage Students</value>
   </data>
-  <data name="&gt;&gt;btnAdministrator.Name" xml:space="preserve">
-    <value>btnAdministrator</value>
+  <data name="manageTopicsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 26</value>
+  </data>
+  <data name="manageTopicsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Manage Topics</value>
+  </data>
+  <data name="bookPublishersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 26</value>
+  </data>
+  <data name="bookPublishersToolStripMenuItem.Text" xml:space="preserve">
+    <value>Manage Publishers</value>
+  </data>
+  <data name="authorsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 26</value>
+  </data>
+  <data name="authorsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Manage Authors</value>
+  </data>
+  <data name="btnMyProfile.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnMyProfile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 30</value>
+  </data>
+  <data name="btnMyProfile.Text" xml:space="preserve">
+    <value>My Profile</value>
+  </data>
+  <data name="pctFondo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="pctFondo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pctFondo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 30</value>
+  </data>
+  <data name="pctFondo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 420</value>
+  </data>
+  <data name="pctFondo.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pctFondo.Name" xml:space="preserve">
+    <value>pctFondo</value>
+  </data>
+  <data name="&gt;&gt;pctFondo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pctFondo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pctFondo.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="menuPrincipal.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>172, 18</value>
-  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 450</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;masterToolStripMenuItem.Name" xml:space="preserve">
+    <value>masterToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;masterToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAdministrator.Name" xml:space="preserve">
+    <value>btnAdministrator</value>
+  </data>
+  <data name="&gt;&gt;btnAdministrator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;manageStudentsToolStripMenuItem1.Name" xml:space="preserve">
+    <value>manageStudentsToolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;manageStudentsToolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;manageTopicsToolStripMenuItem.Name" xml:space="preserve">
+    <value>manageTopicsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;manageTopicsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bookPublishersToolStripMenuItem.Name" xml:space="preserve">
+    <value>bookPublishersToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;bookPublishersToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;authorsToolStripMenuItem.Name" xml:space="preserve">
+    <value>authorsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;authorsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnStudentOptions.Name" xml:space="preserve">
+    <value>btnStudentOptions</value>
+  </data>
+  <data name="&gt;&gt;btnStudentOptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMyProfile.Name" xml:space="preserve">
+    <value>btnMyProfile</value>
+  </data>
+  <data name="&gt;&gt;btnMyProfile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnBooks.Name" xml:space="preserve">
+    <value>btnBooks</value>
+  </data>
+  <data name="&gt;&gt;btnBooks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAgregarLibros.Name" xml:space="preserve">
+    <value>btnAgregarLibros</value>
+  </data>
+  <data name="&gt;&gt;btnAgregarLibros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;searchBookToolStripMenuItem.Name" xml:space="preserve">
+    <value>searchBookToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;searchBookToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnIssueBooks.Name" xml:space="preserve">
+    <value>btnIssueBooks</value>
+  </data>
+  <data name="&gt;&gt;btnIssueBooks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnReturnBooks.Name" xml:space="preserve">
+    <value>btnReturnBooks</value>
+  </data>
+  <data name="&gt;&gt;btnReturnBooks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmPrincipal</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
