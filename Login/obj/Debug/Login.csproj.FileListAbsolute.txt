@@ -8,7 +8,6 @@ C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\obj\Debug\Login.Login.re
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\obj\Debug\Login.Properties.Resources.resources
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\obj\Debug\Login.csproj.GenerateResource.cache
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
-C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\obj\Debug\Login.csproj.CopyComplete
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\obj\Debug\Login.exe
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\obj\Debug\Login.pdb
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\Login\bin\Debug\CustomControls.dll
