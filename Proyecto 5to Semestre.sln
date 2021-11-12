@@ -11,11 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaAuxiliar", "Eleme
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "Dominio\Dominio.csproj", "{C7DF569D-FCB5-431E-9658-C50CC2121CB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcionalidad_Formularios", "..\Evidencia-de-Proyecto-Final\Funcionalidad_Formularios\Funcionalidad_Formularios\Funcionalidad_Formularios.csproj", "{9D2E35BF-622B-4992-8335-6011AF47E8B4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainForm", "MainForm\MainForm.csproj", "{866D1CD3-5058-46C7-9768-3EDC4E0741D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControls", "..\Evidencia-de-Proyecto-Final\CustomControls\CustomControls.csproj", "{275C59E3-3F7E-4C80-9963-8E3E4B2A0BCC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcionalidad_Formularios", "Funcionalidad_Formularios\Funcionalidad_Formularios\Funcionalidad_Formularios.csproj", "{9D2E35BF-622B-4992-8335-6011AF47E8B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControls", "CustomControls\CustomControls.csproj", "{275C59E3-3F7E-4C80-9963-8E3E4B2A0BCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,14 +39,14 @@ Global
 		{C7DF569D-FCB5-431E-9658-C50CC2121CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7DF569D-FCB5-431E-9658-C50CC2121CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7DF569D-FCB5-431E-9658-C50CC2121CB1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9D2E35BF-622B-4992-8335-6011AF47E8B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9D2E35BF-622B-4992-8335-6011AF47E8B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9D2E35BF-622B-4992-8335-6011AF47E8B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9D2E35BF-622B-4992-8335-6011AF47E8B4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{866D1CD3-5058-46C7-9768-3EDC4E0741D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{866D1CD3-5058-46C7-9768-3EDC4E0741D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{866D1CD3-5058-46C7-9768-3EDC4E0741D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{866D1CD3-5058-46C7-9768-3EDC4E0741D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D2E35BF-622B-4992-8335-6011AF47E8B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D2E35BF-622B-4992-8335-6011AF47E8B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D2E35BF-622B-4992-8335-6011AF47E8B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D2E35BF-622B-4992-8335-6011AF47E8B4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{275C59E3-3F7E-4C80-9963-8E3E4B2A0BCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{275C59E3-3F7E-4C80-9963-8E3E4B2A0BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{275C59E3-3F7E-4C80-9963-8E3E4B2A0BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU

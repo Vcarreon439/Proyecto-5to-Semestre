@@ -1,0 +1,8 @@
+C:\Users\hv_ca\source\repos\Evidencia-de-Proyecto-Final\Funcionalidad_Formularios\Funcionalidad_Formularios\bin\Debug\Funcionalidad_Formularios.dll
+C:\Users\hv_ca\source\repos\Evidencia-de-Proyecto-Final\Funcionalidad_Formularios\Funcionalidad_Formularios\bin\Debug\Funcionalidad_Formularios.pdb
+C:\Users\hv_ca\source\repos\Evidencia-de-Proyecto-Final\Funcionalidad_Formularios\Funcionalidad_Formularios\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\hv_ca\source\repos\Evidencia-de-Proyecto-Final\Funcionalidad_Formularios\Funcionalidad_Formularios\obj\Debug\Funcionalidad_Formularios.csproj.CoreCompileInputs.cache
+C:\Users\hv_ca\source\repos\Evidencia-de-Proyecto-Final\Funcionalidad_Formularios\Funcionalidad_Formularios\obj\Debug\Funcionalidad_Formularios.dll
+C:\Users\hv_ca\source\repos\Evidencia-de-Proyecto-Final\Funcionalidad_Formularios\Funcionalidad_Formularios\obj\Debug\Funcionalidad_Formularios.pdb
+C:\Users\hv_ca\source\repos\Evidencia-de-Proyecto-Final\Funcionalidad_Formularios\Funcionalidad_Formularios\obj\Debug\Funcionalidad_Formularios.csproj.AssemblyReference.cache
+C:\Users\hv_ca\source\repos\Evidencia-de-Proyecto-Final\Funcionalidad_Formularios\Funcionalidad_Formularios\obj\Debug\Funcionalidad_Formularios.csproj.CopyComplete
