@@ -14,7 +14,7 @@ namespace MainForm
 {
     public partial class frmPrincipal : Form
     {
-        private TipoUsuario.NivelAutorizacion currentAutorizacion = TipoUsuario.NivelAutorizacion.Invitado;
+        private TipoUsuario.NivelAutorizacion currentAutorizacion = TipoUsuario.NivelAutorizacion.Master;
 
         public frmPrincipal(TipoUsuario.NivelAutorizacion recieverAutorizacion)
         {
