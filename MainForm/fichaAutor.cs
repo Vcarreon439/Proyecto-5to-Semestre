@@ -109,5 +109,10 @@ namespace MainForm
                 MessageBox.Show(exception.Message);
             }
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

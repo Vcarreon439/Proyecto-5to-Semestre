@@ -154,15 +154,6 @@
   <data name="btnAdministrator.Text" xml:space="preserve">
     <value>Administrador</value>
   </data>
-  <data name="btnAgregarLibros.Text" xml:space="preserve">
-    <value>Agregar Libros</value>
-  </data>
-  <data name="searchBookToolStripMenuItem.Text" xml:space="preserve">
-    <value>Buscar Libros</value>
-  </data>
-  <data name="btnBooks.Text" xml:space="preserve">
-    <value>Libros</value>
-  </data>
   <data name="btnMyProfile.Text" xml:space="preserve">
     <value>Mi perfil</value>
   </data>
@@ -3622,6 +3613,15 @@
   </data>
   <data name="btnStudentOptions.Text" xml:space="preserve">
     <value>Estudiante</value>
+  </data>
+  <data name="btnAgregarLibros.Text" xml:space="preserve">
+    <value>Agregar Libros</value>
+  </data>
+  <data name="searchBookToolStripMenuItem.Text" xml:space="preserve">
+    <value>Buscar Libros</value>
+  </data>
+  <data name="btnBooks.Text" xml:space="preserve">
+    <value>Libros</value>
   </data>
   <data name="btnIssueBooks.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

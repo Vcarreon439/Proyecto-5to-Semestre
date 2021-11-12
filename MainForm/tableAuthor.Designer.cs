@@ -29,16 +29,19 @@ namespace MainForm
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAutor = new System.Windows.Forms.DataGridView();
-            this.pnlEncabezado = new System.Windows.Forms.Panel();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.First_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Second_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Country = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlEncabezado = new System.Windows.Forms.Panel();
+            this.btnCerrar = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutor)).BeginInit();
+            this.pnlEncabezado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAutor
@@ -58,20 +61,10 @@ namespace MainForm
             this.dgvAutor.TabIndex = 0;
             this.dgvAutor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAutor_CellClick);
             // 
-            // pnlEncabezado
-            // 
-            this.pnlEncabezado.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.pnlEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEncabezado.Location = new System.Drawing.Point(0, 0);
-            this.pnlEncabezado.Name = "pnlEncabezado";
-            this.pnlEncabezado.Size = new System.Drawing.Size(800, 26);
-            this.pnlEncabezado.TabIndex = 1;
-            this.pnlEncabezado.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlEncabezado_MouseMove);
-            // 
             // ID
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ID.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ID.DefaultCellStyle = dataGridViewCellStyle3;
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
@@ -80,8 +73,8 @@ namespace MainForm
             // First_Name
             // 
             this.First_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.First_Name.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.First_Name.DefaultCellStyle = dataGridViewCellStyle4;
             this.First_Name.HeaderText = "First Name";
             this.First_Name.Name = "First_Name";
             this.First_Name.ReadOnly = true;
@@ -107,6 +100,31 @@ namespace MainForm
             this.City.ReadOnly = true;
             this.City.Width = 125;
             // 
+            // pnlEncabezado
+            // 
+            this.pnlEncabezado.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.pnlEncabezado.Controls.Add(this.btnCerrar);
+            this.pnlEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlEncabezado.Location = new System.Drawing.Point(0, 0);
+            this.pnlEncabezado.Name = "pnlEncabezado";
+            this.pnlEncabezado.Size = new System.Drawing.Size(800, 33);
+            this.pnlEncabezado.TabIndex = 1;
+            this.pnlEncabezado.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlEncabezado_MouseMove);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.ForeColor = System.Drawing.Color.Red;
+            this.btnCerrar.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnCerrar.IconColor = System.Drawing.Color.Red;
+            this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrar.Location = new System.Drawing.Point(765, 4);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(32, 32);
+            this.btnCerrar.TabIndex = 16;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // tableAuthor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,6 +137,8 @@ namespace MainForm
             this.Text = "tableAuthor";
             this.Load += new System.EventHandler(this.tableAuthor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutor)).EndInit();
+            this.pnlEncabezado.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -132,5 +152,6 @@ namespace MainForm
         private System.Windows.Forms.DataGridViewTextBoxColumn Second_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Country;
         private System.Windows.Forms.DataGridViewTextBoxColumn City;
+        private FontAwesome.Sharp.IconPictureBox btnCerrar;
     }
 }

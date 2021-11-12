@@ -38,6 +38,7 @@ namespace MainForm
             System.Windows.Forms.Label paisLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addAuthors));
             this.nombreKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.fullAutorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.apellidoKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.ciudadKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.codigoKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -46,7 +47,6 @@ namespace MainForm
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnTabla = new System.Windows.Forms.Button();
-            this.fullAutorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pctPrueba = new System.Windows.Forms.PictureBox();
             nombreLabel = new System.Windows.Forms.Label();
             apellidoLabel = new System.Windows.Forms.Label();
@@ -132,6 +132,10 @@ namespace MainForm
             this.nombreKryptonTextBox.StateCommon.Border.Rounding = 5;
             this.nombreKryptonTextBox.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 12F);
             this.nombreKryptonTextBox.TabIndex = 1;
+            // 
+            // fullAutorBindingSource
+            // 
+            this.fullAutorBindingSource.DataSource = typeof(Elementos.ElementosBiblioteca.Autor.FullAutor);
             // 
             // apellidoKryptonTextBox
             // 
@@ -465,6 +469,7 @@ namespace MainForm
             this.rjButton1.Text = "Add Picture";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // btnAgregar
             // 
@@ -487,10 +492,6 @@ namespace MainForm
             this.btnTabla.Text = "Open Table";
             this.btnTabla.UseVisualStyleBackColor = true;
             this.btnTabla.Click += new System.EventHandler(this.btnTabla_Click);
-            // 
-            // fullAutorBindingSource
-            // 
-            this.fullAutorBindingSource.DataSource = typeof(Elementos.ElementosBiblioteca.Autor.FullAutor);
             // 
             // pctPrueba
             // 

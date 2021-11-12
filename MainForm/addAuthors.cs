@@ -105,5 +105,16 @@ namespace MainForm
         {
             e.Effect = DragDropEffects.Copy;
         }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                pctPrueba.Image = new Bitmap(open.FileName);
+                imgLocation = open.FileName;
+            }
+        }
     }
 }

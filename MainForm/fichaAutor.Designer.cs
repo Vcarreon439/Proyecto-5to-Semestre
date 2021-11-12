@@ -48,6 +48,7 @@ namespace MainForm
             this.apellidoKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.nombreKryptonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.rjCircularPictureBox1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
+            this.btnCerrar = new FontAwesome.Sharp.IconPictureBox();
             nombreLabel = new System.Windows.Forms.Label();
             apellidoLabel = new System.Windows.Forms.Label();
             comentariosLabel = new System.Windows.Forms.Label();
@@ -57,6 +58,7 @@ namespace MainForm
             this.rounded_Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fullAutorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // nombreLabel
@@ -93,7 +95,7 @@ namespace MainForm
             // 
             codigoLabel.AutoSize = true;
             codigoLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 9.75F, System.Drawing.FontStyle.Bold);
-            codigoLabel.Location = new System.Drawing.Point(184, 195);
+            codigoLabel.Location = new System.Drawing.Point(184, 206);
             codigoLabel.Name = "codigoLabel";
             codigoLabel.Size = new System.Drawing.Size(22, 19);
             codigoLabel.TabIndex = 7;
@@ -125,6 +127,7 @@ namespace MainForm
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rounded_Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.rounded_Panel1.Controls.Add(this.btnCerrar);
             this.rounded_Panel1.Controls.Add(this.btnDelete);
             this.rounded_Panel1.Controls.Add(this.btnUpdate);
             this.rounded_Panel1.Controls.Add(ciudadLabel);
@@ -462,7 +465,8 @@ namespace MainForm
             // codigoKryptonTextBox
             // 
             this.codigoKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fullAutorBindingSource, "Codigo", true));
-            this.codigoKryptonTextBox.Location = new System.Drawing.Point(212, 185);
+            this.codigoKryptonTextBox.Enabled = false;
+            this.codigoKryptonTextBox.Location = new System.Drawing.Point(212, 196);
             this.codigoKryptonTextBox.Name = "codigoKryptonTextBox";
             this.codigoKryptonTextBox.Size = new System.Drawing.Size(100, 29);
             this.codigoKryptonTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Silver;
@@ -535,6 +539,20 @@ namespace MainForm
             this.rjCircularPictureBox1.TabIndex = 0;
             this.rjCircularPictureBox1.TabStop = false;
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.ForeColor = System.Drawing.Color.Red;
+            this.btnCerrar.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnCerrar.IconColor = System.Drawing.Color.Red;
+            this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrar.Location = new System.Drawing.Point(280, 14);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(32, 32);
+            this.btnCerrar.TabIndex = 15;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // fichaAutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -550,6 +568,7 @@ namespace MainForm
             this.rounded_Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fullAutorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -567,5 +586,6 @@ namespace MainForm
         private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox1;
         private RJCodeAdvance.RJControls.RJButton btnDelete;
         private RJCodeAdvance.RJControls.RJButton btnUpdate;
+        private FontAwesome.Sharp.IconPictureBox btnCerrar;
     }
 }

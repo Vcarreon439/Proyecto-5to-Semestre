@@ -184,5 +184,10 @@ namespace MainForm
             ListasObjetos.LoadAutores(ref internalList.Autores);
             FillCbo3(ref checkBoxComboBox1, internalList.Autores);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

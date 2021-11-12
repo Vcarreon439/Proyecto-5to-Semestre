@@ -93,5 +93,10 @@ namespace MainForm
                 Console.WriteLine(e);
             }
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
