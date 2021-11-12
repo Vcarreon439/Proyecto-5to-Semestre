@@ -77,6 +77,12 @@
     <Compile Include="fichaAutor.Designer.cs">
       <DependentUpon>fichaAutor.cs</DependentUpon>
     </Compile>
+    <Compile Include="fichaLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fichaLibro.Designer.cs">
+      <DependentUpon>fichaLibro.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,12 @@
     <Compile Include="searchBooks.Designer.cs">
       <DependentUpon>searchBooks.cs</DependentUpon>
     </Compile>
+    <Compile Include="fichaRenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fichaRenta.Designer.cs">
+      <DependentUpon>fichaRenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="tableAuthor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fichaAutor.resx">
       <DependentUpon>fichaAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fichaLibro.resx">
+      <DependentUpon>fichaLibro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddBook.resx">
       <DependentUpon>frmAddBook.cs</DependentUpon>
@@ -165,6 +180,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="searchBooks.resx">
       <DependentUpon>searchBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fichaRenta.es-419.resx">
+      <DependentUpon>fichaRenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fichaRenta.resx">
+      <DependentUpon>fichaRenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tableAuthor.resx">
       <DependentUpon>tableAuthor.cs</DependentUpon>
@@ -249,6 +270,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="library.ico" />
+    <None Include="Resources\check%403x.png" />
     <None Include="Resources\temas.png" />
   </ItemGroup>
   <ItemGroup />
