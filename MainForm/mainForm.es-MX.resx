@@ -148,6 +148,12 @@
   <data name="authorsToolStripMenuItem.Text" xml:space="preserve">
     <value>Administrar Autores</value>
   </data>
+  <data name="btnRentas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 26</value>
+  </data>
+  <data name="btnRentas.Text" xml:space="preserve">
+    <value>Administrar Rentas</value>
+  </data>
   <data name="btnAdministrator.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 26</value>
   </data>
@@ -3614,11 +3620,11 @@
   <data name="btnStudentOptions.Text" xml:space="preserve">
     <value>Estudiante</value>
   </data>
-  <data name="btnAgregarLibros.Text" xml:space="preserve">
-    <value>Agregar Libros</value>
-  </data>
   <data name="searchBookToolStripMenuItem.Text" xml:space="preserve">
     <value>Buscar Libros</value>
+  </data>
+  <data name="btnAgregarLibros.Text" xml:space="preserve">
+    <value>Agregar Libros</value>
   </data>
   <data name="btnBooks.Text" xml:space="preserve">
     <value>Libros</value>

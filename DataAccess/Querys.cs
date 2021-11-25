@@ -44,6 +44,14 @@ namespace DataAccess
             }
         }
 
+        public void GetLoggData()
+        {
+            FullUser aaa = new FullUser();
+
+
+
+        }
+
         #endregion
 
         #region Editorial

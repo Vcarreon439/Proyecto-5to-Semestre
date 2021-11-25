@@ -86,24 +86,22 @@ namespace Login
                         user.Contraseña = newPass;
                         this.auth = mdDUsuario.LoginUser(user);
 
-                        this.DialogResult = DialogResult.OK;
-
                         switch (auth)
                         {
                             case TipoUsuario.NivelAutorizacion.Master:
-                                MessageBox.Show("Bienvenido Maestro");
+                                this.DialogResult = DialogResult.OK;
                                 break;
 
                             case TipoUsuario.NivelAutorizacion.Admin:
-                                MessageBox.Show("Bienvenido Administrador");
+                                this.DialogResult = DialogResult.OK;
                                 break;
 
                             case TipoUsuario.NivelAutorizacion.User:
-                                MessageBox.Show("Bienvenido Usuario");
+                                this.DialogResult = DialogResult.OK;
                                 break;
 
                             case TipoUsuario.NivelAutorizacion.Invitado:
-                                MessageBox.Show("Bienvenido Invitado");
+                                MessageBox.Show("El correo o la contraseña son incorrectas");
                                 break;
                         }
                     }

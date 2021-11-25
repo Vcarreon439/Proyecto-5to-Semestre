@@ -107,11 +107,23 @@
     <Compile Include="mainForm.Designer.cs">
       <DependentUpon>mainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="manejarRentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manejarRentas.Designer.cs">
+      <DependentUpon>manejarRentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="popularBooks.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="popularBooks.Designer.cs">
       <DependentUpon>popularBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="profileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="profileForm.Designer.cs">
+      <DependentUpon>profileForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -167,8 +179,14 @@
     <EmbeddedResource Include="mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="manejarRentas.resx">
+      <DependentUpon>manejarRentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="popularBooks.resx">
       <DependentUpon>popularBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profileForm.resx">
+      <DependentUpon>profileForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -193,6 +211,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Elementos.ElementosBiblioteca.Autor.FullAutor.datasource" />
     <None Include="Properties\DataSources\Elementos.ElementosBiblioteca.Editorial.FullEditorial.datasource" />
+    <None Include="Properties\DataSources\Elementos.FullUser.datasource" />
     <None Include="Properties\DataSources\Elementos.Libro.datasource" />
     <None Include="Properties\DataSources\Elementos.Tema.datasource" />
     <None Include="Properties\Settings.settings">

@@ -10,3 +10,15 @@ C:\Users\hv_ca\source\repos\Evidencia-de-Proyecto-Final\CustomControls\obj\Debug
 C:\Users\hv_ca\source\repos\Evidencia-de-Proyecto-Final\CustomControls\obj\Debug\CustomControls.pdb
 C:\Users\hv_ca\source\repos\Evidencia-de-Proyecto-Final\CustomControls\obj\Debug\CustomControls.csproj.AssemblyReference.cache
 C:\Users\hv_ca\source\repos\Evidencia-de-Proyecto-Final\CustomControls\obj\Debug\CustomControls.csproj.CopyComplete
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\CustomControls\bin\Debug\CustomControls.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\CustomControls\bin\Debug\CustomControls.pdb
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\CustomControls\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\CustomControls\obj\Debug\CustomControls.csproj.AssemblyReference.cache
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\CustomControls\obj\Debug\CustomControls.Gender.resources
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\CustomControls\obj\Debug\CustomControls.Rounded_Panel.resources
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\CustomControls\obj\Debug\CustomControls.Rounded_PictureBox.resources
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\CustomControls\obj\Debug\CustomControls.csproj.GenerateResource.cache
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\CustomControls\obj\Debug\CustomControls.csproj.CoreCompileInputs.cache
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\CustomControls\obj\Debug\CustomControls.csproj.CopyComplete
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\CustomControls\obj\Debug\CustomControls.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\CustomControls\obj\Debug\CustomControls.pdb

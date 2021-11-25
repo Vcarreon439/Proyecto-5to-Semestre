@@ -48,3 +48,6 @@ C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\Login.Succe
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\Login.Success.es-419.resources
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\bin\Debug\es-419\MainForm.resources.dll
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\es-419\MainForm.resources.dll
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.manejarRentas.resources
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.csproj.CopyComplete
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.profileForm.resources

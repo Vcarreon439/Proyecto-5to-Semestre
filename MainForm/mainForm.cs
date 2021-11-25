@@ -15,6 +15,7 @@ namespace MainForm
     public partial class frmPrincipal : Form
     {
         private TipoUsuario.NivelAutorizacion currentAutorizacion = TipoUsuario.NivelAutorizacion.Master;
+        private FullUser localFullUser;
 
         public frmPrincipal(TipoUsuario.NivelAutorizacion recieverAutorizacion)
         {
@@ -76,7 +77,7 @@ namespace MainForm
 
         private void btnMyProfile_Click(object sender, EventArgs e)
         {
-            if (currentAutorizacion == TipoUsuario.NivelAutorizacion.Invitado)
+            if (currentAutorizacion == TipoUsuario.NivelAutorizacion.Invitado & localFullUser == null)
             {
                 using (Login.Login logg = new Login.Login())
                 {
@@ -90,6 +91,10 @@ namespace MainForm
                         DeterminComponents();
                     }
                 }
+            }
+            else
+            {
+                FormularioAbierto = FormEnPanel.AbrirForm<profileForm>(ref pctFondo);
             }
         }
 
@@ -121,6 +126,11 @@ namespace MainForm
         private void searchBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormularioAbierto = FormEnPanel.AbrirForm<searchBooks>(ref pctFondo);
+        }
+
+        private void btnRentas_Click(object sender, EventArgs e)
+        {
+            FormularioAbierto = FormEnPanel.AbrirForm<manejarRentas>(ref pctFondo);
         }
     }
 }

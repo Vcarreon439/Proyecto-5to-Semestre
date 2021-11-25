@@ -125,10 +125,20 @@ namespace MainForm
 
         private void FillCbo3(ref CheckBoxComboBox comboBox, List<AutorSimple> autores = null)
         {
-            comboBox.Items.Clear();
+            try
+            {
+                comboBox.Items.Clear();
 
-            foreach (AutorSimple autor in autores)
-                comboBox.Items.Add((autor.Nombre + "_" + autor.Apellido));
+                if (autores==null)
+                    return;
+                
+                foreach (AutorSimple autor in autores)
+                    comboBox.Items.Add((autor.Nombre + "_" + autor.Apellido));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
 
         private void cboTema_Enter(object sender, EventArgs e)

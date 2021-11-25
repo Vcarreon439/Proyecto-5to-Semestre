@@ -38,11 +38,12 @@ namespace MainForm
             this.manageTopicsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookPublishersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.authorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnRentas = new System.Windows.Forms.ToolStripMenuItem();
             this.btnStudentOptions = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMyProfile = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBooks = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAgregarLibros = new System.Windows.Forms.ToolStripMenuItem();
             this.searchBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAgregarLibros = new System.Windows.Forms.ToolStripMenuItem();
             this.btnIssueBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.btnReturnBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.pctFondo = new System.Windows.Forms.PictureBox();
@@ -59,8 +60,8 @@ namespace MainForm
             // 
             // menuPrincipal
             // 
-            this.menuPrincipal.BackColor = System.Drawing.Color.MediumSlateBlue;
             resources.ApplyResources(this.menuPrincipal, "menuPrincipal");
+            this.menuPrincipal.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.menuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.masterToolStripMenuItem,
             this.btnAdministrator,
@@ -82,46 +83,53 @@ namespace MainForm
             // 
             // btnAdministrator
             // 
+            resources.ApplyResources(this.btnAdministrator, "btnAdministrator");
             this.btnAdministrator.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageStudentsToolStripMenuItem1,
             this.manageTopicsToolStripMenuItem,
             this.bookPublishersToolStripMenuItem,
-            this.authorsToolStripMenuItem});
-            resources.ApplyResources(this.btnAdministrator, "btnAdministrator");
+            this.authorsToolStripMenuItem,
+            this.btnRentas});
             this.btnAdministrator.ForeColor = System.Drawing.Color.White;
             this.btnAdministrator.Image = global::MainForm.Properties.Resources.adminIcon;
             this.btnAdministrator.Name = "btnAdministrator";
             // 
             // manageStudentsToolStripMenuItem1
             // 
+            resources.ApplyResources(this.manageStudentsToolStripMenuItem1, "manageStudentsToolStripMenuItem1");
             this.manageStudentsToolStripMenuItem1.Image = global::MainForm.Properties.Resources.estudiante;
             this.manageStudentsToolStripMenuItem1.Name = "manageStudentsToolStripMenuItem1";
-            resources.ApplyResources(this.manageStudentsToolStripMenuItem1, "manageStudentsToolStripMenuItem1");
             // 
             // manageTopicsToolStripMenuItem
             // 
+            resources.ApplyResources(this.manageTopicsToolStripMenuItem, "manageTopicsToolStripMenuItem");
             this.manageTopicsToolStripMenuItem.Image = global::MainForm.Properties.Resources.temas;
             this.manageTopicsToolStripMenuItem.Name = "manageTopicsToolStripMenuItem";
-            resources.ApplyResources(this.manageTopicsToolStripMenuItem, "manageTopicsToolStripMenuItem");
             this.manageTopicsToolStripMenuItem.Click += new System.EventHandler(this.manageTopicsToolStripMenuItem_Click);
             // 
             // bookPublishersToolStripMenuItem
             // 
-            this.bookPublishersToolStripMenuItem.Name = "bookPublishersToolStripMenuItem";
             resources.ApplyResources(this.bookPublishersToolStripMenuItem, "bookPublishersToolStripMenuItem");
+            this.bookPublishersToolStripMenuItem.Name = "bookPublishersToolStripMenuItem";
             this.bookPublishersToolStripMenuItem.Click += new System.EventHandler(this.bookPublishersToolStripMenuItem_Click);
             // 
             // authorsToolStripMenuItem
             // 
-            this.authorsToolStripMenuItem.Name = "authorsToolStripMenuItem";
             resources.ApplyResources(this.authorsToolStripMenuItem, "authorsToolStripMenuItem");
+            this.authorsToolStripMenuItem.Name = "authorsToolStripMenuItem";
             this.authorsToolStripMenuItem.Click += new System.EventHandler(this.authorsToolStripMenuItem_Click);
+            // 
+            // btnRentas
+            // 
+            resources.ApplyResources(this.btnRentas, "btnRentas");
+            this.btnRentas.Name = "btnRentas";
+            this.btnRentas.Click += new System.EventHandler(this.btnRentas_Click);
             // 
             // btnStudentOptions
             // 
+            resources.ApplyResources(this.btnStudentOptions, "btnStudentOptions");
             this.btnStudentOptions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnMyProfile});
-            resources.ApplyResources(this.btnStudentOptions, "btnStudentOptions");
             this.btnStudentOptions.ForeColor = System.Drawing.Color.White;
             this.btnStudentOptions.Name = "btnStudentOptions";
             // 
@@ -134,20 +142,13 @@ namespace MainForm
             // 
             // btnBooks
             // 
+            resources.ApplyResources(this.btnBooks, "btnBooks");
             this.btnBooks.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.searchBookToolStripMenuItem,
             this.btnAgregarLibros});
-            resources.ApplyResources(this.btnBooks, "btnBooks");
             this.btnBooks.ForeColor = System.Drawing.Color.White;
             this.btnBooks.Image = global::MainForm.Properties.Resources.libro;
             this.btnBooks.Name = "btnBooks";
-            // 
-            // btnAgregarLibros
-            // 
-            resources.ApplyResources(this.btnAgregarLibros, "btnAgregarLibros");
-            this.btnAgregarLibros.Image = global::MainForm.Properties.Resources.addBook;
-            this.btnAgregarLibros.Name = "btnAgregarLibros";
-            this.btnAgregarLibros.Click += new System.EventHandler(this.btnAgregarLibros_Click);
             // 
             // searchBookToolStripMenuItem
             // 
@@ -155,6 +156,13 @@ namespace MainForm
             this.searchBookToolStripMenuItem.Image = global::MainForm.Properties.Resources.searchbook;
             this.searchBookToolStripMenuItem.Name = "searchBookToolStripMenuItem";
             this.searchBookToolStripMenuItem.Click += new System.EventHandler(this.searchBookToolStripMenuItem_Click);
+            // 
+            // btnAgregarLibros
+            // 
+            resources.ApplyResources(this.btnAgregarLibros, "btnAgregarLibros");
+            this.btnAgregarLibros.Image = global::MainForm.Properties.Resources.addBook;
+            this.btnAgregarLibros.Name = "btnAgregarLibros";
+            this.btnAgregarLibros.Click += new System.EventHandler(this.btnAgregarLibros_Click);
             // 
             // btnIssueBooks
             // 
@@ -211,6 +219,7 @@ namespace MainForm
         private System.Windows.Forms.ToolStripMenuItem manageTopicsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookPublishersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem authorsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnRentas;
     }
 }
 
