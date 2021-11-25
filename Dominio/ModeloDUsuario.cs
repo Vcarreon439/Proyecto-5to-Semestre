@@ -134,5 +134,10 @@ namespace Dominio
         {
             return obj.LoadAutores();
         }
+
+        public FullUser GetLoggData(UserAcces param)
+        {
+            return obj.GetLoggData(param);
+        }
     }
 }

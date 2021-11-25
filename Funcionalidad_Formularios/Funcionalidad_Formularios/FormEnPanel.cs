@@ -30,6 +30,29 @@ namespace Funcionalidad_Formularios
             }
         }
 
+        static public Form AbrirFormulario<T>(ref PictureBox pnlFormularios, Func <T> metodofactory) where T : Form
+        {
+            Form formulario = pnlFormularios.Controls.OfType<T>().FirstOrDefault();
+
+            //Buscar el formulario dentro del panel.
+            if (formulario != null)
+            {
+                formulario.BringToFront();
+                formulario.WindowState = FormWindowState.Maximized;
+
+                
+            }
+
+            formulario = metodofactory();
+            formulario.TopLevel = false;
+            formulario.FormBorderStyle = FormBorderStyle.None;
+            formulario.Dock = DockStyle.Fill;
+            pnlFormularios.Controls.Add(formulario);
+            pnlFormularios.Tag = formulario;
+            formulario.Show();
+            return formulario;
+        }
+
         static public DialogResult AbrirForm<MiFomr>(ref PictureBox pnlFormularios, int valor=0) where MiFomr : Form, new()
         {
             Form formulario;

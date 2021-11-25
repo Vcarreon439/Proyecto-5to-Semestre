@@ -20,7 +20,6 @@ namespace MainForm
         private Tema selectedTema;
         private Tema updatedTema;
 
-
         public frmAddTopics()
         {
             InitializeComponent();

@@ -44,11 +44,46 @@ namespace DataAccess
             }
         }
 
-        public void GetLoggData()
+        public FullUser GetLoggData(UserAcces temp)
         {
-            FullUser aaa = new FullUser();
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
 
+                using (SqlCommand cmd = new SqlCommand("LogData", conexion))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
 
+                    cmd.Parameters.AddWithValue("@Correo", temp.Correo);
+                    cmd.Parameters.AddWithValue("@Contraseña", temp.Contraseña);
+
+                    using (SqlDataAdapter adaptador = new SqlDataAdapter(cmd))
+                    {
+                        DataTable tabla = new DataTable();
+                        adaptador.Fill(tabla);
+
+                        FullUser retFullUser = new FullUser();
+
+                        foreach (DataRow row in tabla.Rows)
+                        {
+                            retFullUser.Nombre = row["Nombre"].ToString();
+                            retFullUser.Apellidos = row["Apellidos"].ToString();
+                            retFullUser.Genero = row["Genero"].ToString();
+
+                            string fec = row["FechaNac"].ToString();
+
+                            if (fec!="")
+                                retFullUser.FechaDateTime = DateTime.Parse(row["FechaNac"].ToString());
+
+                            retFullUser.Entidad = row["EntFed"].ToString();
+                            retFullUser.Domicilio = row["Domicilio"].ToString();
+                            retFullUser.Situacion = row["Situacion"].ToString();
+                        }
+
+                        return retFullUser;
+                    }
+                }
+            }
 
         }
 

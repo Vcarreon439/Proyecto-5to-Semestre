@@ -14,7 +14,7 @@ namespace MainForm
 {
     public partial class frmPrincipal : Form
     {
-        private TipoUsuario.NivelAutorizacion currentAutorizacion = TipoUsuario.NivelAutorizacion.Master;
+        private TipoUsuario.NivelAutorizacion currentAutorizacion = TipoUsuario.NivelAutorizacion.Invitado;
         private FullUser localFullUser;
 
         public frmPrincipal(TipoUsuario.NivelAutorizacion recieverAutorizacion)
@@ -88,19 +88,15 @@ namespace MainForm
                     {
                         MessageBox.Show($"{logg.Auth}");
                         this.currentAutorizacion = logg.Auth;
+                        this.localFullUser = logg.LocalFullUser;
                         DeterminComponents();
                     }
                 }
             }
             else
             {
-                FormularioAbierto = FormEnPanel.AbrirForm<profileForm>(ref pctFondo);
+                FormularioAbierto = FormEnPanel.AbrirFormulario(ref pctFondo,()=> new profileForm(localFullUser));
             }
-        }
-
-        private void manageTopicsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormularioAbierto = FormEnPanel.AbrirForm<frmAddTopics>(ref pctFondo);
         }
 
         private void bookPublishersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -131,6 +127,11 @@ namespace MainForm
         private void btnRentas_Click(object sender, EventArgs e)
         {
             FormularioAbierto = FormEnPanel.AbrirForm<manejarRentas>(ref pctFondo);
+        }
+
+        private void manageTopicsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioAbierto = FormEnPanel.AbrirForm<frmAddTopics>(ref pctFondo);
         }
     }
 }

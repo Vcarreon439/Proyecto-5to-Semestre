@@ -244,6 +244,10 @@ namespace MainForm
             this.generoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fullUserBindingSource, "Genero", true));
             this.generoComboBox.Font = new System.Drawing.Font("Open Sans", 9.75F);
             this.generoComboBox.FormattingEnabled = true;
+            this.generoComboBox.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino",
+            "Sin especificar"});
             this.generoComboBox.Location = new System.Drawing.Point(265, 143);
             this.generoComboBox.Name = "generoComboBox";
             this.generoComboBox.Size = new System.Drawing.Size(212, 26);

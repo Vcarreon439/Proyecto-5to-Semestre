@@ -18,12 +18,17 @@ namespace Login
     {
         protected string mailtxt;
 
+        private FullUser localFullUser; 
+
         private TipoUsuario.NivelAutorizacion auth;
         public TipoUsuario.NivelAutorizacion Auth => auth;
+
+        public FullUser LocalFullUser => localFullUser;
 
         public Login()
         {
             InitializeComponent();
+            localFullUser = new FullUser();
             userAccesBindingSource.DataSource = new UserAcces();
         }
 
@@ -84,7 +89,9 @@ namespace Login
                         ModeloDUsuario mdDUsuario = new ModeloDUsuario();
                         string newPass = Encriptado.Encrypt(user.Contraseña);
                         user.Contraseña = newPass;
+
                         this.auth = mdDUsuario.LoginUser(user);
+                        localFullUser = mdDUsuario.GetLoggData(user);
 
                         switch (auth)
                         {
