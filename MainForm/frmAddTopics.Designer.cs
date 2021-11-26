@@ -47,6 +47,9 @@ namespace MainForm
             // 
             // codigoLabel
             // 
+            codigoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             codigoLabel.AutoSize = true;
             codigoLabel.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
             codigoLabel.Location = new System.Drawing.Point(17, 18);
@@ -57,6 +60,9 @@ namespace MainForm
             // 
             // descripcionLabel
             // 
+            descripcionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             descripcionLabel.AutoSize = true;
             descripcionLabel.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
             descripcionLabel.Location = new System.Drawing.Point(17, 101);
@@ -67,6 +73,8 @@ namespace MainForm
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
             this.btnEliminar.Location = new System.Drawing.Point(143, 297);
             this.btnEliminar.Name = "btnEliminar";
@@ -78,7 +86,8 @@ namespace MainForm
             // 
             // btnEditar
             // 
-            this.btnEditar.Enabled = false;
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEditar.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
             this.btnEditar.Location = new System.Drawing.Point(143, 244);
             this.btnEditar.Name = "btnEditar";
@@ -90,6 +99,8 @@ namespace MainForm
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
             this.btnAgregar.Location = new System.Drawing.Point(143, 191);
             this.btnAgregar.Name = "btnAgregar";
@@ -101,19 +112,23 @@ namespace MainForm
             // 
             // dgvGeneros
             // 
-            this.dgvGeneros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvGeneros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvGeneros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGeneros.Location = new System.Drawing.Point(330, 18);
             this.dgvGeneros.Name = "dgvGeneros";
             this.dgvGeneros.ReadOnly = true;
-            this.dgvGeneros.Size = new System.Drawing.Size(474, 546);
+            this.dgvGeneros.Size = new System.Drawing.Size(474, 379);
             this.dgvGeneros.TabIndex = 10;
             this.dgvGeneros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGeneros_CellClick);
             this.dgvGeneros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGeneros_CellContentClick);
             // 
             // codigoKryptonTextBox
             // 
+            this.codigoKryptonTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.codigoKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.temaBindingSource, "Codigo", true));
             this.codigoKryptonTextBox.Location = new System.Drawing.Point(21, 55);
             this.codigoKryptonTextBox.Name = "codigoKryptonTextBox";
@@ -134,6 +149,9 @@ namespace MainForm
             // 
             // descripcionKryptonTextBox
             // 
+            this.descripcionKryptonTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.descripcionKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.temaBindingSource, "Descripcion", true));
             this.descripcionKryptonTextBox.Location = new System.Drawing.Point(21, 135);
             this.descripcionKryptonTextBox.Name = "descripcionKryptonTextBox";
@@ -151,7 +169,7 @@ namespace MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 576);
+            this.ClientSize = new System.Drawing.Size(816, 409);
             this.Controls.Add(descripcionLabel);
             this.Controls.Add(this.descripcionKryptonTextBox);
             this.Controls.Add(codigoLabel);
