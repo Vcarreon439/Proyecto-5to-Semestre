@@ -42,6 +42,7 @@ namespace MainForm
             this.btnStudentOptions = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMyProfile = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBooks = new System.Windows.Forms.ToolStripMenuItem();
+            this.popularBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAgregarLibros = new System.Windows.Forms.ToolStripMenuItem();
             this.btnIssueBooks = new System.Windows.Forms.ToolStripMenuItem();
@@ -143,12 +144,19 @@ namespace MainForm
             // btnBooks
             // 
             this.btnBooks.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.popularBooksToolStripMenuItem,
             this.searchBookToolStripMenuItem,
             this.btnAgregarLibros});
             resources.ApplyResources(this.btnBooks, "btnBooks");
             this.btnBooks.ForeColor = System.Drawing.Color.White;
             this.btnBooks.Image = global::MainForm.Properties.Resources.libro;
             this.btnBooks.Name = "btnBooks";
+            // 
+            // popularBooksToolStripMenuItem
+            // 
+            this.popularBooksToolStripMenuItem.Name = "popularBooksToolStripMenuItem";
+            resources.ApplyResources(this.popularBooksToolStripMenuItem, "popularBooksToolStripMenuItem");
+            this.popularBooksToolStripMenuItem.Click += new System.EventHandler(this.popularBooksToolStripMenuItem_Click);
             // 
             // searchBookToolStripMenuItem
             // 
@@ -220,6 +228,7 @@ namespace MainForm
         private System.Windows.Forms.ToolStripMenuItem bookPublishersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem authorsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem btnRentas;
+        private System.Windows.Forms.ToolStripMenuItem popularBooksToolStripMenuItem;
     }
 }
 

@@ -30,22 +30,36 @@ namespace MainForm
             Fill();
         }
 
+        public LibroVista LibroFicha => libroFicha;
+
         private void Fill()
         {
-            this.lblTitulo.Text = libroFicha.Titulo;
-            this.lblISBN.Text = libroFicha.ISBN;
-            this.lblNumEdicion.Text = libroFicha.numEdicion.ToString();
-            this.lblAñoEdicion.Text = libroFicha.añoEdicion.ToString();
-            this.lblDescripcion.Text = libroFicha.descripcion;
-            this.lblTitulo.Text = libroFicha.Titulo;
-            this.pictureBox1.Image = ImageConvertions.Base64ToImage(libroFicha.imagenLibro);
+            this.lblTitulo.Text = LibroFicha.Titulo;
 
+            if (LibroFicha.ISBN!="")
+                this.lblISBN.Text = LibroFicha.ISBN;
+
+            this.lblEditorial.Text = LibroFicha.Editorial;
+            this.lblNumEdicion.Text = LibroFicha.numEdicion.ToString();
+            this.lblAñoEdicion.Text = LibroFicha.añoEdicion.ToString();
+            this.lblDescripcion.Text = LibroFicha.descripcion;
+            this.lblTitulo.Text = LibroFicha.Titulo;
+            this.pictureBox1.Image = ImageConvertions.Base64ToImage(LibroFicha.imagenLibro);
+            this.TopMost = true;
         }
 
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnRentar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("","",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                this.DialogResult = DialogResult.Yes;
+            else
+                this.DialogResult = DialogResult.No;
         }
     }
 }

@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Elementos;
+using Elementos.ElementosBiblioteca.Libros;
 using Funcionalidad_Formularios;
 
 namespace MainForm
 {
     public partial class frmPrincipal : Form
     {
-        private TipoUsuario.NivelAutorizacion currentAutorizacion = TipoUsuario.NivelAutorizacion.Invitado;
         private FullUser localFullUser;
+        private Form FormularioAbierto = null;
+        public List<LibroVista> librosRenta = new List<LibroVista>();
+        private TipoUsuario.NivelAutorizacion currentAutorizacion = TipoUsuario.NivelAutorizacion.Invitado;
 
         public frmPrincipal(TipoUsuario.NivelAutorizacion recieverAutorizacion)
         {
@@ -48,10 +45,13 @@ namespace MainForm
                     foreach (ToolStripMenuItem opciones in menuPrincipal.Items)
                     {
                         foreach (ToolStripMenuItem opc in opciones.DropDownItems)
-                        {opc.Visible = true;}
+                        {
+                            opc.Visible = true;
+                        }
 
                         opciones.Visible = true;
                     }
+
                     break;
             }
         }
@@ -62,12 +62,9 @@ namespace MainForm
             Funcionalidad_Formularios.Arrastre_Formularios.Llama_SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private Form FormularioAbierto = null;
-
-
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            FormularioAbierto = FormEnPanel.AbrirForm<popularBooks>(ref pctFondo);
+            FormularioAbierto = FormEnPanel.AbrirFormulario(ref pctFondo, () => new popularBooks(this));
         }
 
         private void btnAgregarLibros_Click(object sender, EventArgs e)
@@ -95,7 +92,7 @@ namespace MainForm
             }
             else
             {
-                FormularioAbierto = FormEnPanel.AbrirFormulario(ref pctFondo,()=> new profileForm(localFullUser));
+                FormularioAbierto = FormEnPanel.AbrirFormulario(ref pctFondo, () => new profileForm(localFullUser));
             }
         }
 
@@ -116,7 +113,7 @@ namespace MainForm
 
         private void btnIssueBooks_Click(object sender, EventArgs e)
         {
-            FormularioAbierto = FormEnPanel.AbrirForm<rentarLibro>(ref pctFondo);
+            FormularioAbierto = FormEnPanel.AbrirFormulario(ref pctFondo, () => new rentarLibro(this.librosRenta));
         }
 
         private void searchBookToolStripMenuItem_Click(object sender, EventArgs e)
@@ -133,5 +130,11 @@ namespace MainForm
         {
             FormularioAbierto = FormEnPanel.AbrirForm<frmAddTopics>(ref pctFondo);
         }
+
+        private void popularBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioAbierto = FormEnPanel.AbrirFormulario(ref pctFondo, () => new popularBooks(this));
+        }
+
     }
 }

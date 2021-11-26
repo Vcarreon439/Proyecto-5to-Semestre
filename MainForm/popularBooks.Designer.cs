@@ -167,6 +167,7 @@ namespace MainForm
             this.pctRecomendado4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctRecomendado4.TabIndex = 3;
             this.pctRecomendado4.TabStop = false;
+            this.pctRecomendado4.Click += new System.EventHandler(this.pctRecomendado4_Click);
             // 
             // pctRecomendado3
             // 
@@ -180,6 +181,7 @@ namespace MainForm
             this.pctRecomendado3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctRecomendado3.TabIndex = 2;
             this.pctRecomendado3.TabStop = false;
+            this.pctRecomendado3.Click += new System.EventHandler(this.pctRecomendado3_Click);
             // 
             // pctRecomendado2
             // 
@@ -193,6 +195,7 @@ namespace MainForm
             this.pctRecomendado2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctRecomendado2.TabIndex = 1;
             this.pctRecomendado2.TabStop = false;
+            this.pctRecomendado2.Click += new System.EventHandler(this.pctRecomendado2_Click);
             // 
             // pctRecomendado1
             // 

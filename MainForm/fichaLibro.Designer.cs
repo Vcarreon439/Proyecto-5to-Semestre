@@ -75,7 +75,7 @@ namespace MainForm
             this.flowLayoutPanel1.Controls.Add(this.lblEdicion);
             this.flowLayoutPanel1.Controls.Add(this.lblNumEdicion);
             this.flowLayoutPanel1.Controls.Add(this.lblAñoEdicion);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(266, 82);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(259, 82);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(368, 27);
             this.flowLayoutPanel1.TabIndex = 15;
@@ -131,20 +131,21 @@ namespace MainForm
             // 
             this.btnRentar.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnRentar.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnRentar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnRentar.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.btnRentar.BorderRadius = 12;
             this.btnRentar.BorderSize = 0;
             this.btnRentar.FlatAppearance.BorderSize = 0;
             this.btnRentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRentar.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
-            this.btnRentar.ForeColor = System.Drawing.Color.White;
+            this.btnRentar.ForeColor = System.Drawing.Color.Transparent;
             this.btnRentar.Location = new System.Drawing.Point(470, 303);
             this.btnRentar.Name = "btnRentar";
             this.btnRentar.Size = new System.Drawing.Size(164, 40);
             this.btnRentar.TabIndex = 12;
             this.btnRentar.Text = "Rentar Libro";
-            this.btnRentar.TextColor = System.Drawing.Color.White;
+            this.btnRentar.TextColor = System.Drawing.Color.Transparent;
             this.btnRentar.UseVisualStyleBackColor = false;
+            this.btnRentar.Click += new System.EventHandler(this.btnRentar_Click);
             // 
             // lblEditorial
             // 
@@ -176,9 +177,9 @@ namespace MainForm
             this.lblISBN.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblISBN.Location = new System.Drawing.Point(261, 46);
             this.lblISBN.Name = "lblISBN";
-            this.lblISBN.Size = new System.Drawing.Size(132, 27);
+            this.lblISBN.Size = new System.Drawing.Size(39, 27);
             this.lblISBN.TabIndex = 2;
-            this.lblISBN.Text = "000000000000000";
+            this.lblISBN.Text = "N/A";
             // 
             // lblTitulo
             // 

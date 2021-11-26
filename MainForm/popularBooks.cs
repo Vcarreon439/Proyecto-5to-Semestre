@@ -9,18 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
 using Elementos;
+using Elementos.ElementosBiblioteca.Libros;
 using MainForm.Properties;
 
 namespace MainForm
 {
     public partial class popularBooks : Form
     {
-        public popularBooks()
+        private List<LibroSencillo> listaLibros;
+        private frmPrincipal forma;
+
+        public popularBooks(frmPrincipal forma)
         {
             InitializeComponent();
+            this.forma = forma;
         }
-
-        private List<LibroSencillo> listaLibros;
 
         private void popularBooks_Load(object sender, EventArgs e)
         {
@@ -85,9 +88,59 @@ namespace MainForm
 
         private void pctRecomendado1_Click(object sender, EventArgs e)
         {
+            if(listaLibros[0]==null)
+                return;
+
             ModeloDUsuario obj = new ModeloDUsuario();
             fichaLibro libro = new fichaLibro(obj.GetBookView(listaLibros[0].Codigo));
-            libro.Show();
+
+            if (libro.ShowDialog()==DialogResult.Yes)
+            {
+                forma.librosRenta.Add(libro.LibroFicha);
+            }
         }
+
+        private void pctRecomendado2_Click(object sender, EventArgs e)
+        {
+            if (listaLibros[1] == null)
+                return;
+
+            ModeloDUsuario obj = new ModeloDUsuario();
+            fichaLibro libro = new fichaLibro(obj.GetBookView(listaLibros[1].Codigo));
+
+            if (libro.ShowDialog() == DialogResult.Yes)
+            {
+                forma.librosRenta.Add(libro.LibroFicha);
+            }
+        }
+
+        private void pctRecomendado3_Click(object sender, EventArgs e)
+        {
+            if (listaLibros[2] == null)
+                return;
+
+            ModeloDUsuario obj = new ModeloDUsuario();
+            fichaLibro libro = new fichaLibro(obj.GetBookView(listaLibros[2].Codigo));
+
+            if (libro.ShowDialog() == DialogResult.Yes)
+            {
+                forma.librosRenta.Add(libro.LibroFicha);
+            }
+        }
+
+        private void pctRecomendado4_Click(object sender, EventArgs e)
+        {
+            if (listaLibros[3] == null)
+                return;
+
+            ModeloDUsuario obj = new ModeloDUsuario();
+            fichaLibro libro = new fichaLibro(obj.GetBookView(listaLibros[3].Codigo));
+
+            if (libro.ShowDialog() == DialogResult.Yes)
+            {
+                forma.librosRenta.Add(libro.LibroFicha);
+            }
+        }
+
     }
 }

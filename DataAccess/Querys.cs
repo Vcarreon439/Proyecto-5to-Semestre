@@ -875,7 +875,7 @@ namespace DataAccess
             {
                 conexion.Open();
 
-                using (SqlCommand cmd = new SqlCommand("GetBookFullView", conexion))
+                using (SqlCommand cmd = new SqlCommand("GetBookView", conexion))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@code", codigo);

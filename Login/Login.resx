@@ -204,6 +204,111 @@
   <data name="rounded_Panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;correoKryptonTextBox.Name" xml:space="preserve">
+    <value>correoKryptonTextBox</value>
+  </data>
+  <data name="&gt;&gt;correoKryptonTextBox.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;correoKryptonTextBox.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;correoKryptonTextBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;contraseñaKryptonTextBox.Name" xml:space="preserve">
+    <value>contraseñaKryptonTextBox</value>
+  </data>
+  <data name="&gt;&gt;contraseñaKryptonTextBox.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;contraseñaKryptonTextBox.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;contraseñaKryptonTextBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnCerrar.Name" xml:space="preserve">
+    <value>btnCerrar</value>
+  </data>
+  <data name="&gt;&gt;btnCerrar.Type" xml:space="preserve">
+    <value>FontAwesome.Sharp.IconPictureBox, FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnCerrar.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;btnCerrar.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lnkForget.Name" xml:space="preserve">
+    <value>lnkForget</value>
+  </data>
+  <data name="&gt;&gt;lnkForget.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lnkForget.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;lnkForget.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.Name" xml:space="preserve">
+    <value>btnLogin</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.Type" xml:space="preserve">
+    <value>CustomControls.Rounded_Button, CustomControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lnkSignUp.Name" xml:space="preserve">
+    <value>lnkSignUp</value>
+  </data>
+  <data name="&gt;&gt;lnkSignUp.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLinkLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;lnkSignUp.Parent" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;lnkSignUp.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="rounded_Panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="rounded_Panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>333, 365</value>
+  </data>
+  <data name="rounded_Panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;rounded_Panel1.Name" xml:space="preserve">
+    <value>rounded_Panel1</value>
+  </data>
+  <data name="&gt;&gt;rounded_Panel1.Type" xml:space="preserve">
+    <value>CustomControls.Rounded_Panel, CustomControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;rounded_Panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rounded_Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Open Sans Hebrew, 15.75pt</value>
   </data>
@@ -258,6 +363,9 @@
   <data name="&gt;&gt;correoKryptonTextBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="userAccesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="contraseñaKryptonTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>19, 200</value>
   </data>
@@ -389,27 +497,6 @@
   </data>
   <data name="&gt;&gt;lnkSignUp.ZOrder" xml:space="preserve">
     <value>8</value>
-  </data>
-  <data name="rounded_Panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="rounded_Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>333, 365</value>
-  </data>
-  <data name="rounded_Panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;rounded_Panel1.Name" xml:space="preserve">
-    <value>rounded_Panel1</value>
-  </data>
-  <data name="&gt;&gt;rounded_Panel1.Type" xml:space="preserve">
-    <value>CustomControls.Rounded_Panel, CustomControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;rounded_Panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;rounded_Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

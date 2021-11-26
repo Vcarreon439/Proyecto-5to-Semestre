@@ -29,7 +29,10 @@ namespace MainForm
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,11 +40,16 @@ namespace MainForm
             this.editorialLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.temasLibro = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.autoresLibro = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.timerReloj = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tituloLibro,
@@ -50,6 +58,7 @@ namespace MainForm
             this.autoresLibro});
             this.dataGridView1.Location = new System.Drawing.Point(12, 73);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(776, 365);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -58,13 +67,13 @@ namespace MainForm
             this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 7;
+            this.rjButton1.BorderRadius = 0;
             this.rjButton1.BorderSize = 0;
             this.rjButton1.FlatAppearance.BorderSize = 0;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(12, 32);
+            this.rjButton1.Location = new System.Drawing.Point(13, 15);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(175, 35);
             this.rjButton1.TabIndex = 1;
@@ -76,7 +85,7 @@ namespace MainForm
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(203, 38);
+            this.label1.Location = new System.Drawing.Point(204, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 23);
             this.label1.TabIndex = 2;
@@ -84,8 +93,8 @@ namespace MainForm
             // 
             // tituloLibro
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.tituloLibro.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.tituloLibro.DefaultCellStyle = dataGridViewCellStyle13;
             this.tituloLibro.HeaderText = "Titulo";
             this.tituloLibro.Name = "tituloLibro";
             this.tituloLibro.ReadOnly = true;
@@ -95,23 +104,36 @@ namespace MainForm
             this.editorialLibro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.editorialLibro.HeaderText = "Editorial";
             this.editorialLibro.Name = "editorialLibro";
+            this.editorialLibro.ReadOnly = true;
             // 
             // temasLibro
             // 
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            this.temasLibro.DefaultCellStyle = dataGridViewCellStyle14;
             this.temasLibro.HeaderText = "Temas";
             this.temasLibro.Name = "temasLibro";
+            this.temasLibro.ReadOnly = true;
             this.temasLibro.Width = 175;
             // 
             // autoresLibro
             // 
             this.autoresLibro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            this.autoresLibro.DefaultCellStyle = dataGridViewCellStyle15;
             this.autoresLibro.HeaderText = "Autores";
             this.autoresLibro.Name = "autoresLibro";
+            this.autoresLibro.ReadOnly = true;
+            // 
+            // timerReloj
+            // 
+            this.timerReloj.Interval = 1;
+            this.timerReloj.Tick += new System.EventHandler(this.timerReloj_Tick);
             // 
             // rentarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rjButton1);
@@ -119,6 +141,7 @@ namespace MainForm
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "rentarLibro";
             this.Text = "rentarLibro";
+            this.Enter += new System.EventHandler(this.rentarLibro_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -134,5 +157,6 @@ namespace MainForm
         private System.Windows.Forms.DataGridViewTextBoxColumn editorialLibro;
         private System.Windows.Forms.DataGridViewComboBoxColumn temasLibro;
         private System.Windows.Forms.DataGridViewComboBoxColumn autoresLibro;
+        private System.Windows.Forms.Timer timerReloj;
     }
 }
