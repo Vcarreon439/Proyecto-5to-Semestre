@@ -85,7 +85,8 @@ namespace MainForm
 
         private void pctRecomendado1_Click(object sender, EventArgs e)
         {
-            fichaLibro libro = new fichaLibro(new Libro(listaLibros[0]));
+            ModeloDUsuario obj = new ModeloDUsuario();
+            fichaLibro libro = new fichaLibro(obj.GetBookView(listaLibros[0].Codigo));
             libro.Show();
         }
     }

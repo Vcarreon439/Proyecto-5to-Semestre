@@ -10,32 +10,38 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
 using Elementos;
+using Elementos.ElementosBiblioteca.Libros;
 
 namespace MainForm
 {
     public partial class fichaLibro : Form
     {
-        private Libro libroFicha;
+        private LibroVista libroFicha;
 
         public fichaLibro()
         {
             InitializeComponent();
         }
 
-        public fichaLibro(LibroSencillo libro)
+        public fichaLibro(LibroVista libro)
         {
             InitializeComponent();
-            
-
+            this.libroFicha = libro;
+            Fill();
         }
 
-        private Libro GetBookView(LibroSencillo lib)
+        private void Fill()
         {
-            ModeloDUsuario obj = new ModeloDUsuario();
-            Libro param = obj.GetBookView(string codigo);
-            this.lblTitulo.Text = param.Titulo;
-            this.lblISBN.Text = param.ISBN;
+            this.lblTitulo.Text = libroFicha.Titulo;
+            this.lblISBN.Text = libroFicha.ISBN;
+            this.lblNumEdicion.Text = libroFicha.numEdicion.ToString();
+            this.lblAñoEdicion.Text = libroFicha.añoEdicion.ToString();
+            this.lblDescripcion.Text = libroFicha.descripcion;
+            this.lblTitulo.Text = libroFicha.Titulo;
+            this.pictureBox1.Image = ImageConvertions.Base64ToImage(libroFicha.imagenLibro);
+
         }
+
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {

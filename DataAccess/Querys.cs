@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Elementos;
 using Elementos.ElementosBiblioteca.Autor;
 using Elementos.ElementosBiblioteca.Editorial;
+using Elementos.ElementosBiblioteca.Libros;
 
 
 namespace DataAccess
@@ -868,35 +869,35 @@ namespace DataAccess
             return null;
         }
 
-        public Libro GetBookView(string codigo)
+        public LibroVista GetBookView(int codigo)
         {
             using (SqlConnection conexion = getConnection())
             {
                 conexion.Open();
 
-                using (SqlCommand cmd = new SqlCommand("GetBookView", conexion))
+                using (SqlCommand cmd = new SqlCommand("GetBookFullView", conexion))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-
                     cmd.Parameters.AddWithValue("@code", codigo);
 
                     using (SqlDataAdapter adaptador = new SqlDataAdapter(cmd))
                     {
                         DataTable tabla = new DataTable();
                         adaptador.Fill(tabla);
-
-                        Libro retBook = new Libro();
+                        LibroVista retBook = new LibroVista(codigo);
 
                         foreach (DataRow row in tabla.Rows)
                         {
                             retBook.Titulo = row["Titulo"].ToString();
                             retBook.ISBN = row["ISBN"].ToString();
-
-
-
+                            retBook.numEdicion = int.Parse(row["numeroEdicion"].ToString());
+                            retBook.Editorial = row["Editorial"].ToString();
+                            retBook.añoEdicion = int.Parse(row["añoEdicion"].ToString());
+                            retBook.imagenLibro = row["Imagen"].ToString();
+                            retBook.descripcion = row["Descripcion"].ToString();
                         }
 
-                        return retFullUser;
+                        return retBook;
                     }
                 }
             }

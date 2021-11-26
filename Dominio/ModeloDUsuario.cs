@@ -8,6 +8,7 @@ using DataAccess;
 using Elementos;
 using Elementos.ElementosBiblioteca.Autor;
 using Elementos.ElementosBiblioteca.Editorial;
+using Elementos.ElementosBiblioteca.Libros;
 
 namespace Dominio
 {
@@ -140,7 +141,7 @@ namespace Dominio
             return obj.GetLoggData(param);
         }
 
-        public Libro GetBookView(string codigo)
+        public LibroVista GetBookView(int codigo)
         {
             return obj.GetBookView(codigo);
         }
