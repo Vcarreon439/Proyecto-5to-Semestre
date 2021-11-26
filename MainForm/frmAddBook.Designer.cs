@@ -79,8 +79,7 @@ namespace MainForm
             // 
             // numEdicionLabel
             // 
-            numEdicionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            numEdicionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             numEdicionLabel.AutoSize = true;
             numEdicionLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             numEdicionLabel.Location = new System.Drawing.Point(478, 116);
@@ -91,8 +90,7 @@ namespace MainForm
             // 
             // copiasLabel
             // 
-            copiasLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            copiasLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             copiasLabel.AutoSize = true;
             copiasLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             copiasLabel.Location = new System.Drawing.Point(673, 116);
@@ -103,8 +101,7 @@ namespace MainForm
             // 
             // añoEdicionLabel
             // 
-            añoEdicionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            añoEdicionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             añoEdicionLabel.AutoSize = true;
             añoEdicionLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             añoEdicionLabel.Location = new System.Drawing.Point(257, 156);
@@ -126,8 +123,7 @@ namespace MainForm
             // 
             // codEditorialLabel
             // 
-            codEditorialLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            codEditorialLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             codEditorialLabel.AutoSize = true;
             codEditorialLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             codEditorialLabel.Location = new System.Drawing.Point(257, 80);
@@ -157,8 +153,7 @@ namespace MainForm
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(481, 154);
@@ -180,8 +175,7 @@ namespace MainForm
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(257, 116);
@@ -192,8 +186,7 @@ namespace MainForm
             // 
             // label11
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(542, 81);
@@ -216,8 +209,7 @@ namespace MainForm
             // 
             // cboTema
             // 
-            this.cboTema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboTema.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             checkBoxProperties1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.cboTema.CheckBoxProperties = checkBoxProperties1;
             this.cboTema.DisplayMemberSingleItem = "";
@@ -241,8 +233,7 @@ namespace MainForm
             // 
             // iSBNTextBox
             // 
-            this.iSBNTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.iSBNTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iSBNTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.libroBindingSource, "ISBN", true));
             this.iSBNTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.iSBNTextBox.Location = new System.Drawing.Point(588, 80);
@@ -252,8 +243,7 @@ namespace MainForm
             // 
             // numEdicionNumericUpDown
             // 
-            this.numEdicionNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.numEdicionNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.numEdicionNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.libroBindingSource, "numEdicion", true));
             this.numEdicionNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.numEdicionNumericUpDown.Location = new System.Drawing.Point(604, 116);
@@ -274,8 +264,7 @@ namespace MainForm
             // 
             // copiasNumericUpDown
             // 
-            this.copiasNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.copiasNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.copiasNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.libroBindingSource, "Copias", true));
             this.copiasNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.copiasNumericUpDown.Location = new System.Drawing.Point(729, 116);
@@ -296,8 +285,7 @@ namespace MainForm
             // 
             // añoEdicionTextBox
             // 
-            this.añoEdicionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.añoEdicionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.añoEdicionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.libroBindingSource, "AñoEdicion", true));
             this.añoEdicionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.añoEdicionTextBox.Location = new System.Drawing.Point(340, 154);
@@ -319,8 +307,7 @@ namespace MainForm
             // 
             // codEditorialComboBox
             // 
-            this.codEditorialComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.codEditorialComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.codEditorialComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.libroBindingSource, "codEditorial", true));
             this.codEditorialComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.codEditorialComboBox.FormattingEnabled = true;
@@ -332,8 +319,7 @@ namespace MainForm
             // 
             // checkBoxComboBox1
             // 
-            this.checkBoxComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             checkBoxProperties2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkBoxComboBox1.CheckBoxProperties = checkBoxProperties2;
             this.checkBoxComboBox1.DisplayMemberSingleItem = "";
