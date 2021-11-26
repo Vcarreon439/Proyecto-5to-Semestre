@@ -63,6 +63,10 @@ namespace MainForm
                     }
 
                 }
+                else
+                {
+                    temaBindingSource.DataSource = new Tema();
+                }
             }
             catch (Exception exception)
             {
@@ -178,6 +182,10 @@ namespace MainForm
                         }
                     }
 
+                }
+                else
+                {
+                    temaBindingSource.DataSource = new Tema();
                 }
             }
             catch (Exception exception)
