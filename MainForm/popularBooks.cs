@@ -102,7 +102,7 @@ namespace MainForm
 
         private void pctRecomendado2_Click(object sender, EventArgs e)
         {
-            if (listaLibros[1] == null)
+            if (listaLibros.Count  < 2)
                 return;
 
             ModeloDUsuario obj = new ModeloDUsuario();
@@ -116,7 +116,7 @@ namespace MainForm
 
         private void pctRecomendado3_Click(object sender, EventArgs e)
         {
-            if (listaLibros[2] == null)
+            if (listaLibros.Count < 3)
                 return;
 
             ModeloDUsuario obj = new ModeloDUsuario();
@@ -130,7 +130,7 @@ namespace MainForm
 
         private void pctRecomendado4_Click(object sender, EventArgs e)
         {
-            if (listaLibros[3] == null)
+            if (listaLibros.Count < 4)
                 return;
 
             ModeloDUsuario obj = new ModeloDUsuario();
