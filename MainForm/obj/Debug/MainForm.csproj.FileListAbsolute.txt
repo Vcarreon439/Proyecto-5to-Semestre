@@ -51,3 +51,4 @@ C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\es-419\Main
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.manejarRentas.resources
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.csproj.CopyComplete
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.profileForm.resources
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.askPassword.resources
