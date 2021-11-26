@@ -36,12 +36,12 @@ namespace MainForm
 
             foreach (LibroVista libro in local.librosRenta)
             {
-                DataGridViewComboBoxCell elem = new DataGridViewComboBoxCell();
+                string temas ="";
+                
+                foreach (Tema tema in modeloD.GetBookTopics(libro.Codigo))
+                    temas += " " + tema.Descripcion;
 
-                foreach (Tema tem in modeloD.GetBookTopics(libro.Codigo))
-                    elem.Items.Add(tem.Descripcion);
-
-                dataGridView1.Rows.Add(libro.Titulo, libro.Editorial);
+                dataGridView1.Rows.Add(libro.Titulo, libro.Editorial, temas);
             }
         }
 
@@ -50,7 +50,7 @@ namespace MainForm
             label1.Text = DateTime.Now.ToString();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
             ActualizarContenido();
         }

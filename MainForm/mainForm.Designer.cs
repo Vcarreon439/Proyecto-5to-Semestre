@@ -100,6 +100,7 @@ namespace MainForm
             this.manageStudentsToolStripMenuItem1.Image = global::MainForm.Properties.Resources.estudiante;
             this.manageStudentsToolStripMenuItem1.Name = "manageStudentsToolStripMenuItem1";
             resources.ApplyResources(this.manageStudentsToolStripMenuItem1, "manageStudentsToolStripMenuItem1");
+            this.manageStudentsToolStripMenuItem1.Click += new System.EventHandler(this.manageStudentsToolStripMenuItem1_Click);
             // 
             // manageTopicsToolStripMenuItem
             // 
