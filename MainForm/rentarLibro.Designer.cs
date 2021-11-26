@@ -30,17 +30,18 @@ namespace MainForm
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.tituloLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editorialLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.temasLibro = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.autoresLibro = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.timerReloj = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,6 +62,39 @@ namespace MainForm
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(776, 365);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // tituloLibro
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.tituloLibro.DefaultCellStyle = dataGridViewCellStyle4;
+            this.tituloLibro.HeaderText = "Titulo";
+            this.tituloLibro.Name = "tituloLibro";
+            this.tituloLibro.ReadOnly = true;
+            // 
+            // editorialLibro
+            // 
+            this.editorialLibro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.editorialLibro.HeaderText = "Editorial";
+            this.editorialLibro.Name = "editorialLibro";
+            this.editorialLibro.ReadOnly = true;
+            // 
+            // temasLibro
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.temasLibro.DefaultCellStyle = dataGridViewCellStyle5;
+            this.temasLibro.HeaderText = "Temas";
+            this.temasLibro.Name = "temasLibro";
+            this.temasLibro.ReadOnly = true;
+            this.temasLibro.Width = 175;
+            // 
+            // autoresLibro
+            // 
+            this.autoresLibro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            this.autoresLibro.DefaultCellStyle = dataGridViewCellStyle6;
+            this.autoresLibro.HeaderText = "Autores";
+            this.autoresLibro.Name = "autoresLibro";
+            this.autoresLibro.ReadOnly = true;
             // 
             // rjButton1
             // 
@@ -91,43 +125,15 @@ namespace MainForm
             this.label1.TabIndex = 2;
             this.label1.Text = "12-11-2021 12:50";
             // 
-            // tituloLibro
-            // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.tituloLibro.DefaultCellStyle = dataGridViewCellStyle13;
-            this.tituloLibro.HeaderText = "Titulo";
-            this.tituloLibro.Name = "tituloLibro";
-            this.tituloLibro.ReadOnly = true;
-            // 
-            // editorialLibro
-            // 
-            this.editorialLibro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.editorialLibro.HeaderText = "Editorial";
-            this.editorialLibro.Name = "editorialLibro";
-            this.editorialLibro.ReadOnly = true;
-            // 
-            // temasLibro
-            // 
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            this.temasLibro.DefaultCellStyle = dataGridViewCellStyle14;
-            this.temasLibro.HeaderText = "Temas";
-            this.temasLibro.Name = "temasLibro";
-            this.temasLibro.ReadOnly = true;
-            this.temasLibro.Width = 175;
-            // 
-            // autoresLibro
-            // 
-            this.autoresLibro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            this.autoresLibro.DefaultCellStyle = dataGridViewCellStyle15;
-            this.autoresLibro.HeaderText = "Autores";
-            this.autoresLibro.Name = "autoresLibro";
-            this.autoresLibro.ReadOnly = true;
-            // 
             // timerReloj
             // 
             this.timerReloj.Interval = 1;
             this.timerReloj.Tick += new System.EventHandler(this.timerReloj_Tick);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // rentarLibro
             // 
@@ -141,7 +147,6 @@ namespace MainForm
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "rentarLibro";
             this.Text = "rentarLibro";
-            this.Enter += new System.EventHandler(this.rentarLibro_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -158,5 +163,6 @@ namespace MainForm
         private System.Windows.Forms.DataGridViewComboBoxColumn temasLibro;
         private System.Windows.Forms.DataGridViewComboBoxColumn autoresLibro;
         private System.Windows.Forms.Timer timerReloj;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -8,31 +8,41 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using Dominio;
+using Elementos;
 using Elementos.ElementosBiblioteca.Libros;
 
 namespace MainForm
 {
     public partial class rentarLibro : Form
     {
-        public rentarLibro(List<LibroVista> libros)
+        private frmPrincipal local;
+        private ModeloDUsuario modeloD = new ModeloDUsuario();
+
+        public rentarLibro(frmPrincipal formaprincipal)
         {
             InitializeComponent();
-
-            foreach (LibroVista libro in libros)
-            {
-                dataGridView1.Rows.Add(libro.Titulo, libro.Editorial);
-            }
-
+            this.local = formaprincipal;
+            ActualizarContenido();
+            
             label1.Text = DateTime.Now.ToString();
             timerReloj.Start();
-            
-
+            timer1.Start();
         }
 
-        private void ActualizarContenido()
+        public void ActualizarContenido()
         {
+            dataGridView1.Rows.Clear();
 
+            foreach (LibroVista libro in local.librosRenta)
+            {
+                DataGridViewComboBoxCell elem = new DataGridViewComboBoxCell();
 
+                foreach (Tema tem in modeloD.GetBookTopics(libro.Codigo))
+                    elem.Items.Add(tem.Descripcion);
+
+                dataGridView1.Rows.Add(libro.Titulo, libro.Editorial);
+            }
         }
 
         private void timerReloj_Tick(object sender, EventArgs e)
@@ -40,9 +50,9 @@ namespace MainForm
             label1.Text = DateTime.Now.ToString();
         }
 
-        private void rentarLibro_Enter(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-
+            ActualizarContenido();
         }
     }
 }

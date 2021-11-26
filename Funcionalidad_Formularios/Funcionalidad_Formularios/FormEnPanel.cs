@@ -39,8 +39,6 @@ namespace Funcionalidad_Formularios
             {
                 formulario.BringToFront();
                 formulario.WindowState = FormWindowState.Maximized;
-
-                
             }
 
             formulario = metodofactory();

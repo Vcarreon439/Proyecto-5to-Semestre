@@ -113,7 +113,7 @@ namespace MainForm
 
         private void btnIssueBooks_Click(object sender, EventArgs e)
         {
-            FormularioAbierto = FormEnPanel.AbrirFormulario(ref pctFondo, () => new rentarLibro(this.librosRenta));
+            FormularioAbierto = FormEnPanel.AbrirFormulario(ref pctFondo, () => new rentarLibro(this));
         }
 
         private void searchBookToolStripMenuItem_Click(object sender, EventArgs e)

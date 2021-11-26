@@ -145,5 +145,10 @@ namespace Dominio
         {
             return obj.GetBookView(codigo);
         }
+
+        public List<Tema> GetBookTopics(int codigo)
+        {
+            return obj.GetBookTopics(codigo);
+        }
     }
 }

@@ -878,7 +878,7 @@ namespace DataAccess
                 using (SqlCommand cmd = new SqlCommand("GetBookView", conexion))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@code", codigo);
+                    cmd.Parameters.AddWithValue("@Codigo", codigo);
 
                     using (SqlDataAdapter adaptador = new SqlDataAdapter(cmd))
                     {
@@ -898,6 +898,32 @@ namespace DataAccess
                         }
 
                         return retBook;
+                    }
+                }
+            }
+        }
+
+        public List<Tema> GetBookTopics(int codigo)
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("GetBookTopics", conexion))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Codigo", codigo);
+
+                    using (SqlDataAdapter adaptador = new SqlDataAdapter(cmd))
+                    {
+                        DataTable tabla = new DataTable();
+                        adaptador.Fill(tabla);
+                        List<Tema> temas = new List<Tema>();
+
+                        foreach (DataRow row in tabla.Rows)
+                            temas.Add(new Tema(row["Codigo"].ToString(), row["Descripcion"].ToString()));
+
+                        return temas;
                     }
                 }
             }
