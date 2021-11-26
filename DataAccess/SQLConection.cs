@@ -8,7 +8,7 @@ namespace DataAccess
 
         public SQLConection()
         {
-            conectionString = $"Data Source=DESKTOP-185RN13\\SQLEXPRESS;Initial Catalog=Pruebas11_11;Integrated Security=True";
+            conectionString = $"Data Source=.\\SQLEXPRESS;Initial Catalog=Pruebas11_11;Integrated Security=True";
         }
 
         protected SqlConnection getConnection()
