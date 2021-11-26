@@ -25,7 +25,8 @@ namespace MainForm
         private void popularBooks_Load(object sender, EventArgs e)
         {
             ModeloDUsuario mdDUsuario = new ModeloDUsuario();
-            CargarLibros(mdDUsuario.LibrosPopulares_4());
+            listaLibros = mdDUsuario.LibrosPopulares_4();
+            CargarLibros(listaLibros);
         }
 
         private void CargarPortada(ref PictureBox caja, ref Label Titulo, ref Label Descripcion, LibroSencillo libro = null)
@@ -80,6 +81,12 @@ namespace MainForm
         {
             Funcionalidad_Formularios.Arrastre_Formularios.Llama_ReleaseCapture();
             Funcionalidad_Formularios.Arrastre_Formularios.Llama_SendMessage(ParentForm.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pctRecomendado1_Click(object sender, EventArgs e)
+        {
+            fichaLibro libro = new fichaLibro(new Libro(listaLibros[0]));
+            libro.Show();
         }
     }
 }

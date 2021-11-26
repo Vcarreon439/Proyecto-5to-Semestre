@@ -139,5 +139,10 @@ namespace Dominio
         {
             return obj.GetLoggData(param);
         }
+
+        public Libro GetBookView(string codigo)
+        {
+            return obj.GetBookView(codigo);
+        }
     }
 }

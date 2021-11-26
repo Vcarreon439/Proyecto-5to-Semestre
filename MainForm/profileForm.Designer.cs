@@ -33,34 +33,35 @@ namespace MainForm
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label apellidosLabel;
             System.Windows.Forms.Label correoLabel;
-            System.Windows.Forms.Label contraseñaLabel;
             System.Windows.Forms.Label domicilioLabel;
             System.Windows.Forms.Label entidadLabel;
             System.Windows.Forms.Label fechaDateTimeLabel;
             System.Windows.Forms.Label generoLabel;
-            this.fullUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.apellidosTextBox = new System.Windows.Forms.TextBox();
             this.correoTextBox = new System.Windows.Forms.TextBox();
-            this.contraseñaTextBox = new System.Windows.Forms.TextBox();
             this.domicilioTextBox = new System.Windows.Forms.TextBox();
             this.situacionLabel1 = new System.Windows.Forms.Label();
             this.entidadTextBox = new System.Windows.Forms.TextBox();
             this.fechaDateTimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.generoComboBox = new System.Windows.Forms.ComboBox();
-            this.rjCircularPictureBox1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
+            this.pctImagenUsuario = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.fullUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnCambiarContra = new RJCodeAdvance.RJControls.RJButton();
+            this.btnCambiarFoto = new RJCodeAdvance.RJControls.RJButton();
+            this.btnGuardar = new FontAwesome.Sharp.IconPictureBox();
             nombreLabel = new System.Windows.Forms.Label();
             apellidosLabel = new System.Windows.Forms.Label();
             correoLabel = new System.Windows.Forms.Label();
-            contraseñaLabel = new System.Windows.Forms.Label();
             domicilioLabel = new System.Windows.Forms.Label();
             entidadLabel = new System.Windows.Forms.Label();
             fechaDateTimeLabel = new System.Windows.Forms.Label();
             generoLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.fullUserBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctImagenUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullUserBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
             this.SuspendLayout();
             // 
             // nombreLabel
@@ -96,17 +97,6 @@ namespace MainForm
             correoLabel.TabIndex = 5;
             correoLabel.Text = "Correo:";
             // 
-            // contraseñaLabel
-            // 
-            contraseñaLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            contraseñaLabel.AutoSize = true;
-            contraseñaLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 9.75F, System.Drawing.FontStyle.Bold);
-            contraseñaLabel.Location = new System.Drawing.Point(483, 65);
-            contraseñaLabel.Name = "contraseñaLabel";
-            contraseñaLabel.Size = new System.Drawing.Size(67, 19);
-            contraseñaLabel.TabIndex = 7;
-            contraseñaLabel.Text = "Contraseña:";
-            // 
             // domicilioLabel
             // 
             domicilioLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -123,7 +113,7 @@ namespace MainForm
             entidadLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             entidadLabel.AutoSize = true;
             entidadLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 9.75F, System.Drawing.FontStyle.Bold);
-            entidadLabel.Location = new System.Drawing.Point(453, 181);
+            entidadLabel.Location = new System.Drawing.Point(483, 121);
             entidadLabel.Name = "entidadLabel";
             entidadLabel.Size = new System.Drawing.Size(48, 19);
             entidadLabel.TabIndex = 13;
@@ -134,7 +124,7 @@ namespace MainForm
             fechaDateTimeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             fechaDateTimeLabel.AutoSize = true;
             fechaDateTimeLabel.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 9.75F, System.Drawing.FontStyle.Bold);
-            fechaDateTimeLabel.Location = new System.Drawing.Point(483, 121);
+            fechaDateTimeLabel.Location = new System.Drawing.Point(483, 64);
             fechaDateTimeLabel.Name = "fechaDateTimeLabel";
             fechaDateTimeLabel.Size = new System.Drawing.Size(112, 19);
             fechaDateTimeLabel.TabIndex = 15;
@@ -150,10 +140,6 @@ namespace MainForm
             generoLabel.Size = new System.Drawing.Size(47, 19);
             generoLabel.TabIndex = 17;
             generoLabel.Text = "Genero:";
-            // 
-            // fullUserBindingSource
-            // 
-            this.fullUserBindingSource.DataSource = typeof(Elementos.FullUser);
             // 
             // nombreTextBox
             // 
@@ -185,16 +171,6 @@ namespace MainForm
             this.correoTextBox.Size = new System.Drawing.Size(212, 25);
             this.correoTextBox.TabIndex = 6;
             // 
-            // contraseñaTextBox
-            // 
-            this.contraseñaTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.contraseñaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fullUserBindingSource, "Contraseña", true));
-            this.contraseñaTextBox.Font = new System.Drawing.Font("Open Sans", 9.75F);
-            this.contraseñaTextBox.Location = new System.Drawing.Point(483, 87);
-            this.contraseñaTextBox.Name = "contraseñaTextBox";
-            this.contraseñaTextBox.Size = new System.Drawing.Size(218, 25);
-            this.contraseñaTextBox.TabIndex = 8;
-            // 
             // domicilioTextBox
             // 
             this.domicilioTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -208,12 +184,11 @@ namespace MainForm
             // 
             // situacionLabel1
             // 
-            this.situacionLabel1.AutoSize = true;
             this.situacionLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fullUserBindingSource, "Situacion", true));
             this.situacionLabel1.Font = new System.Drawing.Font("Open Sans Condensed SemiBold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.situacionLabel1.Location = new System.Drawing.Point(140, 263);
+            this.situacionLabel1.Location = new System.Drawing.Point(138, 251);
             this.situacionLabel1.Name = "situacionLabel1";
-            this.situacionLabel1.Size = new System.Drawing.Size(106, 19);
+            this.situacionLabel1.Size = new System.Drawing.Size(108, 29);
             this.situacionLabel1.TabIndex = 12;
             this.situacionLabel1.Text = "Situación: NINGUNA";
             this.situacionLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -223,17 +198,18 @@ namespace MainForm
             this.entidadTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.entidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fullUserBindingSource, "Entidad", true));
             this.entidadTextBox.Font = new System.Drawing.Font("Open Sans", 9.75F);
-            this.entidadTextBox.Location = new System.Drawing.Point(507, 179);
+            this.entidadTextBox.Location = new System.Drawing.Point(487, 143);
             this.entidadTextBox.Name = "entidadTextBox";
-            this.entidadTextBox.Size = new System.Drawing.Size(194, 25);
+            this.entidadTextBox.Size = new System.Drawing.Size(214, 25);
             this.entidadTextBox.TabIndex = 14;
             // 
             // fechaDateTimeDateTimePicker
             // 
             this.fechaDateTimeDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.fechaDateTimeDateTimePicker.CalendarFont = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fechaDateTimeDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.fullUserBindingSource, "FechaDateTime", true));
             this.fechaDateTimeDateTimePicker.Font = new System.Drawing.Font("Open Sans", 9.75F);
-            this.fechaDateTimeDateTimePicker.Location = new System.Drawing.Point(483, 144);
+            this.fechaDateTimeDateTimePicker.Location = new System.Drawing.Point(483, 87);
             this.fechaDateTimeDateTimePicker.Name = "fechaDateTimeDateTimePicker";
             this.fechaDateTimeDateTimePicker.Size = new System.Drawing.Size(218, 25);
             this.fechaDateTimeDateTimePicker.TabIndex = 16;
@@ -253,20 +229,22 @@ namespace MainForm
             this.generoComboBox.Size = new System.Drawing.Size(212, 26);
             this.generoComboBox.TabIndex = 18;
             // 
-            // rjCircularPictureBox1
+            // pctImagenUsuario
             // 
-            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.MediumSlateBlue;
-            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox1.BorderSize = 2;
-            this.rjCircularPictureBox1.GradientAngle = 50F;
-            this.rjCircularPictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
-            this.rjCircularPictureBox1.Size = new System.Drawing.Size(234, 234);
-            this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rjCircularPictureBox1.TabIndex = 19;
-            this.rjCircularPictureBox1.TabStop = false;
+            this.pctImagenUsuario.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pctImagenUsuario.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.pctImagenUsuario.BorderColor2 = System.Drawing.Color.MediumSlateBlue;
+            this.pctImagenUsuario.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.pctImagenUsuario.BorderSize = 2;
+            this.pctImagenUsuario.GradientAngle = 50F;
+            this.pctImagenUsuario.Location = new System.Drawing.Point(12, 12);
+            this.pctImagenUsuario.Name = "pctImagenUsuario";
+            this.pctImagenUsuario.Size = new System.Drawing.Size(234, 234);
+            this.pctImagenUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctImagenUsuario.TabIndex = 19;
+            this.pctImagenUsuario.TabStop = false;
+            this.pctImagenUsuario.DragDrop += new System.Windows.Forms.DragEventHandler(this.pctImagenUsuario_DragDrop);
+            this.pctImagenUsuario.DragEnter += new System.Windows.Forms.DragEventHandler(this.pctImagenUsuario_DragEnter);
             // 
             // dataGridView1
             // 
@@ -279,13 +257,72 @@ namespace MainForm
             this.dataGridView1.Size = new System.Drawing.Size(689, 140);
             this.dataGridView1.TabIndex = 20;
             // 
+            // fullUserBindingSource
+            // 
+            this.fullUserBindingSource.DataSource = typeof(Elementos.FullUser);
+            // 
+            // btnCambiarContra
+            // 
+            this.btnCambiarContra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCambiarContra.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnCambiarContra.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnCambiarContra.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCambiarContra.BorderRadius = 10;
+            this.btnCambiarContra.BorderSize = 0;
+            this.btnCambiarContra.FlatAppearance.BorderSize = 0;
+            this.btnCambiarContra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarContra.ForeColor = System.Drawing.Color.White;
+            this.btnCambiarContra.Location = new System.Drawing.Point(551, 180);
+            this.btnCambiarContra.Name = "btnCambiarContra";
+            this.btnCambiarContra.Size = new System.Drawing.Size(150, 26);
+            this.btnCambiarContra.TabIndex = 21;
+            this.btnCambiarContra.Text = "Cambiar contraseña";
+            this.btnCambiarContra.TextColor = System.Drawing.Color.White;
+            this.btnCambiarContra.UseVisualStyleBackColor = false;
+            // 
+            // btnCambiarFoto
+            // 
+            this.btnCambiarFoto.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnCambiarFoto.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnCambiarFoto.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCambiarFoto.BorderRadius = 10;
+            this.btnCambiarFoto.BorderSize = 0;
+            this.btnCambiarFoto.FlatAppearance.BorderSize = 0;
+            this.btnCambiarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarFoto.ForeColor = System.Drawing.Color.White;
+            this.btnCambiarFoto.Location = new System.Drawing.Point(16, 251);
+            this.btnCambiarFoto.Name = "btnCambiarFoto";
+            this.btnCambiarFoto.Size = new System.Drawing.Size(116, 29);
+            this.btnCambiarFoto.TabIndex = 22;
+            this.btnCambiarFoto.Text = "Cambiar foto";
+            this.btnCambiarFoto.TextColor = System.Drawing.Color.White;
+            this.btnCambiarFoto.UseVisualStyleBackColor = false;
+            this.btnCambiarFoto.Click += new System.EventHandler(this.btnCambiarFoto_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnGuardar.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnGuardar.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuardar.Location = new System.Drawing.Point(515, 180);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(32, 32);
+            this.btnGuardar.TabIndex = 23;
+            this.btnGuardar.TabStop = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // profileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(713, 450);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnCambiarFoto);
+            this.Controls.Add(this.btnCambiarContra);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.rjCircularPictureBox1);
+            this.Controls.Add(this.pctImagenUsuario);
             this.Controls.Add(generoLabel);
             this.Controls.Add(this.generoComboBox);
             this.Controls.Add(fechaDateTimeLabel);
@@ -295,8 +332,6 @@ namespace MainForm
             this.Controls.Add(this.situacionLabel1);
             this.Controls.Add(domicilioLabel);
             this.Controls.Add(this.domicilioTextBox);
-            this.Controls.Add(contraseñaLabel);
-            this.Controls.Add(this.contraseñaTextBox);
             this.Controls.Add(correoLabel);
             this.Controls.Add(this.correoTextBox);
             this.Controls.Add(apellidosLabel);
@@ -306,9 +341,10 @@ namespace MainForm
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "profileForm";
             this.Text = "profileForm";
-            ((System.ComponentModel.ISupportInitialize)(this.fullUserBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctImagenUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullUserBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,13 +356,15 @@ namespace MainForm
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.TextBox apellidosTextBox;
         private System.Windows.Forms.TextBox correoTextBox;
-        private System.Windows.Forms.TextBox contraseñaTextBox;
         private System.Windows.Forms.TextBox domicilioTextBox;
         private System.Windows.Forms.Label situacionLabel1;
         private System.Windows.Forms.TextBox entidadTextBox;
         private System.Windows.Forms.DateTimePicker fechaDateTimeDateTimePicker;
         private System.Windows.Forms.ComboBox generoComboBox;
-        private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox1;
+        private RJCodeAdvance.RJControls.RJCircularPictureBox pctImagenUsuario;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private RJCodeAdvance.RJControls.RJButton btnCambiarContra;
+        private RJCodeAdvance.RJControls.RJButton btnCambiarFoto;
+        private FontAwesome.Sharp.IconPictureBox btnGuardar;
     }
 }

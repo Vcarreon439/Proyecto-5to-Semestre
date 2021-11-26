@@ -78,6 +78,7 @@ namespace DataAccess
                             retFullUser.Entidad = row["EntFed"].ToString();
                             retFullUser.Domicilio = row["Domicilio"].ToString();
                             retFullUser.Situacion = row["Situacion"].ToString();
+                            retFullUser.ImagenUsuario = row["Pic"].ToString();
                         }
 
                         return retFullUser;
@@ -865,6 +866,40 @@ namespace DataAccess
                 }
             }
             return null;
+        }
+
+        public Libro GetBookView(string codigo)
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("GetBookView", conexion))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@code", codigo);
+
+                    using (SqlDataAdapter adaptador = new SqlDataAdapter(cmd))
+                    {
+                        DataTable tabla = new DataTable();
+                        adaptador.Fill(tabla);
+
+                        Libro retBook = new Libro();
+
+                        foreach (DataRow row in tabla.Rows)
+                        {
+                            retBook.Titulo = row["Titulo"].ToString();
+                            retBook.ISBN = row["ISBN"].ToString();
+
+
+
+                        }
+
+                        return retFullUser;
+                    }
+                }
+            }
         }
     }
 }

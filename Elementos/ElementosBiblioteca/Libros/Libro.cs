@@ -47,6 +47,17 @@ namespace Elementos
         /// </summary>
         public Libro() { }
 
+        public Libro(LibroSencillo param)
+        {
+
+
+
+            this.Codigo = param.Codigo;
+            this.Titulo = param.Titulo;
+            this.Imagen = param.Imagen;
+            this.Descripcion = param.Descripcion;
+        }
+
         ~Libro() { }
     }
 }

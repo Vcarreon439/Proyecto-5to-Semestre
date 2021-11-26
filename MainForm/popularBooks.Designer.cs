@@ -37,17 +37,17 @@ namespace MainForm
             this.lblLibro4 = new System.Windows.Forms.Label();
             this.lblLibro2 = new System.Windows.Forms.Label();
             this.lblLibro1 = new System.Windows.Forms.Label();
+            this.pctRecomendado4 = new System.Windows.Forms.PictureBox();
             this.pctRecomendado3 = new System.Windows.Forms.PictureBox();
             this.pctRecomendado2 = new System.Windows.Forms.PictureBox();
             this.pctRecomendado1 = new System.Windows.Forms.PictureBox();
             this.lblLibro3 = new System.Windows.Forms.Label();
             this.lblDescripcionL1 = new System.Windows.Forms.Label();
-            this.pctRecomendado4 = new System.Windows.Forms.PictureBox();
             this.LayoutPopulares.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado4)).BeginInit();
             this.SuspendLayout();
             // 
             // LayoutPopulares
@@ -156,6 +156,18 @@ namespace MainForm
             this.lblLibro1.Text = "Default Tittle";
             this.lblLibro1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pctRecomendado4
+            // 
+            this.pctRecomendado4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pctRecomendado4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pctRecomendado4.Image = ((System.Drawing.Image)(resources.GetObject("pctRecomendado4.Image")));
+            this.pctRecomendado4.Location = new System.Drawing.Point(599, 3);
+            this.pctRecomendado4.Name = "pctRecomendado4";
+            this.pctRecomendado4.Size = new System.Drawing.Size(193, 307);
+            this.pctRecomendado4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctRecomendado4.TabIndex = 3;
+            this.pctRecomendado4.TabStop = false;
+            // 
             // pctRecomendado3
             // 
             this.pctRecomendado3.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -193,6 +205,7 @@ namespace MainForm
             this.pctRecomendado1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctRecomendado1.TabIndex = 0;
             this.pctRecomendado1.TabStop = false;
+            this.pctRecomendado1.Click += new System.EventHandler(this.pctRecomendado1_Click);
             // 
             // lblLibro3
             // 
@@ -219,18 +232,6 @@ namespace MainForm
     "cididunt ut labore et dolore magna aliqua.\r\n";
             this.lblDescripcionL1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // pctRecomendado4
-            // 
-            this.pctRecomendado4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pctRecomendado4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pctRecomendado4.Image = ((System.Drawing.Image)(resources.GetObject("pctRecomendado4.Image")));
-            this.pctRecomendado4.Location = new System.Drawing.Point(599, 3);
-            this.pctRecomendado4.Name = "pctRecomendado4";
-            this.pctRecomendado4.Size = new System.Drawing.Size(193, 307);
-            this.pctRecomendado4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctRecomendado4.TabIndex = 3;
-            this.pctRecomendado4.TabStop = false;
-            // 
             // popularBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,10 +246,10 @@ namespace MainForm
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.popularBooks_MouseMove);
             this.LayoutPopulares.ResumeLayout(false);
             this.LayoutPopulares.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado4)).EndInit();
             this.ResumeLayout(false);
 
         }

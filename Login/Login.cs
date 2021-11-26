@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using CustomControls;
 using Dominio;
 using Elementos;
 using FluentValidation.Results;
@@ -87,11 +81,13 @@ namespace Login
                     else
                     {
                         ModeloDUsuario mdDUsuario = new ModeloDUsuario();
+                        localFullUser.Contraseña = user.Contraseña;
                         string newPass = Encriptado.Encrypt(user.Contraseña);
                         user.Contraseña = newPass;
-
                         this.auth = mdDUsuario.LoginUser(user);
                         localFullUser = mdDUsuario.GetLoggData(user);
+                        localFullUser.Correo = user.Correo;
+                        
 
                         switch (auth)
                         {
