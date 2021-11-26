@@ -19,6 +19,7 @@ namespace MainForm
     {
         private Tema selectedTema;
         private Tema updatedTema;
+        private bool isSelected = false;
 
         public frmAddTopics()
         {
@@ -120,7 +121,8 @@ namespace MainForm
                     {
                         foreach (ValidationFailure errors in fallas)
                         {
-                            MessageBox.Show(errors.ErrorMessage, errors.PropertyName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show(errors.ErrorMessage, errors.PropertyName, MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
                             return;
                         }
                     }
@@ -128,20 +130,31 @@ namespace MainForm
                     {
                         ModeloDUsuario mdDUsuario = new ModeloDUsuario();
 
-                        if (mdDUsuario.UpdateTema(selectedTema, updatedTema.Codigo, updatedTema.Descripcion))
+                        if (isSelected)
                         {
-                            FillData();
-                            temaBindingSource.Clear();
-                            selectedTema = null;
-                            updatedTema = null;
+                            if (mdDUsuario.UpdateTema(selectedTema, updatedTema.Codigo, updatedTema.Descripcion))
+                            {
+                                FillData();
+                                temaBindingSource.Clear();
+                                selectedTema = null;
+                                updatedTema = null;
+                            }
+                        }
+                        else
+                        {
+                            if (mdDUsuario.UpdateDescripcionTema(updatedTema.Codigo, updatedTema.Descripcion))
+                            {
+                                FillData();
+                                temaBindingSource.Clear();
+                                selectedTema = null;
+                                updatedTema = null;
+                            }
                         }
                     }
+                }
 
-                }
-                else
-                {
-                    temaBindingSource.DataSource = new Tema();
-                }
+                isSelected = false;
+                temaBindingSource.DataSource = new Tema();
             }
             catch (Exception exception)
             {
@@ -196,6 +209,7 @@ namespace MainForm
 
         private void dgvGeneros_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            isSelected = true;
             selectedTema = new Tema(dgvGeneros.SelectedCells[0].Value.ToString(), dgvGeneros.SelectedCells[1].Value.ToString());
             temaBindingSource.DataSource = new Tema(dgvGeneros.SelectedCells[0].Value.ToString(), dgvGeneros.SelectedCells[1].Value.ToString());
         }

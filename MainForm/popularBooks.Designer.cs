@@ -69,8 +69,7 @@ namespace MainForm
             this.LayoutPopulares.Controls.Add(this.pctRecomendado1, 0, 0);
             this.LayoutPopulares.Controls.Add(this.lblLibro3, 2, 1);
             this.LayoutPopulares.Controls.Add(this.lblDescripcionL1, 0, 2);
-            this.LayoutPopulares.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.LayoutPopulares.Location = new System.Drawing.Point(0, 37);
+            this.LayoutPopulares.Location = new System.Drawing.Point(0, 17);
             this.LayoutPopulares.Name = "LayoutPopulares";
             this.LayoutPopulares.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LayoutPopulares.RowCount = 3;

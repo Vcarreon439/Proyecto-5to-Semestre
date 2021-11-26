@@ -203,6 +203,36 @@ namespace DataAccess
             }
         }
 
+        public bool UpdateDescripcionTema(string codigo, string ndescripcion)
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("UpdateDescripcionTema", conexion))
+                {
+                    try
+                    {
+                        cmd.Connection = conexion;
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@Code", codigo);
+                        cmd.Parameters.AddWithValue("@newDesc", ndescripcion);
+                        cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
+                        cmd.ExecuteNonQuery();
+
+                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString()));
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                        return false;
+                    }
+
+                }
+            }
+        }
+
         #endregion
 
         #region DeleteTema

@@ -150,5 +150,10 @@ namespace Dominio
         {
             return obj.GetBookTopics(codigo);
         }
+
+        public bool UpdateDescripcionTema(string updatedTemaCodigo, string updatedTemaDescripcion)
+        {
+            return obj.UpdateDescripcionTema(updatedTemaCodigo, updatedTemaDescripcion);
+        }
     }
 }

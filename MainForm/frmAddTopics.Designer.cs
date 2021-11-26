@@ -78,6 +78,7 @@ namespace MainForm
             // 
             // btnEditar
             // 
+            this.btnEditar.Enabled = false;
             this.btnEditar.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
             this.btnEditar.Location = new System.Drawing.Point(143, 244);
             this.btnEditar.Name = "btnEditar";
