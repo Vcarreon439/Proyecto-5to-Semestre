@@ -31,27 +31,28 @@ namespace MainForm
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(popularBooks));
             this.LayoutPopulares = new System.Windows.Forms.TableLayoutPanel();
+            this.lblDescripcionL4 = new System.Windows.Forms.Label();
+            this.lblDescripcionL3 = new System.Windows.Forms.Label();
+            this.lblDescripcionL2 = new System.Windows.Forms.Label();
             this.lblLibro4 = new System.Windows.Forms.Label();
             this.lblLibro2 = new System.Windows.Forms.Label();
             this.lblLibro1 = new System.Windows.Forms.Label();
-            this.pctRecomendado4 = new System.Windows.Forms.PictureBox();
             this.pctRecomendado3 = new System.Windows.Forms.PictureBox();
             this.pctRecomendado2 = new System.Windows.Forms.PictureBox();
             this.pctRecomendado1 = new System.Windows.Forms.PictureBox();
             this.lblLibro3 = new System.Windows.Forms.Label();
             this.lblDescripcionL1 = new System.Windows.Forms.Label();
-            this.lblDescripcionL2 = new System.Windows.Forms.Label();
-            this.lblDescripcionL3 = new System.Windows.Forms.Label();
-            this.lblDescripcionL4 = new System.Windows.Forms.Label();
+            this.pctRecomendado4 = new System.Windows.Forms.PictureBox();
             this.LayoutPopulares.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado4)).BeginInit();
             this.SuspendLayout();
             // 
             // LayoutPopulares
             // 
+            this.LayoutPopulares.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.LayoutPopulares.ColumnCount = 4;
             this.LayoutPopulares.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.LayoutPopulares.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -69,8 +70,7 @@ namespace MainForm
             this.LayoutPopulares.Controls.Add(this.lblLibro3, 2, 1);
             this.LayoutPopulares.Controls.Add(this.lblDescripcionL1, 0, 2);
             this.LayoutPopulares.Controls.Add(this.pctRecomendado4, 3, 0);
-            this.LayoutPopulares.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.LayoutPopulares.Location = new System.Drawing.Point(0, 74);
+            this.LayoutPopulares.Location = new System.Drawing.Point(0, 35);
             this.LayoutPopulares.Name = "LayoutPopulares";
             this.LayoutPopulares.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LayoutPopulares.RowCount = 3;
@@ -80,6 +80,42 @@ namespace MainForm
             this.LayoutPopulares.Size = new System.Drawing.Size(800, 413);
             this.LayoutPopulares.TabIndex = 0;
             this.LayoutPopulares.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LayoutPopulares_MouseMove);
+            // 
+            // lblDescripcionL4
+            // 
+            this.lblDescripcionL4.AutoSize = true;
+            this.lblDescripcionL4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDescripcionL4.Location = new System.Drawing.Point(599, 340);
+            this.lblDescripcionL4.Name = "lblDescripcionL4";
+            this.lblDescripcionL4.Size = new System.Drawing.Size(193, 73);
+            this.lblDescripcionL4.TabIndex = 11;
+            this.lblDescripcionL4.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
+    "cididunt ut labore et dolore magna aliqua.\r\n";
+            this.lblDescripcionL4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblDescripcionL3
+            // 
+            this.lblDescripcionL3.AutoSize = true;
+            this.lblDescripcionL3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDescripcionL3.Location = new System.Drawing.Point(402, 340);
+            this.lblDescripcionL3.Name = "lblDescripcionL3";
+            this.lblDescripcionL3.Size = new System.Drawing.Size(191, 73);
+            this.lblDescripcionL3.TabIndex = 10;
+            this.lblDescripcionL3.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
+    "cididunt ut labore et dolore magna aliqua.\r\n";
+            this.lblDescripcionL3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblDescripcionL2
+            // 
+            this.lblDescripcionL2.AutoSize = true;
+            this.lblDescripcionL2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDescripcionL2.Location = new System.Drawing.Point(205, 340);
+            this.lblDescripcionL2.Name = "lblDescripcionL2";
+            this.lblDescripcionL2.Size = new System.Drawing.Size(191, 73);
+            this.lblDescripcionL2.TabIndex = 9;
+            this.lblDescripcionL2.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
+    "cididunt ut labore et dolore magna aliqua.\r\n";
+            this.lblDescripcionL2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblLibro4
             // 
@@ -116,19 +152,6 @@ namespace MainForm
             this.lblLibro1.TabIndex = 5;
             this.lblLibro1.Text = "Default Tittle";
             this.lblLibro1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pctRecomendado4
-            // 
-            this.pctRecomendado4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pctRecomendado4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pctRecomendado4.Image = ((System.Drawing.Image)(resources.GetObject("pctRecomendado4.Image")));
-            this.pctRecomendado4.Location = new System.Drawing.Point(599, 3);
-            this.pctRecomendado4.Name = "pctRecomendado4";
-            this.pctRecomendado4.Size = new System.Drawing.Size(193, 307);
-            this.pctRecomendado4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctRecomendado4.TabIndex = 3;
-            this.pctRecomendado4.TabStop = false;
-            this.pctRecomendado4.Click += new System.EventHandler(this.pctRecomendado4_Click);
             // 
             // pctRecomendado3
             // 
@@ -195,41 +218,18 @@ namespace MainForm
     "cididunt ut labore et dolore magna aliqua.\r\n";
             this.lblDescripcionL1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lblDescripcionL2
+            // pctRecomendado4
             // 
-            this.lblDescripcionL2.AutoSize = true;
-            this.lblDescripcionL2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDescripcionL2.Location = new System.Drawing.Point(205, 340);
-            this.lblDescripcionL2.Name = "lblDescripcionL2";
-            this.lblDescripcionL2.Size = new System.Drawing.Size(191, 73);
-            this.lblDescripcionL2.TabIndex = 9;
-            this.lblDescripcionL2.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
-    "cididunt ut labore et dolore magna aliqua.\r\n";
-            this.lblDescripcionL2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblDescripcionL3
-            // 
-            this.lblDescripcionL3.AutoSize = true;
-            this.lblDescripcionL3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDescripcionL3.Location = new System.Drawing.Point(402, 340);
-            this.lblDescripcionL3.Name = "lblDescripcionL3";
-            this.lblDescripcionL3.Size = new System.Drawing.Size(191, 73);
-            this.lblDescripcionL3.TabIndex = 10;
-            this.lblDescripcionL3.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
-    "cididunt ut labore et dolore magna aliqua.\r\n";
-            this.lblDescripcionL3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblDescripcionL4
-            // 
-            this.lblDescripcionL4.AutoSize = true;
-            this.lblDescripcionL4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDescripcionL4.Location = new System.Drawing.Point(599, 340);
-            this.lblDescripcionL4.Name = "lblDescripcionL4";
-            this.lblDescripcionL4.Size = new System.Drawing.Size(193, 73);
-            this.lblDescripcionL4.TabIndex = 11;
-            this.lblDescripcionL4.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
-    "cididunt ut labore et dolore magna aliqua.\r\n";
-            this.lblDescripcionL4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pctRecomendado4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pctRecomendado4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pctRecomendado4.Image = ((System.Drawing.Image)(resources.GetObject("pctRecomendado4.Image")));
+            this.pctRecomendado4.Location = new System.Drawing.Point(599, 3);
+            this.pctRecomendado4.Name = "pctRecomendado4";
+            this.pctRecomendado4.Size = new System.Drawing.Size(193, 307);
+            this.pctRecomendado4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctRecomendado4.TabIndex = 3;
+            this.pctRecomendado4.TabStop = false;
+            this.pctRecomendado4.Click += new System.EventHandler(this.pctRecomendado4_Click);
             // 
             // popularBooks
             // 
@@ -245,10 +245,10 @@ namespace MainForm
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.popularBooks_MouseMove);
             this.LayoutPopulares.ResumeLayout(false);
             this.LayoutPopulares.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctRecomendado4)).EndInit();
             this.ResumeLayout(false);
 
         }

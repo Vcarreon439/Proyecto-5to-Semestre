@@ -76,6 +76,7 @@ namespace MainForm
             // 
             // direccionLabel
             // 
+            direccionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             direccionLabel.AutoSize = true;
             direccionLabel.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
             direccionLabel.Location = new System.Drawing.Point(442, 24);
@@ -109,7 +110,7 @@ namespace MainForm
             this.codigoKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fullEditorialBindingSource, "Codigo", true));
             this.codigoKryptonTextBox.Location = new System.Drawing.Point(200, 22);
             this.codigoKryptonTextBox.Name = "codigoKryptonTextBox";
-            this.codigoKryptonTextBox.Size = new System.Drawing.Size(217, 33);
+            this.codigoKryptonTextBox.Size = new System.Drawing.Size(225, 33);
             this.codigoKryptonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -126,7 +127,7 @@ namespace MainForm
             this.correoKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fullEditorialBindingSource, "Correo", true));
             this.correoKryptonTextBox.Location = new System.Drawing.Point(93, 100);
             this.correoKryptonTextBox.Name = "correoKryptonTextBox";
-            this.correoKryptonTextBox.Size = new System.Drawing.Size(324, 33);
+            this.correoKryptonTextBox.Size = new System.Drawing.Size(332, 33);
             this.correoKryptonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -136,6 +137,7 @@ namespace MainForm
             // 
             // direccionKryptonTextBox
             // 
+            this.direccionKryptonTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.direccionKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fullEditorialBindingSource, "Direccion", true));
             this.direccionKryptonTextBox.Location = new System.Drawing.Point(446, 50);
             this.direccionKryptonTextBox.Multiline = true;
@@ -153,7 +155,7 @@ namespace MainForm
             this.nombreKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fullEditorialBindingSource, "Nombre", true));
             this.nombreKryptonTextBox.Location = new System.Drawing.Point(93, 61);
             this.nombreKryptonTextBox.Name = "nombreKryptonTextBox";
-            this.nombreKryptonTextBox.Size = new System.Drawing.Size(324, 33);
+            this.nombreKryptonTextBox.Size = new System.Drawing.Size(332, 33);
             this.nombreKryptonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -163,6 +165,9 @@ namespace MainForm
             // 
             // dgvEditoriales
             // 
+            this.dgvEditoriales.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEditoriales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEditoriales.Location = new System.Drawing.Point(23, 216);
             this.dgvEditoriales.Name = "dgvEditoriales";
@@ -173,6 +178,7 @@ namespace MainForm
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.Location = new System.Drawing.Point(713, 178);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
@@ -183,6 +189,7 @@ namespace MainForm
             // 
             // btnEditar
             // 
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEditar.Location = new System.Drawing.Point(632, 178);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
@@ -193,6 +200,7 @@ namespace MainForm
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.Location = new System.Drawing.Point(551, 178);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
@@ -206,7 +214,7 @@ namespace MainForm
             this.telefonoKryptonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fullEditorialBindingSource, "Telefono", true));
             this.telefonoKryptonTextBox.Location = new System.Drawing.Point(93, 139);
             this.telefonoKryptonTextBox.Name = "telefonoKryptonTextBox";
-            this.telefonoKryptonTextBox.Size = new System.Drawing.Size(324, 33);
+            this.telefonoKryptonTextBox.Size = new System.Drawing.Size(332, 33);
             this.telefonoKryptonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));

@@ -20,7 +20,7 @@ namespace MainForm
     {
         private FullEditorial selectEditorial;
         private FullEditorial updatEditorial;
-
+        private bool isSelected = false;
 
         public frmAddEditorials()
         {
@@ -93,6 +93,7 @@ namespace MainForm
 
         private void dgvEditoriales_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            isSelected = true;
             selectEditorial = new FullEditorial(dgvEditoriales.SelectedCells);
             fullEditorialBindingSource.DataSource = new FullEditorial(dgvEditoriales.SelectedCells);
         }
@@ -122,13 +123,27 @@ namespace MainForm
                     {
                         ModeloDUsuario mdDUsuario = new ModeloDUsuario();
 
-                        if (mdDUsuario.UpdateEditorial(selectEditorial, updatEditorial))
+                        if (isSelected)
                         {
-                            FillData();
-                            fullEditorialBindingSource.Clear();
-                            selectEditorial = null;
-                            updatEditorial = null;
+                            if (mdDUsuario.UpdateEditorial(selectEditorial, updatEditorial))
+                            {
+                                FillData();
+                                fullEditorialBindingSource.Clear();
+                                selectEditorial = null;
+                                updatEditorial = null;
+                            }
                         }
+                        else
+                        {
+                            if (mdDUsuario.UpdatePublishersWithotCode(updatEditorial.Codigo, updatEditorial))
+                            {
+                                FillData();
+                                fullEditorialBindingSource.Clear();
+                                selectEditorial = null;
+                                updatEditorial = null;
+                            }
+                        }
+
                     }
 
                 }

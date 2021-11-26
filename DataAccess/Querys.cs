@@ -566,6 +566,42 @@ namespace DataAccess
 
                 }
             }
+        } 
+        
+        
+        public bool UpdatePublishersWithotCode(string codigo, FullEditorial newEditorial)
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("UpdatePublishersWithotCode", conexion))
+                {
+                    try
+                    {
+                        cmd.Connection = conexion;
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@Code", codigo);
+
+                        cmd.Parameters.AddWithValue("@newName", newEditorial.Nombre);
+                        cmd.Parameters.AddWithValue("@newPhone", newEditorial.Telefono);
+                        cmd.Parameters.AddWithValue("@newMail", newEditorial.Correo);
+                        cmd.Parameters.AddWithValue("@newAddress", newEditorial.Direccion);
+
+                        cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
+                        cmd.ExecuteNonQuery();
+
+                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString()));
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                        return false;
+                    }
+
+                }
+            }
         }
 
         public bool DeletePublisher(FullEditorial editorial)

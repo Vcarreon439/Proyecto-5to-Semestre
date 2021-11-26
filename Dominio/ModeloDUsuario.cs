@@ -155,5 +155,10 @@ namespace Dominio
         {
             return obj.UpdateDescripcionTema(updatedTemaCodigo, updatedTemaDescripcion);
         }
+
+        public bool UpdatePublishersWithotCode(string updatEditorialCodigo, FullEditorial updatEditorial)
+        {
+            return obj.UpdatePublishersWithotCode(updatEditorialCodigo, updatEditorial);
+        }
     }
 }
