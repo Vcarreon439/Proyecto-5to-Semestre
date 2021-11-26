@@ -134,6 +134,10 @@ namespace MainForm
                     }
 
                 }
+                else
+                {
+                    temaBindingSource.DataSource = new Tema();
+                }
             }
             catch (Exception exception)
             {
