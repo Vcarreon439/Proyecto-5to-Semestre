@@ -54,5 +54,21 @@ namespace MainForm
         {
             ActualizarContenido();
         }
+
+        private void btnRentar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+
+
+
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+            }
+        }
     }
 }

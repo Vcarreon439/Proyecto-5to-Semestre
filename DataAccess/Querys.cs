@@ -994,6 +994,84 @@ namespace DataAccess
                 }
             }
         }
+
+        //public bool NewPrestamo()
+        //{
+        //    string valor;
+
+        //    using (SqlConnection conexion = getConnection())
+        //    {
+        //        conexion.Open();
+
+        //        using (SqlCommand cmd = new SqlCommand("AddBook", conexion))
+        //        {
+        //            try
+        //            {
+        //                cmd.Connection = conexion;
+        //                cmd.CommandType = CommandType.StoredProcedure;
+
+        //                //El titulo nunca pueden ir vacios
+        //                cmd.Parameters.AddWithValue("@Titulo", tempLibro.Titulo);
+
+        //                if (tempLibro.codEditorial == "" | tempLibro.codEditorial == null)
+        //                    cmd.Parameters.AddWithValue("@codEditorial", DBNull.Value);
+        //                else
+        //                    cmd.Parameters.AddWithValue("@codEditorial", tempLibro.codEditorial);
+
+        //                if (tempLibro.ISBN == "" | tempLibro.ISBN == null)
+        //                    cmd.Parameters.AddWithValue("@ISBN", DBNull.Value);
+        //                else
+        //                    cmd.Parameters.AddWithValue("@ISBN", tempLibro.ISBN);
+
+        //                if (tempLibro.numEdicion == -1 | tempLibro.numEdicion == null)
+        //                    cmd.Parameters.AddWithValue("@numEdicion", DBNull.Value);
+        //                else
+        //                    cmd.Parameters.AddWithValue("@numEdicion", tempLibro.numEdicion);
+
+        //                if (tempLibro.Copias == -1 | tempLibro.Copias == null)
+        //                    cmd.Parameters.AddWithValue("@copias", DBNull.Value);
+        //                else
+        //                    cmd.Parameters.AddWithValue("@copias", tempLibro.Copias);
+
+        //                if (tempLibro.AñoEdicion == 0 | tempLibro.AñoEdicion == null)
+        //                    cmd.Parameters.AddWithValue("@añoEdicion", DBNull.Value);
+        //                else
+        //                    cmd.Parameters.AddWithValue("@añoEdicion", tempLibro.AñoEdicion.ToString());
+
+        //                if (tempLibro.Descripcion == null | tempLibro.Descripcion == "")
+        //                    cmd.Parameters.AddWithValue("@descripcion", DBNull.Value);
+        //                else
+        //                    cmd.Parameters.AddWithValue("@descripcion", tempLibro.Descripcion);
+
+        //                if (tempLibro.Imagen == null | tempLibro.Imagen == "")
+        //                    cmd.Parameters.AddWithValue("@foto", DBNull.Value);
+        //                else
+        //                    cmd.Parameters.AddWithValue("@foto", tempLibro.Imagen);
+
+        //                cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.Output;
+        //                cmd.Parameters.Add("@codLibro", SqlDbType.Int).Direction = ParameterDirection.Output;
+
+        //                cmd.ExecuteNonQuery();
+        //                tempLibro.Codigo = int.Parse(cmd.Parameters["@codLibro"].Value.ToString());
+
+        //                if (Convert.ToBoolean(cmd.Parameters["@ret"].Value.ToString()))
+        //                    InsertTemaLibro(tempLibro);
+        //                else
+        //                    return false;
+
+        //                return Convert.ToBoolean(cmd.Parameters["@ret"].Value.ToString());
+        //            }
+        //            catch (Exception e)
+        //            {
+        //                MessageBox.Show(e.Message);
+        //                return false;
+        //            }
+        //        }
+
+        //        conexion.Close();
+        //    }
+        //}
+
     }
 }
 

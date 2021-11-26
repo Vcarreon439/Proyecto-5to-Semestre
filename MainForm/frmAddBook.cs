@@ -195,9 +195,15 @@ namespace MainForm
             FillCbo3(ref checkBoxComboBox1, internalList.Autores);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAgregarImagen_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                pctImagenLibro.Image = new Bitmap(open.FileName);
+                imgLocation = open.FileName;
+            }
         }
     }
 }

@@ -70,6 +70,12 @@
     <Compile Include="addAuthors.Designer.cs">
       <DependentUpon>addAuthors.cs</DependentUpon>
     </Compile>
+    <Compile Include="askPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="askPassword.Designer.cs">
+      <DependentUpon>askPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Auxiliares\ListaObjetos.cs" />
     <Compile Include="fichaAutor.cs">
       <SubType>Form</SubType>
@@ -157,6 +163,9 @@
     <Compile Include="ValidateData\ValidateTopic.cs" />
     <EmbeddedResource Include="addAuthors.resx">
       <DependentUpon>addAuthors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="askPassword.resx">
+      <DependentUpon>askPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fichaAutor.resx">
       <DependentUpon>fichaAutor.cs</DependentUpon>

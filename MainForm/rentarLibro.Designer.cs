@@ -30,18 +30,18 @@ namespace MainForm
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.timerReloj = new System.Windows.Forms.Timer(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tituloLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editorialLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.temasLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.autoresLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRentar = new RJCodeAdvance.RJControls.RJButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timerReloj = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnUpdate = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
@@ -65,24 +65,62 @@ namespace MainForm
             this.dataGridView1.Size = new System.Drawing.Size(776, 365);
             this.dataGridView1.TabIndex = 0;
             // 
-            // rjButton1
+            // tituloLibro
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 0;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(13, 15);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(175, 35);
-            this.rjButton1.TabIndex = 1;
-            this.rjButton1.Text = "Generar Ficha";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.tituloLibro.DefaultCellStyle = dataGridViewCellStyle1;
+            this.tituloLibro.HeaderText = "Titulo";
+            this.tituloLibro.Name = "tituloLibro";
+            this.tituloLibro.ReadOnly = true;
+            // 
+            // editorialLibro
+            // 
+            this.editorialLibro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.editorialLibro.HeaderText = "Editorial";
+            this.editorialLibro.Name = "editorialLibro";
+            this.editorialLibro.ReadOnly = true;
+            // 
+            // temasLibro
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            this.temasLibro.DefaultCellStyle = dataGridViewCellStyle2;
+            this.temasLibro.HeaderText = "Temas";
+            this.temasLibro.Name = "temasLibro";
+            this.temasLibro.ReadOnly = true;
+            this.temasLibro.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.temasLibro.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.temasLibro.Width = 175;
+            // 
+            // autoresLibro
+            // 
+            this.autoresLibro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            this.autoresLibro.DefaultCellStyle = dataGridViewCellStyle3;
+            this.autoresLibro.HeaderText = "Autores";
+            this.autoresLibro.Name = "autoresLibro";
+            this.autoresLibro.ReadOnly = true;
+            this.autoresLibro.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.autoresLibro.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // btnRentar
+            // 
+            this.btnRentar.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnRentar.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnRentar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnRentar.BorderRadius = 0;
+            this.btnRentar.BorderSize = 0;
+            this.btnRentar.FlatAppearance.BorderSize = 0;
+            this.btnRentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRentar.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRentar.ForeColor = System.Drawing.Color.White;
+            this.btnRentar.Location = new System.Drawing.Point(13, 15);
+            this.btnRentar.Name = "btnRentar";
+            this.btnRentar.Size = new System.Drawing.Size(175, 35);
+            this.btnRentar.TabIndex = 1;
+            this.btnRentar.Text = "Generar Ficha";
+            this.btnRentar.TextColor = System.Drawing.Color.White;
+            this.btnRentar.UseVisualStyleBackColor = false;
+            this.btnRentar.Click += new System.EventHandler(this.btnRentar_Click);
             // 
             // label1
             // 
@@ -102,43 +140,6 @@ namespace MainForm
             // timer1
             // 
             this.timer1.Interval = 1000;
-            // 
-            // tituloLibro
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.tituloLibro.DefaultCellStyle = dataGridViewCellStyle4;
-            this.tituloLibro.HeaderText = "Titulo";
-            this.tituloLibro.Name = "tituloLibro";
-            this.tituloLibro.ReadOnly = true;
-            // 
-            // editorialLibro
-            // 
-            this.editorialLibro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.editorialLibro.HeaderText = "Editorial";
-            this.editorialLibro.Name = "editorialLibro";
-            this.editorialLibro.ReadOnly = true;
-            // 
-            // temasLibro
-            // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.temasLibro.DefaultCellStyle = dataGridViewCellStyle5;
-            this.temasLibro.HeaderText = "Temas";
-            this.temasLibro.Name = "temasLibro";
-            this.temasLibro.ReadOnly = true;
-            this.temasLibro.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.temasLibro.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.temasLibro.Width = 175;
-            // 
-            // autoresLibro
-            // 
-            this.autoresLibro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            this.autoresLibro.DefaultCellStyle = dataGridViewCellStyle6;
-            this.autoresLibro.HeaderText = "Autores";
-            this.autoresLibro.Name = "autoresLibro";
-            this.autoresLibro.ReadOnly = true;
-            this.autoresLibro.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.autoresLibro.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // btnUpdate
             // 
@@ -162,7 +163,7 @@ namespace MainForm
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.rjButton1);
+            this.Controls.Add(this.btnRentar);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "rentarLibro";
@@ -177,7 +178,7 @@ namespace MainForm
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private RJCodeAdvance.RJControls.RJButton rjButton1;
+        private RJCodeAdvance.RJControls.RJButton btnRentar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timerReloj;
         private System.Windows.Forms.Timer timer1;

@@ -44,7 +44,7 @@ namespace MainForm
             this.btnInsertar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregarImagen = new System.Windows.Forms.Button();
             this.cboTema = new CustomControls.CheckBoxComboBox.CheckBoxComboBox();
             this.tituloTextBox = new System.Windows.Forms.TextBox();
             this.iSBNTextBox = new System.Windows.Forms.TextBox();
@@ -195,17 +195,17 @@ namespace MainForm
             this.label11.TabIndex = 28;
             this.label11.Text = "ISBN:";
             // 
-            // button1
+            // btnAgregarImagen
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnAgregarImagen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(12, 381);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 23);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "Agregar Imagen";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAgregarImagen.Location = new System.Drawing.Point(12, 381);
+            this.btnAgregarImagen.Name = "btnAgregarImagen";
+            this.btnAgregarImagen.Size = new System.Drawing.Size(230, 23);
+            this.btnAgregarImagen.TabIndex = 40;
+            this.btnAgregarImagen.Text = "Agregar Imagen";
+            this.btnAgregarImagen.UseVisualStyleBackColor = true;
+            this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
             // 
             // cboTema
             // 
@@ -349,7 +349,7 @@ namespace MainForm
             this.Controls.Add(this.iSBNTextBox);
             this.Controls.Add(tituloLabel);
             this.Controls.Add(this.cboTema);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAgregarImagen);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.label5);
@@ -375,7 +375,7 @@ namespace MainForm
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAgregarImagen;
         private CustomControls.CheckBoxComboBox.CheckBoxComboBox cboTema;
         private System.Windows.Forms.BindingSource libroBindingSource;
         private System.Windows.Forms.TextBox tituloTextBox;
