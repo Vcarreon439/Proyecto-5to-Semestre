@@ -56,7 +56,7 @@ namespace MainForm
 
         private void btnRentar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("","Desea rentar este libro?",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Desea rentar este libro?", "",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 this.DialogResult = DialogResult.Yes;
             else
                 this.DialogResult = DialogResult.No;
