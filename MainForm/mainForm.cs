@@ -95,7 +95,8 @@ namespace MainForm
             }
             else
             {
-                FormularioAbierto = FormEnPanel.AbrirFormulario(ref pctFondo, () => new profileForm(LocalFullUser));
+                MessageBox.Show("Esta opcion esta en mantenimiento");
+                //FormularioAbierto = FormEnPanel.AbrirFormulario(ref pctFondo, () => new profileForm(LocalFullUser));
             }
         }
 
@@ -116,17 +117,20 @@ namespace MainForm
 
         private void btnIssueBooks_Click(object sender, EventArgs e)
         {
-            FormularioAbierto = FormEnPanel.AbrirFormulario(ref pctFondo, () => new rentarLibro(this));
+            MessageBox.Show("Esta opcion esta en mantenimiento");
+            //FormularioAbierto = FormEnPanel.AbrirFormulario(ref pctFondo, () => new rentarLibro(this));
         }
 
         private void searchBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Esta opcion esta en mantenimiento");
             FormularioAbierto = FormEnPanel.AbrirForm<searchBooks>(ref pctFondo);
         }
 
         private void btnRentas_Click(object sender, EventArgs e)
         {
-            FormularioAbierto = FormEnPanel.AbrirForm<manejarRentas>(ref pctFondo);
+            MessageBox.Show("Esta opcion esta en mantenimiento");
+            //FormularioAbierto = FormEnPanel.AbrirForm<manejarRentas>(ref pctFondo);
         }
 
         private void manageTopicsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -141,7 +145,17 @@ namespace MainForm
 
         private void manageStudentsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Esta opcion esta en mantenimiento");
+        }
 
+        private void btnReturnBooks_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Esta opcion esta en mantenimiento");
+        }
+
+        private void masterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Esta opcion esta en mantenimiento");
         }
     }
 }

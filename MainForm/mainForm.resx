@@ -153,48 +153,6 @@
   <data name="masterToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="manageStudentsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 26</value>
-  </data>
-  <data name="manageStudentsToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Manage Students</value>
-  </data>
-  <data name="manageTopicsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 26</value>
-  </data>
-  <data name="manageTopicsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Manage Topics</value>
-  </data>
-  <data name="bookPublishersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 26</value>
-  </data>
-  <data name="bookPublishersToolStripMenuItem.Text" xml:space="preserve">
-    <value>Manage Publishers</value>
-  </data>
-  <data name="authorsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 26</value>
-  </data>
-  <data name="authorsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Manage Authors</value>
-  </data>
-  <data name="btnRentas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 26</value>
-  </data>
-  <data name="btnRentas.Text" xml:space="preserve">
-    <value>Manage Rents</value>
-  </data>
-  <data name="btnAdministrator.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Open Sans Condensed, 11.25pt</value>
-  </data>
-  <data name="btnAdministrator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 26</value>
-  </data>
-  <data name="btnAdministrator.Text" xml:space="preserve">
-    <value>Manager</value>
-  </data>
-  <data name="btnAdministrator.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="btnMyProfile.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -3660,6 +3618,48 @@
   </data>
   <data name="btnStudentOptions.Text" xml:space="preserve">
     <value>Student</value>
+  </data>
+  <data name="manageStudentsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 26</value>
+  </data>
+  <data name="manageStudentsToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Manage Students</value>
+  </data>
+  <data name="manageTopicsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 26</value>
+  </data>
+  <data name="manageTopicsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Manage Topics</value>
+  </data>
+  <data name="bookPublishersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 26</value>
+  </data>
+  <data name="bookPublishersToolStripMenuItem.Text" xml:space="preserve">
+    <value>Manage Publishers</value>
+  </data>
+  <data name="authorsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 26</value>
+  </data>
+  <data name="authorsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Manage Authors</value>
+  </data>
+  <data name="btnRentas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 26</value>
+  </data>
+  <data name="btnRentas.Text" xml:space="preserve">
+    <value>Manage Rents</value>
+  </data>
+  <data name="btnAdministrator.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Open Sans Condensed, 11.25pt</value>
+  </data>
+  <data name="btnAdministrator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 26</value>
+  </data>
+  <data name="btnAdministrator.Text" xml:space="preserve">
+    <value>Manager</value>
+  </data>
+  <data name="btnAdministrator.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="popularBooksToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 26</value>

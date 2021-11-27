@@ -65,8 +65,8 @@ namespace MainForm
             resources.ApplyResources(this.menuPrincipal, "menuPrincipal");
             this.menuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.masterToolStripMenuItem,
-            this.btnAdministrator,
             this.btnStudentOptions,
+            this.btnAdministrator,
             this.btnBooks,
             this.btnIssueBooks,
             this.btnReturnBooks,
@@ -81,6 +81,7 @@ namespace MainForm
             this.masterToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.masterToolStripMenuItem.Image = global::MainForm.Properties.Resources.masterIcon;
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
+            this.masterToolStripMenuItem.Click += new System.EventHandler(this.masterToolStripMenuItem_Click);
             // 
             // btnAdministrator
             // 
@@ -185,6 +186,7 @@ namespace MainForm
             resources.ApplyResources(this.btnReturnBooks, "btnReturnBooks");
             this.btnReturnBooks.ForeColor = System.Drawing.Color.White;
             this.btnReturnBooks.Name = "btnReturnBooks";
+            this.btnReturnBooks.Click += new System.EventHandler(this.btnReturnBooks_Click);
             // 
             // pctFondo
             // 
