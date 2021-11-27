@@ -49,6 +49,7 @@
     <Compile Include="ElementosBiblioteca\Libros\Libro.cs" />
     <Compile Include="ElementosBiblioteca\Editorial\EditorialSencillo.cs" />
     <Compile Include="ElementosBiblioteca\Libros\LibroVista.cs" />
+    <Compile Include="ElementosBiblioteca\Prestamo\PrestamoSimple.cs" />
     <Compile Include="Encriptado.cs" />
     <Compile Include="ElementosBiblioteca\Usuarios\FullUser.cs" />
     <Compile Include="ElementosBiblioteca\Libros\LibroSencillo.cs" />

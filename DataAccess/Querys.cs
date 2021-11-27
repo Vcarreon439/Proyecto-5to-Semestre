@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Text;
 using System.Windows.Forms;
 using Elementos;
 using Elementos.ElementosBiblioteca.Autor;
 using Elementos.ElementosBiblioteca.Editorial;
 using Elementos.ElementosBiblioteca.Libros;
+using Elementos.ElementosBiblioteca.Prestamo;
 
 
 namespace DataAccess
@@ -31,7 +33,8 @@ namespace DataAccess
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@Correo", temp.Correo);
                         cmd.Parameters.AddWithValue("@Contraseña", temp.Contraseña);
-                        cmd.Parameters.Add("@level", SqlDbType.VarChar, Int32.MaxValue).Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add("@level", SqlDbType.VarChar, Int32.MaxValue).Direction =
+                            ParameterDirection.Output;
                         cmd.ExecuteNonQuery();
 
                         return TipoUsuario.ConvertirNivelAutorizacion(cmd.Parameters["@level"].Value.ToString());
@@ -73,7 +76,7 @@ namespace DataAccess
 
                             string fec = row["FechaNac"].ToString();
 
-                            if (fec!="")
+                            if (fec != "")
                                 retFullUser.FechaDateTime = DateTime.Parse(row["FechaNac"].ToString());
 
                             retFullUser.Entidad = row["EntFed"].ToString();
@@ -155,7 +158,8 @@ namespace DataAccess
                         cmd.Parameters.AddWithValue("@Descripcion", temp.Descripcion);
                         cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
                         cmd.ExecuteNonQuery();
-                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString())); ;
+                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString()));
+                        ;
                     }
                     catch (Exception e)
                     {
@@ -253,7 +257,8 @@ namespace DataAccess
                         cmd.Parameters.AddWithValue("@Descripcion", temp.Descripcion);
                         cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
                         cmd.ExecuteNonQuery();
-                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString())); ;
+                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString()));
+                        ;
                     }
                     catch (Exception e)
                     {
@@ -289,7 +294,7 @@ namespace DataAccess
                         //El titulo nunca pueden ir vacios
                         cmd.Parameters.AddWithValue("@Titulo", tempLibro.Titulo);
 
-                        if (tempLibro.codEditorial == ""|tempLibro.codEditorial == null)
+                        if (tempLibro.codEditorial == "" | tempLibro.codEditorial == null)
                             cmd.Parameters.AddWithValue("@codEditorial", DBNull.Value);
                         else
                             cmd.Parameters.AddWithValue("@codEditorial", tempLibro.codEditorial);
@@ -314,7 +319,7 @@ namespace DataAccess
                         else
                             cmd.Parameters.AddWithValue("@añoEdicion", tempLibro.AñoEdicion.ToString());
 
-                        if (tempLibro.Descripcion==null| tempLibro.Descripcion=="")
+                        if (tempLibro.Descripcion == null | tempLibro.Descripcion == "")
                             cmd.Parameters.AddWithValue("@descripcion", DBNull.Value);
                         else
                             cmd.Parameters.AddWithValue("@descripcion", tempLibro.Descripcion);
@@ -505,7 +510,8 @@ namespace DataAccess
 
                         cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
                         cmd.ExecuteNonQuery();
-                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString())); ;
+                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString()));
+                        ;
                     }
                     catch (Exception e)
                     {
@@ -566,9 +572,9 @@ namespace DataAccess
 
                 }
             }
-        } 
-        
-        
+        }
+
+
         public bool UpdatePublishersWithotCode(string codigo, FullEditorial newEditorial)
         {
             using (SqlConnection conexion = getConnection())
@@ -619,7 +625,8 @@ namespace DataAccess
                         cmd.Parameters.AddWithValue("@Code", editorial.Codigo);
                         cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
                         cmd.ExecuteNonQuery();
-                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString())); ;
+                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString()));
+                        ;
                     }
                     catch (Exception e)
                     {
@@ -679,7 +686,8 @@ namespace DataAccess
 
                         cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
                         cmd.ExecuteNonQuery();
-                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString())); ;
+                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString()));
+                        ;
                     }
                     catch (Exception e)
                     {
@@ -780,7 +788,8 @@ namespace DataAccess
                         cmd.Parameters.AddWithValue("@Codigo", codigo);
                         cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.ReturnValue;
                         cmd.ExecuteNonQuery();
-                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString())); ;
+                        return Convert.ToBoolean(int.Parse(cmd.Parameters["@ret"].Value.ToString()));
+                        ;
                     }
                     catch (Exception e)
                     {
@@ -812,7 +821,8 @@ namespace DataAccess
                                 List<Tema> listaTemas = new List<Tema>();
 
                                 while (reader.Read())
-                                    listaTemas.Add(new Tema(reader["Codigo"].ToString(), reader["Descripcion"].ToString()));
+                                    listaTemas.Add(new Tema(reader["Codigo"].ToString(),
+                                        reader["Descripcion"].ToString()));
 
                                 return listaTemas;
                             }
@@ -848,7 +858,8 @@ namespace DataAccess
                                 List<EditorialSencillo> editoriales = new List<EditorialSencillo>();
 
                                 while (reader.Read())
-                                    editoriales.Add(new EditorialSencillo(reader["Codigo"].ToString(), reader["Nombre"].ToString()));
+                                    editoriales.Add(new EditorialSencillo(reader["Codigo"].ToString(),
+                                        reader["Nombre"].ToString()));
 
                                 return editoriales;
                             }
@@ -900,7 +911,7 @@ namespace DataAccess
 
             return null;
         }
-        
+
         public List<AutorSimple> LoadAutores()
         {
             using (SqlConnection conexion = getConnection())
@@ -918,7 +929,8 @@ namespace DataAccess
                                 List<AutorSimple> autores = new List<AutorSimple>();
 
                                 while (reader.Read())
-                                    autores.Add(new AutorSimple(reader["Codigo"].ToString(), reader["Nombre"].ToString(), reader["Apellido"].ToString()));
+                                    autores.Add(new AutorSimple(reader["Codigo"].ToString(),
+                                        reader["Nombre"].ToString(), reader["Apellido"].ToString()));
 
                                 return autores;
                             }
@@ -932,6 +944,7 @@ namespace DataAccess
                     }
                 }
             }
+
             return null;
         }
 
@@ -995,83 +1008,82 @@ namespace DataAccess
             }
         }
 
-        //public bool NewPrestamo()
-        //{
-        //    string valor;
+        public PrestamoSimple NewPrestamo(int codUsuario)
+        {
+            string valor;
 
-        //    using (SqlConnection conexion = getConnection())
-        //    {
-        //        conexion.Open();
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
 
-        //        using (SqlCommand cmd = new SqlCommand("AddBook", conexion))
-        //        {
-        //            try
-        //            {
-        //                cmd.Connection = conexion;
-        //                cmd.CommandType = CommandType.StoredProcedure;
+                using (SqlCommand cmd = new SqlCommand("NewPrestamo", conexion))
+                {
+                    try
+                    {
+                        cmd.Connection = conexion;
+                        cmd.CommandType = CommandType.StoredProcedure;
 
-        //                //El titulo nunca pueden ir vacios
-        //                cmd.Parameters.AddWithValue("@Titulo", tempLibro.Titulo);
+                        cmd.Parameters.AddWithValue("@codUsuario", codUsuario);
+                        cmd.Parameters.AddWithValue("@fechaMaxima",
+                            DateTime.Today.AddDays(5).ToString("yyyy-MM-dd"));
 
-        //                if (tempLibro.codEditorial == "" | tempLibro.codEditorial == null)
-        //                    cmd.Parameters.AddWithValue("@codEditorial", DBNull.Value);
-        //                else
-        //                    cmd.Parameters.AddWithValue("@codEditorial", tempLibro.codEditorial);
+                        cmd.Parameters.Add("@estadoUltimoPrestamo", SqlDbType.VarChar, 50).Direction =
+                            ParameterDirection.Output;
+                        cmd.Parameters.Add("@situacionUsuario", SqlDbType.VarChar, 50).Direction =
+                            ParameterDirection.Output;
+                        cmd.Parameters.Add("@numPrestamo", SqlDbType.Int).Direction = ParameterDirection.Output;
 
-        //                if (tempLibro.ISBN == "" | tempLibro.ISBN == null)
-        //                    cmd.Parameters.AddWithValue("@ISBN", DBNull.Value);
-        //                else
-        //                    cmd.Parameters.AddWithValue("@ISBN", tempLibro.ISBN);
+                        cmd.Parameters.Add("@error", SqlDbType.VarChar, Int32.MaxValue).Direction = ParameterDirection.Output;
 
-        //                if (tempLibro.numEdicion == -1 | tempLibro.numEdicion == null)
-        //                    cmd.Parameters.AddWithValue("@numEdicion", DBNull.Value);
-        //                else
-        //                    cmd.Parameters.AddWithValue("@numEdicion", tempLibro.numEdicion);
+                        PrestamoSimple temp = new PrestamoSimple(false);
+                        cmd.ExecuteNonQuery();
 
-        //                if (tempLibro.Copias == -1 | tempLibro.Copias == null)
-        //                    cmd.Parameters.AddWithValue("@copias", DBNull.Value);
-        //                else
-        //                    cmd.Parameters.AddWithValue("@copias", tempLibro.Copias);
 
-        //                if (tempLibro.AñoEdicion == 0 | tempLibro.AñoEdicion == null)
-        //                    cmd.Parameters.AddWithValue("@añoEdicion", DBNull.Value);
-        //                else
-        //                    cmd.Parameters.AddWithValue("@añoEdicion", tempLibro.AñoEdicion.ToString());
+                        MessageBox.Show($"{cmd.Parameters["@error"].Value.ToString()}");
 
-        //                if (tempLibro.Descripcion == null | tempLibro.Descripcion == "")
-        //                    cmd.Parameters.AddWithValue("@descripcion", DBNull.Value);
-        //                else
-        //                    cmd.Parameters.AddWithValue("@descripcion", tempLibro.Descripcion);
+                        if (cmd.Parameters["@numPrestamo"].ToString() == "" | cmd.Parameters["@numPrestamo"] == null)
+                        {
+                            temp = new PrestamoSimple(false);
+                        }
+                        else
+                        {
+                            temp = new PrestamoSimple(true);
+                            temp.numPrestamo = int.Parse(cmd.Parameters["@numPrestamo"].Value.ToString());
+                        }
 
-        //                if (tempLibro.Imagen == null | tempLibro.Imagen == "")
-        //                    cmd.Parameters.AddWithValue("@foto", DBNull.Value);
-        //                else
-        //                    cmd.Parameters.AddWithValue("@foto", tempLibro.Imagen);
+                        return temp;
 
-        //                cmd.Parameters.Add("@ret", SqlDbType.Bit).Direction = ParameterDirection.Output;
-        //                cmd.Parameters.Add("@codLibro", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                        return null;
+                    }
+                }
+            }
+        }
 
-        //                cmd.ExecuteNonQuery();
-        //                tempLibro.Codigo = int.Parse(cmd.Parameters["@codLibro"].Value.ToString());
+        public int GetUserCode(string correo, string contraseña)
+        {
+            using (SqlConnection conexion = getConnection())
+            {
+                conexion.Open();
 
-        //                if (Convert.ToBoolean(cmd.Parameters["@ret"].Value.ToString()))
-        //                    InsertTemaLibro(tempLibro);
-        //                else
-        //                    return false;
+                using (SqlCommand cmd = new SqlCommand("GetUserCode", conexion))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
 
-        //                return Convert.ToBoolean(cmd.Parameters["@ret"].Value.ToString());
-        //            }
-        //            catch (Exception e)
-        //            {
-        //                MessageBox.Show(e.Message);
-        //                return false;
-        //            }
-        //        }
+                    cmd.Parameters.AddWithValue("@Correo", correo);
+                    cmd.Parameters.AddWithValue("@Contraseña", Encriptado.Encrypt(contraseña));
+                    cmd.Parameters.Add("@codUsuario", SqlDbType.Int).Direction = ParameterDirection.Output;
 
-        //        conexion.Close();
-        //    }
-        //}
+                    cmd.ExecuteNonQuery();
 
+                    return int.Parse(cmd.Parameters["@codUsuario"].Value.ToString());
+                }
+            }
+
+        }
     }
 }
 

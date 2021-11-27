@@ -44,11 +44,11 @@ C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.cs
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.rentarLibro.resources
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.searchBooks.resources
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.fichaLibro.resources
-C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\Login.Success.resources
-C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\Login.Success.es-419.resources
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\bin\Debug\es-419\MainForm.resources.dll
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\es-419\MainForm.resources.dll
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.manejarRentas.resources
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.csproj.CopyComplete
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.profileForm.resources
 C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\MainForm.askPassword.resources
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\Login.fichaRenta.resources
+C:\Users\hv_ca\source\repos\Proyecto 5to Semestre\MainForm\obj\Debug\Login.fichaRenta.es-419.resources

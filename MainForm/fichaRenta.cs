@@ -12,15 +12,18 @@ using MainForm.Properties;
 
 namespace Login
 {
-    public partial class Success : Form
+    public partial class fichaRenta : Form
     {
-        public Success(bool resultado)
+        public string codigoPrestamo;
+
+        public fichaRenta(bool resultado)
         {
             InitializeComponent();
 
             switch (resultado)
             {
                 case true:
+                    this.lblNumPrestamo.Text = codigoPrestamo;
                     this.pctImage.Image = Resources.check_3x;
                     this.pctImage.BorderColor = Color.FromArgb(0, 192, 0);
                     this.pctImage.BorderColor2 = Color.FromArgb(0, 192, 0);

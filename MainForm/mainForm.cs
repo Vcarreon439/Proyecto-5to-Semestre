@@ -13,6 +13,7 @@ namespace MainForm
         private Form FormularioAbierto = null;
         public List<LibroVista> librosRenta = new List<LibroVista>();
         private TipoUsuario.NivelAutorizacion currentAutorizacion = TipoUsuario.NivelAutorizacion.Invitado;
+        public FullUser LocalFullUser => localFullUser;
 
         public frmPrincipal(TipoUsuario.NivelAutorizacion recieverAutorizacion)
         {
@@ -24,6 +25,8 @@ namespace MainForm
             InitializeComponent();
             DeterminComponents();
         }
+
+        
 
         private void DeterminComponents()
         {
@@ -74,7 +77,7 @@ namespace MainForm
 
         private void btnMyProfile_Click(object sender, EventArgs e)
         {
-            if (currentAutorizacion == TipoUsuario.NivelAutorizacion.Invitado & localFullUser == null)
+            if (currentAutorizacion == TipoUsuario.NivelAutorizacion.Invitado & LocalFullUser == null)
             {
                 using (Login.Login logg = new Login.Login())
                 {
@@ -92,7 +95,7 @@ namespace MainForm
             }
             else
             {
-                FormularioAbierto = FormEnPanel.AbrirFormulario(ref pctFondo, () => new profileForm(localFullUser));
+                FormularioAbierto = FormEnPanel.AbrirFormulario(ref pctFondo, () => new profileForm(LocalFullUser));
             }
         }
 

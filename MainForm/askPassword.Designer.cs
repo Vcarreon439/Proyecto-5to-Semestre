@@ -30,7 +30,7 @@ namespace MainForm
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtContraseña = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnConfirmar = new RJCodeAdvance.RJControls.RJButton();
             this.btnCerrar = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -48,17 +48,18 @@ namespace MainForm
             this.label1.Text = "Please enter your password";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // kryptonTextBox1
+            // txtContraseña
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(26, 75);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(426, 37);
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtContraseña.Location = new System.Drawing.Point(26, 75);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.Size = new System.Drawing.Size(426, 37);
+            this.txtContraseña.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Border.Rounding = 20;
-            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9.75F);
-            this.kryptonTextBox1.TabIndex = 1;
+            this.txtContraseña.StateCommon.Border.Rounding = 20;
+            this.txtContraseña.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9.75F);
+            this.txtContraseña.TabIndex = 1;
             // 
             // btnConfirmar
             // 
@@ -78,6 +79,7 @@ namespace MainForm
             this.btnConfirmar.Text = "Confirm";
             this.btnConfirmar.TextColor = System.Drawing.Color.White;
             this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // btnCerrar
             // 
@@ -97,10 +99,11 @@ namespace MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(464, 205);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnConfirmar);
-            this.Controls.Add(this.kryptonTextBox1);
+            this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "askPassword";
@@ -114,7 +117,7 @@ namespace MainForm
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtContraseña;
         private RJCodeAdvance.RJControls.RJButton btnConfirmar;
         private FontAwesome.Sharp.IconPictureBox btnCerrar;
     }

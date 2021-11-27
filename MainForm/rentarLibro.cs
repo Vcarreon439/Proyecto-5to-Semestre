@@ -11,6 +11,8 @@ using System.Windows.Forms.VisualStyles;
 using Dominio;
 using Elementos;
 using Elementos.ElementosBiblioteca.Libros;
+using Elementos.ElementosBiblioteca.Prestamo;
+using Login;
 
 namespace MainForm
 {
@@ -59,10 +61,20 @@ namespace MainForm
         {
             try
             {
+                if (local.librosRenta==null|local.librosRenta.Count<1)
+                    return;
 
+                askPassword frm = new askPassword(this.local.LocalFullUser);
+                if (frm.ShowDialog()==DialogResult.Yes)
+                {
+                    ModeloDUsuario obj = new ModeloDUsuario();
+                    PrestamoSimple temp = obj.NewPrestamo(frm.CodigoUsuario);
 
+                    fichaRenta msm = new fichaRenta(temp.Generado);
+                    msm.Show();
+                }
 
-
+                
 
             }
             catch (Exception exception)

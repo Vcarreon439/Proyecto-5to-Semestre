@@ -1,7 +1,7 @@
 ﻿
 namespace Login
 {
-    partial class Success
+    partial class fichaRenta
     {
         /// <summary>
         /// Required designer variable.
@@ -30,11 +30,11 @@ namespace Login
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Success));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fichaRenta));
             this.rounded_Panel1 = new CustomControls.Rounded_Panel(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.btnOK = new CustomControls.Rounded_Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNumPrestamo = new System.Windows.Forms.Label();
             this.pctImage = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.rounded_Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctImage)).BeginInit();
@@ -45,7 +45,7 @@ namespace Login
             resources.ApplyResources(this.rounded_Panel1, "rounded_Panel1");
             this.rounded_Panel1.Controls.Add(this.label2);
             this.rounded_Panel1.Controls.Add(this.btnOK);
-            this.rounded_Panel1.Controls.Add(this.label1);
+            this.rounded_Panel1.Controls.Add(this.lblNumPrestamo);
             this.rounded_Panel1.Controls.Add(this.pctImage);
             this.rounded_Panel1.Name = "rounded_Panel1";
             this.rounded_Panel1.PanelColor = System.Drawing.Color.White;
@@ -73,11 +73,11 @@ namespace Login
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
-            // label1
+            // lblNumPrestamo
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            this.lblNumPrestamo.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lblNumPrestamo, "lblNumPrestamo");
+            this.lblNumPrestamo.Name = "lblNumPrestamo";
             // 
             // pctImage
             // 
@@ -93,14 +93,14 @@ namespace Login
             this.pctImage.Name = "pctImage";
             this.pctImage.TabStop = false;
             // 
-            // Success
+            // fichaRenta
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Controls.Add(this.rounded_Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Success";
+            this.Name = "fichaRenta";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rounded_Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctImage)).EndInit();
@@ -113,7 +113,7 @@ namespace Login
         private CustomControls.Rounded_Panel rounded_Panel1;
         private System.Windows.Forms.Label label2;
         private CustomControls.Rounded_Button btnOK;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNumPrestamo;
         private RJCodeAdvance.RJControls.RJCircularPictureBox pctImage;
     }
 }

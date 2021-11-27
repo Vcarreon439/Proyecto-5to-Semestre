@@ -9,6 +9,7 @@ using Elementos;
 using Elementos.ElementosBiblioteca.Autor;
 using Elementos.ElementosBiblioteca.Editorial;
 using Elementos.ElementosBiblioteca.Libros;
+using Elementos.ElementosBiblioteca.Prestamo;
 
 namespace Dominio
 {
@@ -159,6 +160,16 @@ namespace Dominio
         public bool UpdatePublishersWithotCode(string updatEditorialCodigo, FullEditorial updatEditorial)
         {
             return obj.UpdatePublishersWithotCode(updatEditorialCodigo, updatEditorial);
+        }
+
+        public PrestamoSimple NewPrestamo(int codUsuario)
+        {
+            return obj.NewPrestamo(codUsuario);
+        }
+
+        public int GetUserCode(string correo, string contraseña)
+        {
+            return obj.GetUserCode(correo, contraseña);
         }
     }
 }
